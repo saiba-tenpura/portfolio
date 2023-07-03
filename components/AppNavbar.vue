@@ -1,6 +1,6 @@
 <template>
-  <nav class="w-full py-2 px-4 md:px-2">
-    <div class="max-w-4xl flex flex-wrap justify-between items-center mx-auto">
+  <nav class="w-full p-2 sm:px-2">
+    <div class="max-w-3xl flex flex-wrap justify-between items-center mx-auto">
       <div>
         Logo
       </div>
