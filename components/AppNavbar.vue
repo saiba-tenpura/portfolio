@@ -14,7 +14,7 @@
             About
           </li>
           <li>
-            Article
+            Articles
           </li>
           <li>
             Contact
