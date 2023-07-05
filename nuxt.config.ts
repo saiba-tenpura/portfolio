@@ -7,14 +7,8 @@ export default defineNuxtConfig({
     ],
   },
   css: [
-    '~/assets/css/main.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   devtools: { enabled: true },
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
+  modules: ['@nuxtjs/tailwindcss']
 })
