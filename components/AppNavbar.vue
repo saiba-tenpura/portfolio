@@ -1,6 +1,6 @@
 <template>
-  <nav class="w-full py-4 px-6">
-    <div class="max-w-4xl flex flex-wrap justify-between items-center mx-auto">
+  <nav class="max-w-4xl mx-auto py-4 px-6">
+    <div class="flex flex-wrap justify-between items-center">
       <NuxtLink to="/">
         Logo
       </NuxtLink>
