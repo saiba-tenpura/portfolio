@@ -6,9 +6,15 @@ export default defineNuxtConfig({
       '@fortawesome/fontawesome-svg-core',
     ],
   },
+  content: {
+    documentDriven: true,
+  },
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss']
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/tailwindcss'
+  ],
 })
