@@ -11,7 +11,11 @@
       <div class="justify-between items-center w-full md:flex md:w-auto" :class="{ hidden: ! show }" :aria-expanded="show">
         <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
           <li v-for="link of navigation">
-            <NuxtLink :to="link.path">
+            <NuxtLink
+              :key="link._path"
+              :to="link._path"
+              active-class="text-blue-500"
+            >
               {{ link.title }}
             </NuxtLink>
           </li>
@@ -23,18 +27,5 @@
 
 <script lang="ts" setup>
   const show = ref(false)
-  const navigation = [
-    {
-      "title": "About",
-      "path": "/",
-    },
-    {
-      "title": "Articles",
-      "path": "/articles",
-    },
-    {
-      "title": "Contact",
-      "path": "/contact",
-    }
-  ]
+  const { navigation } = useContent()
 </script>
