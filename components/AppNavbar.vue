@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+  const show = ref(false)
+  const { navigation } = useContent()
+</script>
+
 <template>
   <nav class="max-w-4xl mx-auto py-4 px-6">
     <div class="flex flex-wrap justify-between items-center">
@@ -24,8 +29,3 @@
     </div>
   </nav>
 </template>
-
-<script lang="ts" setup>
-  const show = ref(false)
-  const { navigation } = useContent()
-</script>
