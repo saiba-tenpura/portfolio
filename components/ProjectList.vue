@@ -1,6 +1,8 @@
 <script lang="ts" setup>
   const { data } = await useAsyncData(() => {
-    return queryContent('/projects/').find()
+    return queryContent('/projects/')
+      .sort({ createdAt: -1 })
+      .find()
   })
 </script>
 

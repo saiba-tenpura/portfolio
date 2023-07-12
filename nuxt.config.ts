@@ -6,9 +6,6 @@ export default defineNuxtConfig({
       '@fortawesome/fontawesome-svg-core',
     ],
   },
-  content: {
-    documentDriven: true,
-  },
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],

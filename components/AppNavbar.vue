@@ -1,6 +1,15 @@
 <script lang="ts" setup>
   const show = ref(false)
-  const { navigation } = useContent()
+  const navigation = [
+    {
+      'title': 'About',
+      '_path': '/',
+    },
+    {
+      'title': 'Projects',
+      '_path': '/projects',
+    },
+  ]
 </script>
 
 <template>
