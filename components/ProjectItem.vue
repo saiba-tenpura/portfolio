@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 
 type Project = {
   _path: string
@@ -17,7 +17,6 @@ defineProps({
     }
   },
 })
-
 </script>
 
 <template>

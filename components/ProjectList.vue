@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup lang="ts">
   const { data } = await useAsyncData(() => {
     return queryContent('/projects/')
       .sort({ createdAt: -1 })

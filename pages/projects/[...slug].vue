@@ -2,6 +2,6 @@
   <NuxtLayout :name="layout" />
 </template>
 
-<script lang='ts' setup>
+<script setup lang="ts">
   const layout = 'article';
 </script>

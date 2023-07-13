@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
   import { useNuxtApp, onBeforeUnmount, reactive } from '#imports'
 
   const props = defineProps({
