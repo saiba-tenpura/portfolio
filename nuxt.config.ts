@@ -6,12 +6,16 @@ export default defineNuxtConfig({
       '@fortawesome/fontawesome-svg-core',
     ],
   },
+  colorMode: {
+    classSuffix: '',
+  },
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   devtools: { enabled: true },
   modules: [
     '@nuxt/content',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
   ],
 })
