@@ -9,7 +9,7 @@ const onClick = () => {
 </script>
 
 <template>
-  <button aria-label="Color Mode" @click="onClick">
+  <button aria-label="Color Mode" class="icon-link-hover" @click="onClick">
     <ColorScheme>
       <template v-if="colorMode.preference === 'dark'">
         <font-awesome-icon icon="fa-moon" />
