@@ -3,7 +3,7 @@
   const navigation = [
     {
       'title': 'About',
-      '_path': '/',
+      '_path': '/about',
     },
     {
       'title': 'Projects',
