@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Projects</h2>
+    <h1 class="text-3xl font-bold py-2 mb-4">Projects</h1>
     <ProjectList />
   </div>
 </template>
