@@ -20,7 +20,7 @@
       </NuxtLink>
       <button @click="(show = !show)" class="inline-flex items-center p-2 rounded-lg md:hidden">
         <span class="sr-only">Toggle navigation menu</span>
-        <font-awesome-icon :icon="show ? 'fa-xmark' : 'fa-bars'" />
+        <font-awesome-icon :icon="show ? 'fa-xmark' : 'fa-bars'" class="link-hover" />
       </button>
       <div class="justify-between items-center w-full md:flex md:w-auto" :class="{ hidden: ! show }" :aria-expanded="show">
         <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
@@ -28,7 +28,8 @@
             <NuxtLink
               :key="link._path"
               :to="link._path"
-              active-class="text-blue-500"
+              active-class="bg-zinc-800 font-semibold"
+              class="block p-2 rounded md:bg-transparent md:p-0 hover:bg-zinc-700 md:hover:bg-transparent link-hover"
             >
               {{ link.title }}
             </NuxtLink>
