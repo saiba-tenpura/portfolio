@@ -1,33 +1,3 @@
-<script setup lang="ts">
-  const skill_list= {
-    "Frontend": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Tailwind CSS",
-      "Nuxt.js",
-      "Vue.js",
-      "Next.js",
-      "Bootstrap",
-    ],
-    "Backend": [
-      "PHP",
-      "Laravel",
-      "MySQL",
-      "REST APIs",
-      "Redis",
-    ],
-    "DevOps": [
-      "Bash",
-      "Git",
-      "Linux",
-      "Ansible",
-      "Docker",
-      "Jenkins",
-    ],
-  }
-</script>
-
 <template>
   <div>
     <div class="mb-4">
@@ -42,16 +12,6 @@
         </p>
       </div>
     </div>
-    <div>
-      <h2 class="text-2xl font-bold py-2">Skills</h2>
-      <div class="flex justify-between">
-        <div v-for="(skills, category) in skill_list" class="mb-4">
-          <h3 class="text-lg font-bold py-2">{{ category }}</h3>
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-400">
-            <li v-for="skill in skills">{{ skill }}</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <SkillList />
   </div>
 </template>
