@@ -1,31 +1,5 @@
 <script setup lang="ts">
-  const skill_list= {
-    "Frontend": [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Tailwind CSS",
-      "Nuxt.js",
-      "Vue.js",
-      "Next.js",
-      "Bootstrap",
-    ],
-    "Backend": [
-      "PHP",
-      "Laravel",
-      "MySQL",
-      "REST APIs",
-      "Redis",
-    ],
-    "DevOps": [
-      "Bash",
-      "Git",
-      "Linux",
-      "Ansible",
-      "Docker",
-      "Jenkins",
-    ],
-  }
+  const skill_list = useAppConfig().skill_list
 </script>
 
 <template>

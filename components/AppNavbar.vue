@@ -1,15 +1,6 @@
 <script setup lang="ts">
   const show = ref(false)
-  const navigation = [
-    {
-      'title': 'About',
-      '_path': '/about',
-    },
-    {
-      'title': 'Projects',
-      '_path': '/projects',
-    },
-  ]
+  const navigation = useAppConfig().navigation
 </script>
 
 <template>
@@ -26,8 +17,8 @@
         <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
           <li v-for="link of navigation">
             <NuxtLink
-              :key="link._path"
-              :to="link._path"
+              :key="link.path"
+              :to="link.path"
               active-class="bg-zinc-800 font-semibold"
               class="block p-2 rounded md:bg-transparent md:p-0 hover:bg-zinc-700 md:hover:bg-transparent link-hover"
             >
