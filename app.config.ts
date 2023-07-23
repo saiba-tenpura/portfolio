@@ -5,8 +5,8 @@ export default defineAppConfig({
       'path': '/about',
     },
     {
-      'title': 'Projects',
-      'path': '/projects',
+      'title': 'Blog',
+      'path': '/blog',
     },
   ],
   skill_list: {
