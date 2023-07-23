@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
+  <section>
     <h2 class="text-2xl font-bold py-2">Skills</h2>
     <div class="flex justify-between">
       <SkillSet v-for="(skills, category) in skill_list"
@@ -11,5 +11,5 @@
           :skills="skills"
         />
     </div>
-  </div>
+  </section>
 </template>
