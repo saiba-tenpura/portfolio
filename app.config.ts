@@ -15,7 +15,7 @@ export default defineAppConfig({
       'CSS3',
       'JavaScript',
       'Tailwind CSS',
-      'Nuxt.js',
+      'Nuxt',
       'Vue.js',
       'Next.js',
       'Bootstrap',

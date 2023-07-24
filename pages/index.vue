@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="flex items-center justify-center h-100">
+  <section class="flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-3xl font-bold py-2">Saiba Tenpura</h1>
       <h2 class="text-lg">Full Stack Developer / DevOps / Hobbyist Game Dev</h2>
