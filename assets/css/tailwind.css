@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-50 text-black dark:bg-zinc-900 dark:text-white dark:accent-zinc-500;
+  @apply bg-zinc-50 text-zinc-950 dark:bg-zinc-900 dark:text-zinc-100 dark:accent-zinc-500;
 }
 
 .link-hover {
-  @apply hover:text-zinc-700 dark:text-zinc-100 dark:hover:text-zinc-300;
+  @apply hover:text-zinc-300 dark:hover:text-zinc-400;
 }
