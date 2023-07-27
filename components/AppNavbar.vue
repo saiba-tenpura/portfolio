@@ -22,8 +22,8 @@
             <NuxtLink
               :key="link.path"
               :to="link.path"
-              active-class="bg-zinc-200 dark:bg-zinc-800 font-semibold"
-              class="block p-2 rounded hover:bg-zinc-700 md:p-0 md:bg-transparent md:hover:bg-transparent link-hover"
+              active-class="bg-zinc-200 dark:bg-zinc-800 font-bold"
+              class="block p-2 rounded hover:bg-zinc-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent link-hover"
               @click="toggleNav"
             >
               {{ link.title }}
