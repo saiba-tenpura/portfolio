@@ -2,10 +2,11 @@
   onMounted(() => {
     const header = document.querySelector('#header')
     const observer = new IntersectionObserver(
-      ([entry]) => entry.target.classList.toggle('stuck', entry.intersectionRatio < 1),
-      { threshold: [1] }
+      ([entry]) => entry.target.classList.toggle('stuck', entry.intersectionRatio < 1), {
+        rootMargin: '0px',
+        threshold: 1.0
+      }
     )
-
     observer.observe(header)
   })
 </script>
