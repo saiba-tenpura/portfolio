@@ -1,7 +1,23 @@
+<script setup lang="ts">
+  const route = useRoute()
+  const { data: post } = await useAsyncData(route.path, () => {
+    return queryContent(route.path)
+      .findOne()
+  })
+</script>
+
 <template>
-  <main class="max-w-4xl py-4 px-6 mx-auto">
-    <article class="prose prose-zinc dark:prose-invert">
-      <ContentDoc />
-    </article>
-  </main>
+  <article class="prose prose-zinc dark:prose-invert">
+    <header class="mb-4">
+      <h1 class="mb-0">{{ post?.title }}</h1>
+      <time
+        v-if="post?.created_at"
+        :datetime="post.created_at"
+        class="text-sm text-zinc-500 dark:text-zinc-400"
+      >
+        {{ formatDate(post.created_at) }}
+      </time>
+    </header>
+    <ContentDoc />
+  </article>
 </template>
