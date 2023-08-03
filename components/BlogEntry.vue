@@ -26,7 +26,8 @@ defineProps({
         :src="blog_entry.cover"
         :alt="blog_entry.title"
         sizes="sm:100vw md:100vw lg:100vw"
-        class="object-cover w-full rounded-lg h-48 md:h-auto md:w-48"
+        class="object-cover w-full rounded-lg h-48 md:h-auto md:w-64"
+        loading="lazy"
       />
       <div class="flex flex-col justify-between p-4">
         <h2 class="text-lg font-bold mb-2 tracking-tight text-zinc-900 dark:text-white">{{ blog_entry.title }}</h2>
