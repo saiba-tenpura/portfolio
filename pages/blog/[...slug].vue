@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-  const layout = 'article';
+  const layout = 'article'
 </script>
