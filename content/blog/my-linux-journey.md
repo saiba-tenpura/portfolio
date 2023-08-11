@@ -11,28 +11,8 @@ At first I decided to play it safe and dual booted Windows and Linux but I quick
 
 > **Rice** is a word that is commonly used to refer to making visual improvements and customizations on one's desktop. It was inherited from the practice of customizing cheap Asian import cars to make them appear to be faster than they actually were - which was also known as **ricing**.
 
-At the time I was amazed by the beautiful setups some people had come up with, the sheer endless variety of options to choose from and so I set out to create one of my own. It obviously took a lot of trial and error, fiddling with different tools, reading a bunch of documentations but ultimatetly my accumalted efforts were not only a great learning opportunity but also resulted in the dotfiles you can find in the link below. As with everything else in life nothing is ever perfect so I continously improve my dotfiles to suit my workflow and personal taste. In my latest addition I added config files to allow for the usage of Wayland as a display server inplace of Xorg so I could try it out on my laptop.
+At the time I was amazed by the beautiful setups some people had come up with, the sheer endless variety of options to choose from and so I set out to create one of my own. It obviously took a lot of trial and error, fiddling with different tools, reading a bunch of documentations but ultimatetly my accumalted efforts were not only a great learning opportunity but also resulted in the dotfiles you can find in the link below. As with everything else in life nothing is ever perfect so I continously improve my dotfiles to suit my workflow and personal taste.
+
+In my latest addition I added configuration files to allow for the usage of Wayland as a display server inplace of Xorg so I could try it out on my laptop. I'm also planing to move my main system to Wayland at some point in the future, migrate the Xorg related configuration files to a separate branch and remove them from the main branch to make it less cluttered.
 
 [Check out my dotfiles!](https://github.com/saiba-tenpura/dotfiles)
-
-Rough content ideas:
-* [X] &nbsp; Linux only user for more than 7 years.
-* Why I stopped using Windows.
-  * [X] &nbsp; Forced updates, software.
-  * [X] &nbsp; No control over own OS. (Mention Cortana incident?)
-* Started dual booting Pop!_OS.
-  * [X] &nbsp; Never really looked back.
-* Discovery of Linux Ricing.
-  * [X] &nbsp; Short definition of ricing.
-  * [X] &nbsp; Getting Started with that.
-  * Switching from Xorg to Wayland.
-* Downsides.
-  * Game/Software Support.
-  * Endless customization / time sink.
-  * You are responsible if something breaks.
-* Upsides.
-  * Great learning opportunity.
-  * Freedom.
-* Plans for the future.
-  * Also move desktop to wayland.
-
