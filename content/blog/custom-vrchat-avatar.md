@@ -1,7 +1,7 @@
 ---
 title: Spooky Boogie - VRChat Avatar
 cover: /blog/my-linux-journey.png
-description: 
+description: My recreation of Spooky Boogie from the Psycho-Pass series as a VRChat Avatar using cel-shading techniques.
 created_at: 2022-08-01
 ---
 
