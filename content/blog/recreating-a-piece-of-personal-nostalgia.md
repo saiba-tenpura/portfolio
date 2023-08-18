@@ -5,6 +5,10 @@ description: How I recreated the "Nyan Gun" from Garry's Mod with Blender and Go
 created_at: 2022-08-01 
 ---
 
+Back in 2022 that I wanted to create a basic project using the Godot Game Engine so I could familiarize myself with it and the process of creating First-Person Shooter mechanics incl. the necessary models and animations. So I decided to recreate the "Nyan Gun" Garry's Mod addon orignally created by Rubat not only because it was one of my favorite weapons in the TTT game mode and thus was a piece of personal nostalgia but also because it offered a unique set of challenges when implementing it.
+
+[Workshop Page](https://steamcommunity.com/sharedfiles/filedetails/?id=123277559) 
+
 Draft:
 * Why this mod in particular?
   * Nostalgy. => Original mod.
