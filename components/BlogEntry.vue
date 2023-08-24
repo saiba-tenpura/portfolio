@@ -1,38 +1,36 @@
 <script setup lang="ts">
+  type BlogEntry = {
+    _path: string
+    title: string
+    description: string
+    data: string
+  }
 
-type BlogEntry = {
-  _path: string
-  title: string
-  description: string
-  data: string
-}
-
-defineProps({
-  blog_entry: {
-    type: Object,
-    required: true,
-    validator: (value: BlogEntry) => {
-      if (value?._path && value.title) { return true }
-      return false
-    }
-  },
-})
+  defineProps({
+    blogEntry: {
+      type: Object,
+      required: true,
+      validator: (value: BlogEntry) => {
+        return value?._path && value.title
+      }
+    },
+  })
 </script>
 
 <template>
   <article>
-    <NuxtLink :to="blog_entry._path" class="flex flex-col md:flex-row">
+    <NuxtLink :to="blogEntry._path" class="flex flex-col md:flex-row">
       <NuxtImg
-        :src="blog_entry.cover"
-        :alt="blog_entry.title"
+        :src="blogEntry.cover"
+        :alt="blogEntry.title"
         sizes="sm:100vw md:100vw lg:100vw"
         class="object-cover w-full rounded-lg h-48 md:h-auto md:w-64"
         loading="lazy"
       />
       <div class="flex flex-col justify-between p-4">
-        <h2 class="text-lg font-bold mb-2 tracking-tight text-zinc-900 dark:text-white">{{ blog_entry.title }}</h2>
-        <p class="mb-3 text-zinc-700 dark:text-zinc-300">{{ blog_entry.description }}</p>
-        <time class="text-sm text-zinc-500 dark:text-zinc-400" :datetime="blog_entry.created_at">{{ formatDate(blog_entry.created_at) }}</time>
+        <h2 class="text-lg font-bold mb-2 tracking-tight text-zinc-900 dark:text-white">{{ blogEntry.title }}</h2>
+        <p class="mb-3 text-zinc-700 dark:text-zinc-300">{{ blogEntry.description }}</p>
+        <time class="text-sm text-zinc-500 dark:text-zinc-400" :datetime="blogEntry.created_at">{{ formatDate(blogEntry.created_at) }}</time>
       </div>
     </NuxtLink>
   </article>

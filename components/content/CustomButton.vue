@@ -6,9 +6,15 @@
     position: {
       type: String,
       default: 'start',
+      validator: (value) => {
+        return ['start', 'center', 'end'].includes(value)
+      },
     },
     type: {
       type: String,
+      validator: (value) => {
+        return ['primary'].includes(value)
+      },
     }
   })
 
@@ -27,12 +33,12 @@
   <div
     class="flex"
     :class="positions[position]"
-    >
+  >
     <button
       type="button"
       class="font-medium rounded-lg text-sm text-center px-5 py-2.5 mr-2 mb-2"
       :class="types[type]"
-      >
+    >
       <font-awesome-icon v-if="icon" class="mr-2" :icon="icon" size="lg" />
       <ContentSlot :use="$slots.default" unwrap="p" />
     </button>

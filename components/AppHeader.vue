@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
   onMounted(() => {
     const header = document.querySelector('#header')
     const observer = new IntersectionObserver(
@@ -13,7 +13,7 @@
 
 <template>
   <header id="header" class="sticky top-[-1px] bg-zinc-50/80 dark:bg-zinc-900/80 backdrop-blur">
-    <AppNavbar />
+    <AppNavbar/>
   </header>
 </template>
 

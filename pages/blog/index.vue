@@ -9,7 +9,11 @@
 <template>
   <section v-if="Array.isArray(data) && data.length > 0">
     <h1 class="text-3xl font-bold py-2 mb-4">Blog</h1>
-    <BlogEntry v-for="blog_entry in data" :key="blog_entry._id" :blog_entry="blog_entry" />
+    <BlogEntry
+      v-for="blog_entry in data"
+      :key="blog_entry._id"
+      :blogEntry="blog_entry"
+    />
   </section>
   <section v-else class="flex items-center justify-center">
     <div class="text-center">

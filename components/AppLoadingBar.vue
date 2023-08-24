@@ -1,19 +1,3 @@
-<template>
-  <div 
-    class="nuxt-progress"
-    :class="{
-      'nuxt-progress-failed': !data.canSucceed,
-    }"
-    :style="{
-      width: `${data.percent}%`,
-      left: data.left,
-      height: `${props.height}px`,
-      opacity: data.show ? 1 : 0,
-      backgroundSize: `${(100 / data.percent) * 100}% auto`,
-    }">
-  </div>
-</template>
-
 <script setup lang="ts">
   import { useNuxtApp, onBeforeUnmount, reactive } from '#imports'
 
@@ -101,7 +85,24 @@
   onBeforeUnmount(() => clear)
 </script>
 
-<style>
+<template>
+  <div
+    class="nuxt-progress"
+    :class="{
+      'nuxt-progress-failed': ! data.canSucceed,
+    }"
+    :style="{
+      width: `${data.percent}%`,
+      left: data.left,
+      height: `${props.height}px`,
+      opacity: data.show ? 1 : 0,
+      backgroundSize: `${(100 / data.percent) * 100}% auto`,
+    }"
+  >
+  </div>
+</template>
+
+<style scoped>
   .nuxt-progress {
     position: fixed;
     top: 0px;

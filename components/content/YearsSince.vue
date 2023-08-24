@@ -3,6 +3,7 @@
   defineProps({
     year: {
       type: Number,
+      required: true,
     },
   })
 </script>
