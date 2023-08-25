@@ -1,11 +1,11 @@
 ---
 title: Recreating a piece of personal nostalgia
-cover: /blog/my-linux-journey.png
-description: How I recreated the "Nyan Gun" from Garry's Mod with Blender and Godot.
-created_at: 2022-08-01 
+cover: /blog/nyan-splash.png
+description: How I recreated the "Nyan Gun" from Garry's Mod using Blender and Godot.
+created_at: 2022-04-27
 ---
 
-Back in 2022 that I wanted to create a basic project using the Godot Game Engine so I could familiarize myself with it and the process of creating First-Person Shooter mechanics incl. the necessary models and animations. So I decided to recreate the "Nyan Gun" Garry's Mod addon orignally created by Rubat not only because it was one of my favorite weapons in the TTT game mode and thus was a piece of personal nostalgia but also because it offered a unique set of challenges when implementing it.
+Back in 2022 I wanted to create a basic project using the Godot Game Engine so I could familiarize myself with it and the process of creating First-Person Shooter mechanics incl. the necessary models and animations. So I decided to recreate the "Nyan Gun" Garry's Mod addon orignally created by Rubat not only because it was one of my favorite weapons in the TTT game mode and thus was a piece of personal nostalgia but also because it offered a unique set of challenges when implementing it.
 
 For one there are the different fire modes the weapon offers, a basic full auto fire mode, a shotgun fire mode with spread and a grenade launcher fire mode with an explosion. There are also the animated particle effects with trails which bounce off of objects and enemies.
 
