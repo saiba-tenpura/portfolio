@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  <article>
+  <article class="py-4">
     <NuxtLink :to="blogEntry._path" class="flex flex-col md:flex-row">
       <NuxtImg
         :src="blogEntry.cover"
