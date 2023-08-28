@@ -1,6 +1,6 @@
 ---
 title: My Linux journey
-cover: /blog/my-linux-journey.png
+cover: /blog/my-linux-journey/cover.png
 description: A short summary of my transition from Windows to Linux, my experiences on they way and my plans moving forward.
 created_at: 2023-08-03
 ---

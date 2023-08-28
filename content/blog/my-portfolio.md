@@ -1,6 +1,6 @@
 ---
 title: My Portfolio
-cover: /blog/my-portfolio.png
+cover: /blog/my-portfolio/cover.png
 description: Are you curious about how I created my web portfolio or are you looking for an inspiration for your own web portfolio? Well, you're in luck you can find the details in this post, including the code and a little more.
 created_at: 2023-07-29
 ---
