@@ -14,7 +14,9 @@ The overall steps necessary for this project included:
 * Creating controllers for movement and weapon handling.
 * Creating the effects for the Nyan Cat projectile and the explosion.
 
-The first step in the 3D modeling process was to gather a lot of reference material which I could base my work on. With the collected material I got started in Blender by using images of the side and front view as overlays so I could match up common points in the pictures with the model to ensure the dimensions are correct. I began with the basic shape and added more and more details over time, making sure to gather additional reference materials whenever necessary, until I captured every intricate detail of the object.
+The first step in the 3D modeling process was to gather a lot of reference material which I could base my work on. With the collected material I got started in Blender by using images of the side and front view as overlays so I could match up common points in the pictures with the model to ensure the dimensions are correct. I began with the basic shape and added more and more details over time, making sure to gather additional reference materials whenever necessary, until I captured every intricate detail of the object. I did the same for the arms and hands but only used reference for creating the gloves.
+
+![Mesh of the MP7 & Arms](/blog/nyan-gun-recreation/mp7-arms-mesh.png)
 
 For one there are the different fire modes the weapon has, a basic full auto mode, a shotgun mode and a grenade launcher mode including an explosion effect. In addition to that there are also the animated particle effects with trails which bounce off of objects and enemies.
 
