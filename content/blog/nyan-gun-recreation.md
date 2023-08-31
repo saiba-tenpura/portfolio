@@ -18,7 +18,9 @@ The first step in the 3D modeling process was to gather a lot of reference mater
 
 ![Mesh of the MP7 & Arms](/blog/nyan-gun-recreation/mp7-arms-mesh.png)
 
-Then I continued by using Blenders shader nodes to create procedural textures for the objects. Since it's not possible to just import the previously created shaders into Godot the next step was to UV unwrap the models which is in simple terms the process of flattening a 3D objects surface onto a 2D map. Next I baked the procedural textures onto the resulting UV map creating multiple images each of which is capturing a different aspect of the objects properties.
+Then I continued by using Blenders shader nodes to create procedural textures for the objects. Since it's not possible to just import the previously created shaders into Godot the next step was to UV unwrap the models which is in simple terms the process of flattening a 3D objects surface onto a 2D map. Next I baked the procedural textures onto the resulting UV map creating multiple images each of which is capturing a different aspect of the objects properties incl. the color, reflection and the bump information.
+
+![MP7 textured](/blog/nyan-gun-recreation/mp7-textured.png)
 
 For one there are the different fire modes the weapon has, a basic full auto mode, a shotgun mode and a grenade launcher mode including an explosion effect. In addition to that there are also the animated particle effects with trails which bounce off of objects and enemies.
 
