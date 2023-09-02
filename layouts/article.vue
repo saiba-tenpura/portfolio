@@ -21,7 +21,6 @@
         v-if="post?.cover"
         :src="post.cover"
         :alt="post?.title"
-        class="rounded-lg"
         sizes="sm:100vw md:100vw lg:100vw"
         loading="lazy"
       />

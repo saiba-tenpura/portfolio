@@ -9,3 +9,7 @@ body {
 .link-hover {
   @apply hover:text-zinc-300 dark:hover:text-zinc-400;
 }
+
+.prose img {
+  @apply rounded-lg
+}
