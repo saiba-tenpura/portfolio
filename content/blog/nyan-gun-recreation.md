@@ -22,8 +22,11 @@ Then I continued by using Blenders shader nodes to create procedural textures fo
 
 ![MP7 textured](/blog/nyan-gun-recreation/mp7-textured.png)
 
-Since the basic models were now complete I now needed to create animations of which I needed five in total for drawing the weapon, firing the weapon, reloading the weapon as well as a simple idle and walk animation. To create the necessary animations I first had to rig and weight paint the model which involves the creation of a digital skeleton with bones, where each bone influences a specific part of the model based on an assigned weight.
+Since the basic models were now complete I now needed to create animations of which I needed five in total one each for drawing, firing and reloading the weapon as well as a simple idle and walk animation cycle. To be able to create the necessary animations I first had to rig and weight paint the model which involves the creation of a digital skeleton, where each bone influences a specific part of the model based on an assigned weight.
 
+<video autoplay loop>
+  <source src="/blog/nyan-gun-recreation/mp7-reload.mp4" type="video/mp4" />
+</video>
 
 For one there are the different fire modes the weapon has, a basic full auto mode, a shotgun mode and a grenade launcher mode including an explosion effect. In addition to that there are also the animated particle effects with trails which bounce off of objects and enemies.
 
