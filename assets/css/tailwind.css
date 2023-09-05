@@ -10,6 +10,6 @@ body {
   @apply hover:text-zinc-300 dark:hover:text-zinc-400;
 }
 
-.prose img {
+.prose img, .prose video {
   @apply rounded-lg
 }
