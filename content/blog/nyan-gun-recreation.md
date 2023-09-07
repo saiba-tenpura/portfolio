@@ -28,6 +28,8 @@ Since the basic models and textures were now complete I moved onto creating the 
   <source src="/blog/nyan-gun-recreation/mp7-reload.mp4" type="video/mp4" />
 </video>
 
+After most of the creative work was completed it was now time to move over to the Godot Game Engine where I had to write the game logic incl. the basic movements walking, running, jumping and also the weapon handling. For the time being I decided to not use GDNative but to use GDScript instead so I could familiarize myself with the basics before diving deeper into the engine.
+
 For one there are the different fire modes the weapon has, a basic full auto mode, a shotgun mode and a grenade launcher mode including an explosion effect. In addition to that there are also the animated particle effects with trails which bounce off of objects and enemies.
 
 After implementing a basic FPS controller in Godot I decided to create the models for the MP7 and arms from scratch. Then I rigged and weight painted the models so I could start animating the gun and arms since I needed several animations. After that I created procedural textures using the Blender shader node system and baked them onto the previously UV unwrapped model.
