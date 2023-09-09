@@ -14,7 +14,7 @@ The overall steps necessary for this project included:
 * Creating controllers for movement and weapon handling.
 * Creating the effects for the Nyan Cat projectile and the explosion.
 
-The first step in the 3D modeling process was to gather a lot of reference material on which I could base my work on. With the collected materials I got started in Blender by using images of the side and front view as overlays so I could match up common points in the pictures with the model to ensure the dimensions are correct. After I had the basic shape down I started to add more and more details over time, making sure to gather additional reference material whenever necessary to ensure that I captured every intricate detail of the object. For the arms I basically did the same by referencing gloves I found online and just adding a generic jacket sleeve.
+The first step in the 3D modeling process was to gather a lot of reference material on which I could base my work on. With the collected materials I got started in Blender by using images of the side and front view as overlays so I could match up common points in the pictures with the model to ensure the dimensions are correct. After I had the basic shape down I began to add more and more details over time, making sure to gather additional reference material whenever necessary to ensure that I captured every intricate detail of the object. For the arms I basically did the same by referencing gloves I found online and just adding a generic jacket sleeve.
 
 ![Mesh of the MP7 & arms](/blog/nyan-gun-recreation/mp7-arms-mesh.png)
 
@@ -22,19 +22,15 @@ Then I continued by using Blenders shader nodes to create procedural textures fo
 
 ![MP7 textured](/blog/nyan-gun-recreation/mp7-textured.png)
 
-Since the basic models and textures were now complete I moved onto creating the four animations I needed for drawing, firing and reloading the weapon as well as a simple idle cycle. In order to be able to create the necessary animations I first had to rig and weight paint the models which involves the creation of a digital skeleton, where each bone controls and deforms specific parts of the model based on an assigned weight. As for defining the movement of each action this is achieved by setting specific points which define the state of the 3D model across a timeline aka. keyframes. Said keyframes are defined for key moments in the animation and the gaps between them are automatically interpolated by Blender to create a continous motion.
+Since the basic models and textures were now complete I moved onto creating the four animations I needed for drawing, firing and reloading the weapon as well as a simple idle/walk cycle. In order to be able to create the necessary animations I first had to rig and weight paint the models which involves the creation of a digital skeleton, where each bone controls and deforms specific parts of the model based on an assigned weight. As for defining the movement of each action this is achieved by setting specific points which define the state of the 3D model across a timeline aka. keyframes. Said keyframes are defined for key moments in the animation and the gaps between them are automatically interpolated by Blender to create a continous motion.
 
 <video autoplay loop>
   <source src="/blog/nyan-gun-recreation/mp7-reload.mp4" type="video/mp4" />
 </video>
 
-After most of the creative work was completed it was now time to move over to the Godot Game Engine where I had to write the game logic incl. the basic movements walking, jumping and also the weapon handling. For the time being I decided to not use GDNative but to use GDScript instead so I could familiarize myself with the basics before taking a deeper dive into the engine.
+After most of the creative work was completed it was now time to move over to the Godot Game Engine where I had to write the game logic incl. the basic movements walking, jumping and also the weapon handling. For the time being I decided to not use GDNative but to use GDScript instead so I could familiarize myself with the basics before taking a deeper dive into the engine. So I yet again started watching a lot of tutorials working on one small feature after another first the ability to control the camera, then controls for basic two axis movement, then jumping and gravity as well as a ground floor so the character wouldn't fall infinitely. Eventually after I had the basics down I tweaked the parameters to smooth everything out and made sure you could walk up slopes and stairs.
 
-So I yet again started watching a lot of tutorials working on one small feature after another first the ability to control the camera, then controls for basic two axis movement, then jumping and gravity as well as a ground floor so the character wouldn't fall infinitely. Eventually after I had the basics down I tweaked the parameters to smooth everything out and made sure you could walk up slopes and stairs.
-
-For one there are the different fire modes the weapon has, a basic full auto mode, a shotgun mode and a grenade launcher mode including an explosion effect. In addition to that there are also the animated particle effects with trails which bounce off of objects and enemies.
-
-After implementing a basic FPS controller in Godot I decided to create the models for the MP7 and arms from scratch. Then I rigged and weight painted the models so I could start animating the gun and arms since I needed several animations. After that I created procedural textures using the Blender shader node system and baked them onto the previously UV unwrapped model.
+Now the only thing left to do was to recreate the logic for the Nyan Gun with the different fire modes because the original is a combination of a submachine gun, shotgun and a grenade launcher and I of course had to implement the particle effects for the Nyan Cat projectiles and explosion. The full auto mode is realised by using raycasts where a separate object is instantiated which is responsible for depicting the trail effect, the shotgun mode is using the same technique but fires multiple rays and projectiles with a randomly applied spread. On the other hand for the grenade launcher mode an actual projectile is used for checking for collisions and triggering the explosion.
 
 Draft:
 * Why this mod in particular?
