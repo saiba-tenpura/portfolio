@@ -30,23 +30,6 @@ Since the basic models and textures were now complete I moved onto creating the 
 
 After most of the creative work was completed it was now time to move over to the Godot Game Engine where I had to write the game logic incl. the basic movements walking, jumping and also the weapon handling. For the time being I decided to not use GDNative but to use GDScript instead so I could familiarize myself with the basics before taking a deeper dive into the engine. So I yet again started watching a lot of tutorials working on one small feature after another first the ability to control the camera, then controls for basic two axis movement, then jumping and gravity as well as a ground floor so the character wouldn't fall infinitely. Eventually after I had the basics down I tweaked the parameters to smooth everything out and made sure you could walk up slopes and stairs.
 
-Now the only thing left to do was to recreate the logic for the Nyan Gun with the different fire modes since the original is a combination of a submachine gun, shotgun and a grenade launcher as well as the particle effects for the Nyan Cat projectiles and explosion. The full auto mode is achieved by using raycasts where a separate object is instantiated that is responsible for rendering the trail effect, the shotgun mode is using the same technique that just fires multiple projectiles with a randomly applied offset. The grenade launcher mode on the other hand uses an actual projectile for checking for collisions and triggering the explosion. To trail effect itself was created using [this](https://github.com/OBKF/Godot-Trail-System) plugin and the explosion is particle effect for which I generated images using Blender's fluid simulation features.
+Now the only thing left to do was to recreate the logic for the Nyan Gun with the different fire modes since the original is a combination of a submachine gun, shotgun and a grenade launcher as well as the particle effects for the Nyan Cat projectiles and explosion. The full auto mode is achieved by using raycasts where a separate object is instantiated which is responsible for rendering the trail effect, the shotgun mode is using the same technique that just fires multiple projectiles with a randomly applied offset. The grenade launcher mode on the other hand uses an actual projectile for checking for collisions and triggering the explosion. To trail effect itself was created using [this](https://github.com/OBKF/Godot-Trail-System) plugin and the explosion is particle effect for which I generated images using Blender's fluid simulation features.
 
-Looking at the side by side comparison we get something very similiar to the Nyan Gun inside of Godot.
-
-Draft:
-* Why this mod in particular?
-  * Nostalgia. => Original mod.
-  * I like the MP7.
-  * Unique and interesting mechanics of the gun.
-  * My personal favorite weapon as traitor.
-  * Learning opportunities:
-    * Godot Game Engine.
-    * Animation Tree.
-    * Procedural Textures.
-    * Rigging.
-* The process behind it.
-  * Creating the Nyan Gun. => MP7.
-  * Texturing.
-  * Animation.
-* Side by side comparison.
+Finally if we put everything we get something very similiar to the original Nyan Gun inside of Godot as you can see in the side by side.
