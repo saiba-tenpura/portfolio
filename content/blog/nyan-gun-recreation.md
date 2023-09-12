@@ -32,4 +32,8 @@ After most of the creative work was completed it was now time to move over to th
 
 Now the only thing left to do was to recreate the logic for the Nyan Gun with the different fire modes since the original is a combination of a submachine gun, shotgun and a grenade launcher as well as the particle effects for the Nyan Cat projectiles and explosion. The full auto mode is achieved by using raycasts where a separate object is instantiated which is responsible for rendering the trail effect, the shotgun mode is using the same technique that just fires multiple projectiles with a randomly applied offset. The grenade launcher mode on the other hand uses an actual projectile for checking for collisions and triggering the explosion. To trail effect itself was created using [this](https://github.com/OBKF/Godot-Trail-System) plugin and the explosion is particle effect for which I generated images using Blender's fluid simulation features.
 
-Finally if we put everything we get something very similiar to the original Nyan Gun inside of Godot as you can see in the side by side.
+<video autoplay loop>
+  <source src="/blog/nyan-gun-recreation/ncg-comparison.mp4" type="video/mp4" />
+</video>
+
+Finally if we put everything we get something very similiar to the original Nyan Gun inside of Godot as you can see in the comparison video. I actually also added the same sound effects which were used in the original but decided against using them to avoid any sort of copyright issues.
