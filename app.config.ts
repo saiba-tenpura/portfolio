@@ -11,10 +11,10 @@ export default defineAppConfig({
   ],
   skill_list: {
     'Frontend': [
-      'HTML5',
-      'CSS3',
+      'HTML',
+      'CSS',
       'JavaScript',
-      'Tailwind CSS',
+      'Tailwind',
       'Nuxt',
       'Vue.js',
       'Next.js',
