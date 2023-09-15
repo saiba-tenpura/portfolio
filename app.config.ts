@@ -9,33 +9,40 @@ export default defineAppConfig({
       'path': '/blog',
     },
   ],
-  skill_list: {
-    'Frontend': [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'Tailwind',
-      'Nuxt',
-      'Vue.js',
-      'Next.js',
-      'Bootstrap',
-    ],
-    'Backend': [
-      'PHP',
-      'Laravel',
-      'MySQL',
-      'REST APIs',
-      'Redis',
-    ],
-    'DevOps': [
-      'Bash',
-      'Git',
-      'Linux',
-      'Ansible',
-      'Docker',
-      'Jenkins',
-    ],
-  },
+  skillSets: [
+    {
+      category: 'Frontend',
+      skills: [
+        'HTML5',
+        'CSS3',
+        'JavaScript',
+        'Tailwind',
+        'Nuxt',
+        'Vue.js',
+        'Next.js',
+        'Bootstrap',
+      ],
+    },
+    {
+      category: 'Backend',
+      skills: [
+        'PHP',
+        'Laravel',
+        'MySQL',
+        'NPM',
+      ],
+    },
+    {
+      category: 'DevOps',
+      skills: [
+        'Bash',
+        'Git',
+        'Ansible',
+        'Docker',
+        'Jenkins',
+      ],
+    },
+  ],
   socials: {
     github: 'https://github.com/saiba-tenpura',
   },

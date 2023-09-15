@@ -12,6 +12,6 @@
         </p>
       </div>
     </section>
-    <SkillList />
+    <Skills />
   </div>
 </template>
