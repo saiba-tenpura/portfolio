@@ -8,7 +8,7 @@
           My expertise lies in creating web applications, guiding them from the design phase to the full implementation, and ensuring their contionus improvement and maintenance.
         </p>
         <p>
-          In my spare time, I like to learn about new technologies, tweaking my Linux desktop, and experiment with game engines, 3D modeling as well as 3D animation.
+          In my spare time, I like to learn about new technologies, tweaking my Linux desktop, and experimenting with game engines, 3D modeling as well as 3D animation.
         </p>
       </div>
     </section>

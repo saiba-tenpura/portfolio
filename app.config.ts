@@ -13,14 +13,15 @@ export default defineAppConfig({
     {
       category: 'Frontend',
       skills: [
-        'HTML5',
-        'CSS3',
+        'HTML',
+        'CSS',
         'JavaScript',
         'Tailwind',
         'Nuxt',
         'Vue.js',
         'Next.js',
         'Bootstrap',
+        'NPM',
       ],
     },
     {
@@ -29,17 +30,25 @@ export default defineAppConfig({
         'PHP',
         'Laravel',
         'MySQL',
-        'NPM',
+        'Bash',
       ],
     },
     {
       category: 'DevOps',
       skills: [
-        'Bash',
         'Git',
         'Ansible',
         'Docker',
         'Jenkins',
+      ],
+    },
+    {
+      category: 'Miscellaneous',
+      skills: [
+        'Blender',
+        'Gimp',
+        'Godot',
+        'Inkscape',
       ],
     },
   ],
