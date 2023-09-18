@@ -1,9 +1,11 @@
 ---
-title: Spooky Boogie - VRChat Avatar
+title: Creating a VRChat Avatar with cel-shading
 cover: /blog/my-linux-journey/cover.png
-description: My recreation of Spooky Boogie from the Psycho-Pass series as a VRChat Avatar using cel-shading techniques.
-created_at: 2022-08-01
+description: How I used special shading techniques to recreate Spooky Boogie from the Psycho-Pass series as a VRChat Avatar.
+created_at: 2020-12-20
 ---
+
+Back in the day I learned about the Guilty Gear Games and was intrigued by their unique shading techniques so I wanted to try it for myself. Coincidentally one of my friends just had recently started to play VRChat because of that I decided to kill two birds with one stone and create a custom avatar for him. I ultimately settled on recreating Spooky Boogie from the Psycho-Pass series not only because said friend is a big fan of the series but also because the character itself actually serves as an VR avatar.
 
 Draft:
 * Why this character in particular?
