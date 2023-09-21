@@ -9,7 +9,7 @@ Back in the day I learned of the Guilty Gear games and was intrigued by their un
 
 Let's first talk about what makes the Guilty Gear games special since you might not be familiar with them. When the series first launched it was actually a 2D game but eventually also had made the jump to 3D that was when they faced the challenge of having to translate their hand drawn animesque like style into an environment where lighting is usually based on physics and the viewpoint doesn't have to fixed to a single angle. In order to tackle these challenges and successfully achieve the transition they developed a couple of new techniques.
 
-In the following I'm going to illustrate some of the ones I used for this project. The first one is to manually modify the normals of the 3D model which are used for determining the orientation of a surface's towards a light source and effects how it's shaded by it.
+In the following I'm going to illustrate some of the ones I used for this project. The first one is to manually modify the normals which are used for determining a surface's orientation towards a light source and effects how a 3D model is shaded. Usally the normals of a model are automatically calculated but many 3D modelling programs allow us to modify them manully and thus we are able to dictate how light interacts with our model. This way we can recreate the more spherical interaction of a drawn head in 3D space and get rid of unwanted imperfections.
 
 
 Draft:
