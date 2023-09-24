@@ -15,7 +15,7 @@ The second technique known as "Inverted Hull" is used to mimic the hand drawn ou
 
 * TBC: because of how this technique works the outlines for visually overlapping geometry automatically disappears.
 
-The final technique I adapted was to use a specialized texture map where each of the RGBA color channels controls a different aspect of how the model is being shaded.
+The final technique I adapted was to also use three different texture maps like Arc System Works to control and adjust the color and shading of the model. Which consist of the color texture for handling lit up parts, the SSS (SubSurface Scattering)* texture for controlling shaded parts and the ILM texture map which stores additional shading information for the model within each of it's RGBA color channels.
 
 Draft:
 * Why this character in particular?
