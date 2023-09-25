@@ -1,5 +1,5 @@
 ---
-title: Creating a VRChat Avatar with cel-shading
+title: Creating a VRChat Avatar using cel-shading
 cover: /blog/my-linux-journey/cover.png
 description: How I used special shading techniques to recreate Spooky Boogie from the Psycho-Pass series as a VRChat Avatar.
 created_at: 2020-12-20
@@ -15,7 +15,14 @@ The second technique known as "Inverted Hull" is used to mimic the hand drawn ou
 
 * TBC: because of how this technique works the outlines for visually overlapping geometry automatically disappears.
 
-The final technique I adapted was to also use three different texture maps like Arc System Works to control and adjust the color and shading of the model. Which consist of the color texture for handling lit up parts, the SSS (SubSurface Scattering)* texture for controlling shaded parts and the ILM texture map which stores additional shading information for the model within each of it's RGBA color channels.
+The final technique I adapted was to also use the three different texture maps Arc System Works used to control and adjust the color and shading of the model. Which consist of the color texture for handling lit up parts, the SSS (Subsurface Scattering)[<sup>1</sup>](#SSS) texture for controlling the color of shaded parts and the ILM texture map which stores additional shading information for the model within each of it's color channels. The actual meaning of the ILM abbreviation is actually highly debated within the community so let's just talk about what it does. It's a RGBA texture map which stores values from black to white, from 0 to 1 in each of it's channels each with a different purpose.
+
+* [R]{.text-red-500}ed:
+* [G]{.text-green-500}reen:
+* [B]{.text-blue-500}lue:
+* [A]{.font-bold}lpha:
+
+[1. <a name="SSS"></a>The term Subsurface Scattering usually refers to the way in which light interacts with translucent or semi-transparent materials which is not the actual case here I'm only using it to stay consistent with what the Arc System Works team called it internally.]{.text-xs}
 
 Draft:
 * Why this character in particular?
