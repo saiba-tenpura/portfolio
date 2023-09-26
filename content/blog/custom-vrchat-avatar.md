@@ -15,14 +15,12 @@ The second technique known as "Inverted Hull" is used to mimic the hand drawn ou
 
 * TBC: because of how this technique works the outlines for visually overlapping geometry automatically disappears.
 
-The final technique I adapted was to also use the three different texture maps Arc System Works used to control and adjust the color and shading of the model. Which consist of the color texture for handling lit up parts, the SSS (Subsurface Scattering)[<sup>1</sup>](#SSS) texture for controlling the color of shaded parts and the ILM texture map which stores additional shading information for the model within each of it's color channels. The actual meaning of the ILM abbreviation is actually highly debated within the community so let's just talk about what it does. It's a RGBA texture map which stores values from black to white, from 0 to 1 in each of it's channels each with a different purpose.
+The final technique I adapted was to also use the three different texture maps Arc System Works used to control and adjust the color and shading of the model. Which consist of the color texture representing the lit colors, the SSS (Subsurface Scattering) texture which is multiplied with the base color map to color shadows and the ILM texture map which stores additional shading information for the model. The actual meaning of the ILM abbreviation is actually highly debated within the community so let's just talk about what it does. It's a RGBA texture map which stores values from black to white, from 0 to 1 in each of it's color channels each with a different purpose.
 
-* [R]{.text-red-500}ed:
-* [G]{.text-green-500}reen:
-* [B]{.text-blue-500}lue:
-* [A]{.font-bold}lpha:
-
-[1. <a name="SSS"></a>The term Subsurface Scattering usually refers to the way in which light interacts with translucent or semi-transparent materials which is not the actual case here I'm only using it to stay consistent with what the Arc System Works team called it internally.]{.text-xs}
+* [R]{.text-red-500}ed: Contains the **specular intensity** value which controls where and how intense specular highlights should be. White areas have full specular highlight and black areas have no specular.
+* [G]{.text-green-500}reen: Contains the **ambient occlusion** value which controls how likely areas are to be shaded. White areas are are always lit and black areas are always shaded.
+* [B]{.text-blue-500}lue: Contains the **specular size** value which controls which areas are highlighted when lit or shaded. White areas are always highlighted and black areas are never highlighted.
+* [A]{.font-bold}lpha: Contains additional inner line art which is displayed on the model.
 
 Draft:
 * Why this character in particular?
