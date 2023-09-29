@@ -20,7 +20,12 @@ The final technique I adapted was to also use the three different texture maps A
 * [B]{.text-blue-500}lue: Contains the **specular size** value which controls which areas are highlighted when lit or shaded. White areas are always highlighted and black areas are never highlighted.
 * [A]{.font-bold}lpha: Contains additional inner line art which is displayed on the model.
 
-All of this does not only allow for a lot of creative freedom but also forces us to put a lot of intention behind our actions to achieve the desired outcome which is why I have a lot of respect for Arc System Works work not only for coming up with the shown techniques but also for their genunie passion for their craft. If you would like to try out the avatar for yourself [this]() is the link for adding it your account or if you would like to learn more about the other or similiar techniques I have added some of the sources for you to explore.
+All of this does not only allow for a lot of creative freedom but also forces us to put a lot of intention behind every action to achieve the desired outcome which is why I have a lot of respect for the Arc System Works Team not only for coming up with the shown techniques but also due to their genunie passion. If you would like to try out the avatar for yourself [this]() is the link for adding it your account or if you would like to learn more about the other or similiar techniques I have added some of the sources for you to explore.
+
+Sources:
+* Arc System Work's Technial Artist Junya C Motomura's [GDC talk](https://www.youtube.com/watch?v=yhGjCzxJV3E).
+* Activemontionpictures [Youtube Playlist](https://www.youtube.com/watch?v=UHGoy6A_DmY&list=PLv8Xik7JbQH3AtYLs3QY7jYuubckdGfnU&index=13).
+* Raymond Cripps [Youtube Video](https://www.youtube.com/watch?v=E3zHGD8V2IY) on how he used this style for his project.
 
 Draft:
 * Why this character in particular?
