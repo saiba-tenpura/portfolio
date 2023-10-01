@@ -17,6 +17,8 @@ In the following I'm going to illustrate some of the ones I used myself for this
 
 The second technique known as "Inverted Hull" is used to mimic the inked outline around a character usually present in 2D art which is achieved by utilizing a slightly bigger duplicate of the original mesh for which the normals have been flipped and a black material with backface culling has been applied to. By doing so the the surfaces of the outer shell are facing inward and because we activated backface culling all backfaces are removed leaving us with an outline.
 
+![Inverted Hull comparison](/blog/custom-vrchat-avatar/sb-inverted-hull-comparison.png)
+
 The final technique I adapted was to also use the three different texture maps Arc System Works used to control and adjust the color and shading of the model. Which consist of the base color texture representing the lit colors, the SSS (Subsurface Scattering) texture which is multiplied with the base color map to color shadows and the ILM texture map which stores additional shading information for the model. The actual meaning of the ILM abbreviation is actually highly debated within the community so let's just talk about what it does. It's a RGBA texture map which stores values from black to white, from 0 to 1 within each of it's color channels each with a different purpose.
 
 * [R]{.text-red-500}ed: Contains the **specular intensity** value which controls where and how intense specular highlights are. White areas have full specular highlight and black areas have no specular.
@@ -24,11 +26,15 @@ The final technique I adapted was to also use the three different texture maps A
 * [B]{.text-blue-500}lue: Contains the **specular size** value which controls which areas are highlighted when lit or shaded. White areas are always highlighted and black areas are never highlighted.
 * [A]{.font-bold}lpha: Contains additional inner line art which is displayed on the model.
 
-All of this does not only allow for a lot of creative freedom but also forces us to put a lot of intention behind every action to achieve the desired outcome which is why I have a lot of respect for the Arc System Works Team not only for coming up with the shown techniques but also due to their genunie passion. If you would like to try out the avatar for yourself [this]() is the link for adding it your account or if you would like to learn more about the other or similiar techniques I have added some of the sources for you to explore.
+<video autoplay loop>
+  <source src="/blog/custom-vrchat-avatar/sb-texture-maps.mp4" type="video/mp4" />
+</video>
+
+All of this does not only allow for a lot of creative freedom but also forces us to put a lot intention into every action in order to achieve the desired outcome which is why I have a lot of respect for the Arc System Works Team not only for coming up with the shown techniques but also due to their genunie passion. If you would like to try out the avatar for yourself [this]() is the link for adding it your account or if you would like to learn more about the other or similiar techniques I have added some of the sources for you to explore.
 
 Sources:
 * Arc System Work's Technial Artist Junya C Motomura's [GDC talk](https://www.youtube.com/watch?v=yhGjCzxJV3E).
-* Activemontionpictures [Youtube Playlist](https://www.youtube.com/watch?v=UHGoy6A_DmY&list=PLv8Xik7JbQH3AtYLs3QY7jYuubckdGfnU&index=13).
+* Activemontionpictures [Youtube Playlist](https://www.youtube.com/watch?v=UHGoy6A_DmY&list=PLv8Xik7JbQH3AtYLs3QY7jYuubckdGfnU&index=13) on the topic.
 * Raymond Cripps [Youtube Video](https://www.youtube.com/watch?v=E3zHGD8V2IY) on how he used this style for his project.
 
 Draft:
