@@ -12,12 +12,12 @@ Let's first talk about what makes the Guilty Gear games special since you might 
 In the following I'm going to illustrate some of the ones I used myself for this project. The first of which is to modify the normals of the 3D model since they are responsible for determining a surface's orientation towards a light source and effect how it is being shaded. Usally the normals of a model are automatically calculated but many 3D modelling programs also allow us modify them and thus we are able to dictate how light interacts with our model. One easy way to adjust the normals is to use a simplified mesh and transfer it's normals onto our target mesh for example to recreate the shading of a drawn head in 3D space we can use a sphere. The process is of course not perfect and you might need to do some additional manual tweaking.
 
 <video autoplay loop>
-  <source src="/blog/custom-vrchat-avatar/sb-normal-comparison.mp4" type="video/mp4" />
+  <source src="/blog/custom-cel-shaded-avatar/sb-normal-comparison.mp4" type="video/mp4" />
 </video>
 
 The second technique known as "Inverted Hull" is used to mimic the inked outline around a character usually present in 2D art which is achieved by utilizing a slightly bigger duplicate of the original mesh for which the normals have been flipped and a black material with backface culling has been applied to. By doing so the the surfaces of the outer shell are facing inward and because we activated backface culling all backfaces are removed leaving us with an outline.
 
-![Inverted Hull comparison](/blog/custom-vrchat-avatar/sb-inverted-hull-comparison.png)
+![Inverted Hull comparison](/blog/custom-cel-shaded-avatar/sb-inverted-hull-comparison.png)
 
 The final technique I adapted was to also use the three different texture maps Arc System Works used to control and adjust the color and shading of the model. Which consist of the base color texture representing the lit colors, the SSS (Subsurface Scattering) texture which is multiplied with the base color map to color shadows and the ILM texture map which stores additional shading information for the model. The actual meaning of the ILM abbreviation is actually highly debated within the community so let's just talk about what it does. It's a RGBA texture map which stores values from black to white, from 0 to 1 within each of it's color channels each with a different purpose.
 
@@ -27,7 +27,7 @@ The final technique I adapted was to also use the three different texture maps A
 * [A]{.font-bold}lpha: Contains additional inner line art which is displayed on the model.
 
 <video autoplay loop>
-  <source src="/blog/custom-vrchat-avatar/sb-texture-maps.mp4" type="video/mp4" />
+  <source src="/blog/custom-cel-shaded-avatar/sb-texture-maps.mp4" type="video/mp4" />
 </video>
 
 All of this does not only allow for a lot of creative freedom but also requires a lot of intention in order to achieve the desired outcome which is why I have a lot of respect for the Team at Arc System Works not only for coming up with the shown techniques but also due to their genunie passion and big attention to detail. If you yourself would like to learn more about the other or similiar techniques I added some of the great sources which I used.
