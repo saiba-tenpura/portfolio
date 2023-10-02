@@ -1,5 +1,5 @@
 ---
-title: Creating a VRChat Avatar using cel-shading
+title: Creating a cel-shaded Avatar
 cover: /blog/my-linux-journey/cover.png
 description: How I used special shading techniques to recreate Spooky Boogie from the Psycho-Pass series as a VRChat Avatar.
 created_at: 2020-12-20
@@ -30,25 +30,9 @@ The final technique I adapted was to also use the three different texture maps A
   <source src="/blog/custom-vrchat-avatar/sb-texture-maps.mp4" type="video/mp4" />
 </video>
 
-All of this does not only allow for a lot of creative freedom but also forces us to put a lot intention into every action in order to achieve the desired outcome which is why I have a lot of respect for the Arc System Works Team not only for coming up with the shown techniques but also due to their genunie passion. If you would like to try out the avatar for yourself [this]() is the link for adding it your account or if you would like to learn more about the other or similiar techniques I have added some of the sources for you to explore.
+All of this does not only allow for a lot of creative freedom but also requires a lot of intention in order to achieve the desired outcome which is why I have a lot of respect for the Team at Arc System Works not only for coming up with the shown techniques but also due to their genunie passion and big attention to detail. If you yourself would like to learn more about the other or similiar techniques I added some of the great sources which I used.
 
 Sources:
 * Arc System Work's Technial Artist Junya C Motomura's [GDC talk](https://www.youtube.com/watch?v=yhGjCzxJV3E).
 * Activemontionpictures [Youtube Playlist](https://www.youtube.com/watch?v=UHGoy6A_DmY&list=PLv8Xik7JbQH3AtYLs3QY7jYuubckdGfnU&index=13) on the topic.
 * Raymond Cripps [Youtube Video](https://www.youtube.com/watch?v=E3zHGD8V2IY) on how he used this style for his project.
-
-Draft:
-* Why this character in particular?
-  * Character in the Psycho-Pass series.
-  * In the series itself it serves as an VR avatar.
-  * Friend is huge fan of the Psycho-Pass series and a VRChat Player.
-  * A great oppurtunity to try out and learn a bunch of technologies and ideas.
-    * Special shader and lighting.
-    * Rigging.
-    * Creating a 3D-Model for a unique character concept.
-    * Weight Painting.
-    * Using the Unity Game Engine.
-* Process for the separate technologies.
-  * Bones for rigging were basically predefined by VRChat.
-  * Special shader for using ILM map like in Guilty Gear games to create anime like shading.
-* Link to VRChat download.
