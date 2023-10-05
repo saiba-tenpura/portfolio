@@ -1,7 +1,7 @@
 ---
 title: Creating a cel-shaded Avatar
 cover: /blog/custom-cel-shaded-avatar/cover.png
-description: How I used special shading techniques to recreate Spooky Boogie from the Psycho-Pass series as a VRChat Avatar.
+description: How I used cel-shading techniques to recreate Spooky Boogie from the Psycho-Pass series as a VRChat Avatar.
 created_at: 2020-12-20
 ---
 
