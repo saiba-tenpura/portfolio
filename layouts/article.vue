@@ -1,9 +1,8 @@
 <script setup lang="ts">
-  const route = useRoute()
-  const { data: post } = await useAsyncData(route.path, () => {
-    return queryContent(route.path)
-      .findOne()
-  })
+const route = useRoute();
+const { data: post } = await useAsyncData(route.path, () => {
+  return queryContent(route.path).findOne();
+});
 </script>
 
 <template>

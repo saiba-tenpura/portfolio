@@ -1,15 +1,15 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
-const onClick = () => {
-  const values = ['system', 'light', 'dark']
-  const index = values.indexOf(colorMode.preference)
-  const next = (index + 1) % values.length
-  colorMode.preference = values[next]
+const colorMode = useColorMode();
+const swapColorMode = () => {
+  const values: string[] = ['system', 'light', 'dark'];
+  const index: number = values.indexOf(colorMode.preference);
+  const next: number = (index + 1) % values.length;
+  colorMode.preference = values[next];
 }
 </script>
 
 <template>
-  <button aria-label="Color Mode" class="link-hover" @click="onClick">
+  <button aria-label="Swap Color Mode" class="link-hover" @click="swapColorMode">
     <ColorScheme>
       <template v-if="colorMode.preference === 'dark'">
         <font-awesome-icon icon="fa-moon" />

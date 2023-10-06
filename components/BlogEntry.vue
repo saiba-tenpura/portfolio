@@ -1,20 +1,20 @@
 <script setup lang="ts">
-  type BlogEntry = {
-    _path: string
-    title: string
-    description: string
-    data: string
-  }
+interface BlogEntry {
+  _path: string,
+  title: string,
+  description: string,
+  data: string,
+}
 
-  defineProps({
-    blogEntry: {
-      type: Object,
-      required: true,
-      validator: (value: BlogEntry) => {
-        return value?._path && value.title
-      }
-    },
-  })
+defineProps({
+  blogEntry: {
+    type: Object,
+    required: true,
+    validator: (value: BlogEntry) => {
+      return value?._path && value.title;
+    }
+  },
+});
 </script>
 
 <template>

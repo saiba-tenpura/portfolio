@@ -1,32 +1,38 @@
+<script lang="ts">
+interface AssociativeArray<T> {
+  [key: string]: T | undefined,
+}
+
+const positions: AssociativeArray<string> = {
+  start: "justify-start",
+  center: "justify-center",
+  end: "justify-end",
+};
+
+const types: AssociativeArray<string> = {
+  primary: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800",
+};
+</script>
+
 <script setup lang="ts">
-  defineProps({
-    icon: {
-      type: String,
+defineProps({
+  icon: {
+    type: String,
+  },
+  position: {
+    type: String,
+    default: 'start',
+    validator: (value: string) => {
+      return Object.keys(positions).includes(value);
     },
-    position: {
-      type: String,
-      default: 'start',
-      validator: (value) => {
-        return ['start', 'center', 'end'].includes(value)
-      },
+  },
+  type: {
+    type: String,
+    validator: (value: string) => {
+      return Object.keys(types).includes(value);
     },
-    type: {
-      type: String,
-      validator: (value) => {
-        return ['primary'].includes(value)
-      },
-    }
-  })
-
-  const positions = {
-    start: "justify-start",
-    center: "justify-center",
-    end: "justify-end",
   }
-
-  const types = {
-    primary: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800"
-  }
+});
 </script>
 
 <template>
