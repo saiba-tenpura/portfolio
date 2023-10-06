@@ -16,6 +16,7 @@ export default defineAppConfig({
         'HTML',
         'CSS',
         'JavaScript',
+        'TypeScript',
         'Tailwind',
         'Nuxt',
         'Vue.js',
@@ -31,6 +32,8 @@ export default defineAppConfig({
         'Laravel',
         'MySQL',
         'Bash',
+        'Python',
+        'Powershell',
       ],
     },
     {
