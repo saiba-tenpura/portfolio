@@ -11,5 +11,19 @@ body {
 }
 
 .prose img, .prose video {
-  @apply rounded-lg
+  @apply rounded-lg;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    opacity: 0;
+    transform: translateX(5rem);
+    transition: all 400ms;
+  }
+
+  .fade-in.in-view {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--order) * 100ms);
+  }
 }

@@ -14,9 +14,10 @@ defineProps({
     <h3 class="text-xl font-bold py-2">{{ category }}</h3>
     <div class="flex flex-wrap">
       <div
-        v-for="skill in skills"
+        v-for="(skill, index) in skills"
         :key="skill"
-        class="flex flex-col items-center mr-4 mb-2"
+        class="flex flex-col items-center mr-4 mb-2 fade-in"
+        :style="'--order: ' + index"
       >
         <div class="flex justify-center items-center h-[86px] w-[86px] ring-1 ring-gray-100 dark:ring-0 bg-zinc-200 dark:bg-zinc-800 rounded-lg mb-1 p-2">
           <NuxtImg
