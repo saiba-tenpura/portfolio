@@ -1,5 +1,22 @@
+<script setup lang='ts'>
+const observer: Ref<IntersectionObserver | undefined> = ref();
+const targetRef: Ref<HTMLElement | undefined> = ref();
+
+const onEnter = (target: Element) => {
+  target.classList.add('in-view');
+}
+
+onMounted(() => {
+  observer.value = onIntersect(targetRef.value.querySelectorAll('.fade-in'), onEnter, () => {});
+});
+
+onUnmounted(() => {
+  observer.value.disconnect();
+});
+</script>
+
 <template>
-  <div>
+  <div ref="targetRef">
     <section class="mb-4">
       <h1 class="text-3xl font-bold py-2">About</h1>
       <div class="text-zinc-700 dark:text-zinc-300">
