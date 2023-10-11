@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  const { data } = await useAsyncData(() => {
-    return queryContent('/blog/')
-      .sort({ created_at: -1 })
-      .find()
-  })
+const { data } = await useAsyncData(() => {
+  return queryContent('/blog/')
+    .sort({ created_at: -1 })
+    .find();
+});
 </script>
 
 <template>

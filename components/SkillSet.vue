@@ -11,7 +11,7 @@ defineProps({
   },
 });
 
-const onEnter = (target: Element) => {
+const onEnter = (target: HTMLElement) => {
   target.classList.add('opacity-100', 'translate-x-0');
   target.classList.remove('opacity-0', 'translate-x-20');
 }

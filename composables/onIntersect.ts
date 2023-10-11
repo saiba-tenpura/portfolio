@@ -1,4 +1,4 @@
-export const onIntersect = (elements: HTMLElement[], callback: Function, outCallback = (target: Element) => {}, once: boolean = true, options: object = {}) => {
+export const onIntersect = (elements: NodeListOf<HTMLElement>, callback: Function, outCallback = (target: Element) => {}, once: boolean = true, options: object = {}) => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry && entry.isIntersecting) {
