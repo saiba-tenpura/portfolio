@@ -3,7 +3,7 @@ const route = useRoute();
 const observer: Ref<IntersectionObserver | undefined> = ref();
 
 const { data: post } = await useAsyncData(route.path, () => queryContent(route.path).findOne());
-const getTocLinks = computed(() => post.value?.body.toc.links ?? []);
+const getTocLinks = computed(() => post.value?.body.toc?.links ?? []);
 
 const onEnter = (video: HTMLVideoElement) => {
   if (video.paused) {
@@ -22,12 +22,12 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
- observer.value.disconnect();
+ observer.value?.disconnect();
 });
 </script>
 
 <template>
-  <div class="grid grid-cols-[auto_minmax(0,_1fr)] gap-4">
+  <div class="grid grid-cols-1 lg:grid-cols-[auto_minmax(0,_1fr)] gap-16">
     <article id="article-navigation" class="prose prose-zinc dark:prose-invert">
       <header class="mb-4">
         <h1 class="mb-0">{{ post?.title }}</h1>
@@ -46,35 +46,9 @@ onUnmounted(() => {
           loading="lazy"
         />
       </header>
+      <TableOfContents class="lg:hidden not-prose" :links="getTocLinks" />
       <ContentDoc />
     </article>
-    <aside class="lg:flex lg:flex-col">
-      <div class="sticky top-16">
-        <h2 class="text-lg font-bold mb-2 lg:mt-16 tracking-tight text-zinc-900 dark:text-white">Table of Contents</h2>
-        <nav aria-labelledby="article-navigation">
-          <ul>
-            <li
-              v-for="link in getTocLinks"
-              :key="link.id"
-            >
-              <a
-                :href="'#' + link.id"
-                :class="{}"
-                class="text-base mb-2"
-              >{{ link.text }}</a>
-              <ul v-if="link.children">
-                <li v-for="sublink in link.children">
-                  <a
-                    :href="'#' + sublink.id"
-                    :class="{}"
-                    class="text-base mb-2"
-                  >{{ sublink.text }}</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
+    <TableOfContents class="hidden lg:flex lg:flex-col" :sticky="true" :links="getTocLinks" />
   </div>
 </template>
