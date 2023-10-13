@@ -9,6 +9,14 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
+  content: {
+    markdown: {
+      anchorLinks: {
+        depth: 4,
+        exclude: [1, 2, 3],
+      },
+    },
+  },
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
