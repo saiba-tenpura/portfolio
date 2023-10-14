@@ -46,9 +46,18 @@ onUnmounted(() => {
           loading="lazy"
         />
       </header>
-      <TableOfContents class="lg:hidden not-prose" :links="getTocLinks" />
+      <TableOfContents
+        v-if="getTocLinks.length"
+        class="lg:hidden not-prose"
+        :links="getTocLinks"
+      />
       <ContentDoc />
     </article>
-    <TableOfContents class="hidden lg:flex lg:flex-col" :sticky="true" :links="getTocLinks" />
+    <TableOfContents
+      v-if="getTocLinks.length"
+      class="hidden lg:flex lg:flex-col"
+      :sticky="true"
+      :links="getTocLinks"
+    />
   </div>
 </template>
