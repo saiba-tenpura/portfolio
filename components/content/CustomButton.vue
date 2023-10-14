@@ -10,7 +10,7 @@ const positions: AssociativeArray<string> = {
 };
 
 const types: AssociativeArray<string> = {
-  primary: "text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800",
+  primary: "text-white bg-gradient-to-r from-secondary-500 to-primary-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-secondary-300 dark:focus:ring-secondary-800",
 };
 </script>
 
