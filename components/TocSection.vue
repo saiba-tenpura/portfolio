@@ -3,6 +3,7 @@ import type { TocLink } from '@nuxt/content/dist/runtime/types';
 
 defineProps<{
  links: TocLink[];
+ current?: string;
 }>();
 </script>
 
@@ -12,8 +13,17 @@ defineProps<{
       v-for="link in links"
       :key="link.id"
     >
-      <a :href="'#' + link.id" class="block mb-2 link-hover text-base whitespace-nowrap">{{ link.text }}</a>
-      <TocSection v-if="link.children" :links="link.children" />
+      <a
+        :href="'#' + link.id"
+        class="block mb-2 link-hover text-base whitespace-nowrap"
+        :class="{ 'font-bold': link.id == current }"
+      >{{ link.text }}</a>
+      <TocSection
+        v-if="link.children"
+        class="pl-4"
+        :links="link.children"
+        :current="current"
+      />
     </li>
   </ul>
 </template>
