@@ -1,9 +1,15 @@
 <script setup lang="ts">
-  const show = ref(false)
-  const navigation = useAppConfig().navigation
-  const toggleNav = () => {
-    show.value = ! show.value
-  }
+const show = ref(false);
+const navigation = useAppConfig().navigation;
+const toggleNav = () => {
+  show.value = ! show.value;
+}
+
+const dropdownHeight = computed(() => {
+  const baseHeight = 16;
+  const itemHeight = 40;
+  return baseHeight + navigation.length * itemHeight;
+});
 </script>
 
 <template>
@@ -16,7 +22,11 @@
         <span class="sr-only">Toggle navigation menu</span>
         <font-awesome-icon :icon="show ? 'fa-xmark' : 'fa-bars'" class="link-hover" />
       </button>
-      <div class="justify-between items-center w-full md:flex md:w-auto" :class="{ hidden: ! show }" :aria-expanded="show">
+      <div
+        class="md:flex md:w-auto md:!h-full md:!opacity-100 justify-between items-center w-full overflow-hidden transition-all duration-500"
+        :class="{ 'opacity-0': ! show, 'opacity-100': show }"
+        :style="{ height: (show ? dropdownHeight : 0) + 'px' }"
+        :aria-expanded="show">
         <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
           <li v-for="link of navigation">
             <NuxtLink
