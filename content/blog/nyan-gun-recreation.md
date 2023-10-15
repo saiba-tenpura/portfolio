@@ -5,6 +5,8 @@ description: How I recreated the "Nyan Gun" from Garry's Mod using Blender and G
 created_at: 2022-04-27
 ---
 
+## Intro
+
 Back in 2022 I wanted to create a basic First-Person Shooter project using the Godot Game Engine so I could familiarize myself with it as well as the process of creating the mechanics, models and animations. So I decided to recreate the "Nyan Gun" Garry's Mod addon originally created by Rubat the workshop page can be found [here](https://steamcommunity.com/sharedfiles/filedetails/?id=123277559). I decided to do so not only because it was one of my favorite weapons in the TTT game mode but also because it offered a lot of unique challenges that would allow me to aquire a lot of new skills. A short disclaimer this is by no means a tutorial but rather a short summary of the complete process.
 
 The overall steps necessary for this project included:
@@ -13,6 +15,8 @@ The overall steps necessary for this project included:
 * Combining the two models and creating the necessary animations.
 * Creating controllers for movement and weapon handling.
 * Creating the effects for the Nyan Cat projectile and the explosion.
+
+## The Creative Process
 
 The first step in the 3D modeling process was to gather a lot of reference material on which I could base my work on. With the collected materials I got started in Blender by using images of the side and front view as overlays so I could match up common points in the pictures with the model to ensure the dimensions are correct. After I had the basic shape down I began to add more and more details over time, making sure to gather additional reference material whenever necessary to ensure that I captured every intricate detail of the object. For the arms I basically did the same by referencing gloves I found online and just adding a generic jacket sleeve.
 
@@ -28,9 +32,13 @@ Since the basic models and textures were now complete I moved onto creating the 
   <source src="/blog/nyan-gun-recreation/mp7-reload.mp4" type="video/mp4" />
 </video>
 
+## Moving to Godot
+
 After most of the creative work was completed it was now time to move over to the Godot Game Engine where I had to write the game logic incl. the basic movements walking, jumping and also the weapon handling. For the time being I decided to not use GDNative but to use GDScript instead so I could familiarize myself with the basics before taking a deeper dive into the engine. So I yet again started watching a lot of tutorials working on one small feature after another first the ability to control the camera, then controls for basic two axis movement, then jumping and gravity as well as a ground floor so the character wouldn't fall infinitely. Eventually after I had the basics down I tweaked the parameters to smooth everything out and made sure you could walk up slopes and stairs.
 
 Now the only thing left to do was to recreate the logic for the Nyan Gun with the different fire modes since the original is a combination of a submachine gun, shotgun and a grenade launcher as well as the particle effects for the Nyan Cat projectiles and explosion. The full auto mode is achieved by using raycasts where a separate object is instantiated which is responsible for rendering the trail effect, the shotgun mode is using the same technique that just fires multiple projectiles with a randomly applied offset. The grenade launcher mode on the other hand uses an actual projectile for checking for collisions and triggering the explosion. To trail effect itself was created using [this](https://github.com/OBKF/Godot-Trail-System) plugin and the explosion is particle effect for which I generated images using Blender's fluid simulation features.
+
+## Final Result
 
 Finally if we put everything we get something very similiar to the original Nyan Gun but in Godot. I actually also added the same sound effects which were used in the original but decided against using them here to avoid any sort of copyright issues.
 
