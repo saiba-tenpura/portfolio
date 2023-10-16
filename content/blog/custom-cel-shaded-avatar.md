@@ -1,21 +1,17 @@
 ---
-title: Creating a cel-shaded Avatar
+title: Unlocking the Art of Cel-Shading
 cover: /blog/custom-cel-shaded-avatar/cover.png
-description: How I used cel-shading techniques to recreate Spooky Boogie from the Psycho-Pass series as a VRChat Avatar.
+description: How I used cel-shading techniques to translate a 2D character into a 3D world.
 created_at: 2020-12-20
 ---
 
 ## Intro
 
-Back in the day I learned of the Guilty Gear series created by Arc System Works and was intrigued by the unique 3D shading techniques they used and wanted to use them in one of my own projects. Coincidentally one of my friends just had recently started playing VRChat and because of that I decided to kill two birds with one stone and create a custom avatar for him. I ultimately settled on recreating Spooky Boogie from the Psycho-Pass series not only because said friend is a big fan of the series but also because the character itself actually serves as an VR avatar.
-
-## Guilty Gear's Unique Style
-
-Let's first talk about what makes the Guilty Gear games special since you might not be familiar with them. When the series first launched it was actually a 2D game but eventually also had to make the jump to 3D and that was when they faced the challenge of having to translate their hand drawn animesque like style into an environment where lighting is usually based on physics and the viewpoint isn't necessarily fixed to a single angle. In order to tackle these challenges and successfully achieve the transition they used and improved a couple of known techniques to capture the same look and feel of the 2D predecessors.
+I like many others was very intrigued when I first learned of the unique 3D shading techniques used in the Guilty Gear series created by Arc System works. So I decided to use some of them in my own projects to shade a custom avatar for VRChat. As for the character I wanted to recreate Spooky Boogie from the Psycho-Pass series because the character itself actually serves as an VR avatar. For those uninitiated with the Guilty Gear series, it started as a 2D game but later transitioned to 3D. This presented the unique challenge of translating their hand-drawn anime-esque style of the 2D predecessors into a 3D environment, where lighting obeys the laws of physics and the viewpoint is dynamic. In this article I explore some of the techniques they used and improved to capture the same look and feel of the predecessors.
 
 ## Modifying Normals
 
-In the following I'm going to illustrate some of the ones I used myself for this project. The first of which is to modify the normals of the 3D model since they are responsible for determining a surface's orientation towards a light source and effect how it is being shaded. Usally the normals of a model are automatically calculated but many 3D modelling programs also allow us modify them and thus we are able to dictate how light interacts with our model. One easy way to adjust the normals is to use a simplified mesh and transfer it's normals onto our target mesh for example to recreate the shading of a drawn head in 3D space we can use a sphere. The process is of course not perfect and you might need to do some additional manual tweaking.
+The first of which is to modify the normals of the 3D model since they are responsible for determining a surface's orientation towards a light source and effect how it is being shaded. Usally the normals of a model are automatically calculated but many 3D modelling programs also allow us modify them and thus we are able to dictate how light interacts with our model. One easy way to adjust the normals is to use a simplified mesh and transfer it's normals onto our target mesh for example to recreate the shading of a drawn head in 3D space we can use a sphere. The process is of course not perfect and you might need to do some additional manual tweaking.
 
 <video autoplay loop>
   <source src="/blog/custom-cel-shaded-avatar/sb-normal-comparison.mp4" type="video/mp4" />
