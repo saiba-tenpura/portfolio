@@ -11,7 +11,7 @@ I like many others was very intrigued when I first learned of the unique 3D shad
 
 ## Modifying Normals
 
-The first of which is to modify the normals of the 3D model since they are responsible for determining a surface's orientation towards a light source and effect how it is being shaded. Usally the normals of a model are automatically calculated but many 3D modelling programs also allow us modify them and thus we are able to dictate how light interacts with our model. One easy way to adjust the normals is to use a simplified mesh and transfer it's normals onto our target mesh for example to recreate the shading of a drawn head in 3D space we can use a sphere. The process is of course not perfect and you might need to do some additional manual tweaking.
+The first of which is to modify the normals of the 3D model since they are responsible for determining a surface's orientation towards a light source and effect how it is being shaded. Usally the normals of a model are automatically calculated but many 3D modelling programs also allow us to modify them and thus we are able to dictate how light interacts with our model. One easy way to adjust the normals is to use a simplified mesh and transfer it's normals onto our target mesh for example to recreate the shading of a drawn head in 3D space we can use a sphere. The process is of course not perfect and you might need to do some additional manual tweaking.
 
 <video autoplay loop>
   <source src="/blog/custom-cel-shaded-avatar/sb-normal-comparison.mp4" type="video/mp4" />
@@ -19,7 +19,7 @@ The first of which is to modify the normals of the 3D model since they are respo
 
 ## Inverted Hull Method
 
-The second technique known as **Inverted Hull Method** is used to mimic the inked outline around a character usually present in 2D art which is achieved by utilizing a slightly bigger duplicate of the original mesh for which the normals have been flipped and a black material with backface culling has been applied to. By doing so the the surfaces of the outer shell are facing inward and because we activated backface culling all backfaces are removed leaving us with an outline.
+The second technique known as **Inverted Hull Method** is used to mimic the inked outline often seen in 2D art. It involves the creation of a slightly larger duplicate of the original mesh for which the normals have been flipped. A black material with backface culling is also applied to it. As a result the surface of the outer shell faces inward and the backfaces are removed, leaving us with the distinctive outline.
 
 ![Inverted Hull comparison](/blog/custom-cel-shaded-avatar/sb-inverted-hull-comparison.png)
 
