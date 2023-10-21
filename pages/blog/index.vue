@@ -14,22 +14,14 @@ onMounted(() => {
 <template>
   <section v-if="Array.isArray(data) && data.length > 0">
     <h1 class="text-3xl font-bold py-2 mb-4">Blog</h1>
-    <TransitionGroup
-      enter-from-class="opacity-0 translate-y-20"
-      enter-to-class="opacity-100 translate-y-0"
-      enter-active-class="transition duration-500 delay-order"
-      leave-from-class="opacity-100 translate-y-0"
-      leave-to-class="opacity-0 translate-y-20"
-      leave-active-class="transition duration-500 delay-order"
-    >
-      <BlogEntry
-        v-for="(blog_entry, index) in data"
-        v-show="showBlogEntries"
-        :key="blog_entry._id"
-        :blogEntry="blog_entry"
-        :style="'--order: ' + index"
-      />
-    </TransitionGroup>
+    <BlogEntry
+      v-for="(blogEntry, index) in data"
+      class="transition duration-500 delay-order"
+      :class="[showBlogEntries ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20']"
+      :key="blogEntry._id"
+      :blogEntry="blogEntry"
+      :style="'--order: ' + index"
+    />
   </section>
   <section v-else class="flex items-center justify-center">
     <div class="text-center">
