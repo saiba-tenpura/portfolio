@@ -1,12 +1,10 @@
 <script setup lang="ts">
-const route = useRoute();
 const rootEl = ref();
 const currentHeadingId: Ref<string | null> = ref('');
 const headingObserver: Ref<IntersectionObserver | undefined> = ref();
 const videoObserver: Ref<IntersectionObserver | undefined> = ref();
 
-const { data: post } = await useAsyncData(route.path, () => queryContent(route.path).findOne());
-const getTocLinks = computed(() => post.value?.body.toc?.links ?? []);
+const getDocTocLinks = (doc: any) => doc.body.toc?.links ?? [];
 
 const onHeadingEnter = (heading: Element) => {
   currentHeadingId.value = heading.getAttribute('id');
@@ -37,38 +35,42 @@ onUnmounted(() => {
 
 <template>
   <div ref="rootEl" class="grid grid-cols-1 lg:grid-cols-[auto_minmax(0,_1fr)] gap-16">
-    <article id="article-navigation" class="prose prose-zinc dark:prose-invert">
-      <header class="mb-4">
-        <h1 class="mb-0">{{ post?.title }}</h1>
-        <time
-          v-if="post?.created_at"
-          :datetime="post.created_at"
-          class="text-sm text-zinc-500 dark:text-zinc-400"
-        >
-          {{ formatDate(post.created_at) }}
-        </time>
-        <NuxtImg
-          v-if="post?.cover"
-          :src="post.cover"
-          :alt="post?.title"
-          sizes="sm:100vw md:100vw lg:100vw"
-          loading="lazy"
+    <ContentDoc v-slot="{ doc }">
+      <article id="article-navigation" class="prose prose-zinc dark:prose-invert"> 
+        <header class="mb-4">
+          <h1 class="mb-0">{{ doc.title }}</h1>
+          <time
+            v-if="doc?.created_at"
+            :datetime="doc.created_at"
+            class="text-sm text-zinc-500 dark:text-zinc-400"
+          >
+            {{ formatDate(doc.created_at) }}
+          </time>
+          <NuxtImg
+            v-if="doc?.cover"
+            :src="doc.cover"
+            :alt="doc.title"
+            sizes="sm:100vw md:100vw lg:100vw"
+            loading="lazy"
+          />
+        </header>
+        <TableOfContents
+          v-if="getDocTocLinks(doc).length"
+          class="lg:hidden not-prose"
+          aria-labelledby="article-navigation"
+          :links="getDocTocLinks(doc)"
+          :current="currentHeadingId"
         />
-      </header>
+        <ContentRenderer :value="doc" />
+      </article>
       <TableOfContents
-        v-if="getTocLinks.length"
-        class="lg:hidden not-prose"
-        :links="getTocLinks"
+        v-if="getDocTocLinks(doc).length"
+        class="hidden lg:flex lg:flex-col"
+        aria-labelledby="article-navigation"
+        :sticky="true"
+        :links="getDocTocLinks(doc)"
         :current="currentHeadingId"
       />
-      <ContentDoc />
-    </article>
-    <TableOfContents
-      v-if="getTocLinks.length"
-      class="hidden lg:flex lg:flex-col"
-      :sticky="true"
-      :links="getTocLinks"
-      :current="currentHeadingId"
-    />
+    </ContentDoc>
   </div>
 </template>
