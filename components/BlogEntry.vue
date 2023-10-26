@@ -18,8 +18,8 @@ defineProps({
 </script>
 
 <template>
-  <article class="py-4">
-    <NuxtLink :to="blogEntry._path" class="flex flex-col md:flex-row">
+  <NuxtLink :to="blogEntry._path" class="block mb-4 p-4 scale-95 rounded-lg hover:bg-zinc-200/80 hover:dark:bg-zinc-800/80 hover:scale-100 hover:shadow-lg">
+    <article class="flex flex-col md:flex-row">
       <NuxtImg
         :src="blogEntry.cover"
         :alt="blogEntry.title"
@@ -32,6 +32,6 @@ defineProps({
         <p class="mb-3 text-zinc-700 dark:text-zinc-300">{{ blogEntry.description }}</p>
         <time class="text-sm text-zinc-500 dark:text-zinc-400" :datetime="blogEntry.created_at">{{ formatDate(blogEntry.created_at) }}</time>
       </div>
-    </NuxtLink>
-  </article>
+    </article>
+  </NuxtLink>
 </template>

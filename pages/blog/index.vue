@@ -17,8 +17,8 @@ onMounted(() => {
       <h1 class="text-3xl font-bold py-2 mb-4">Blog</h1>
       <BlogEntry
         v-for="(blogEntry, index) in data"
-        class="transition duration-500 delay-order"
-        :class="[showBlogEntries ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20']"
+        class="transition duration-300"
+        :class="[showBlogEntries ? 'delay-order opacity-100 translate-y-0' : 'delay-order opacity-0 translate-y-20']"
         :key="blogEntry._id"
         :blogEntry="blogEntry"
         :style="'--order: ' + index"
