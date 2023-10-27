@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const rootEl = ref()
 const showBlogEntries = ref(false);
 const { data } = await useAsyncData(() => {
   return queryContent('/blog/')
@@ -6,13 +7,13 @@ const { data } = await useAsyncData(() => {
     .find();
 });
 
-onMounted(() => {
-  nextTick(() => showBlogEntries.value = true);
+useSafeOnMounted(rootEl, () => {
+  showBlogEntries.value = true
 });
 </script>
 
 <template>
-  <section>
+  <section ref="rootEl">
     <div v-if="Array.isArray(data) && data.length > 0">
       <h1 class="text-3xl font-bold py-2 mb-4">Blog</h1>
       <BlogEntry
