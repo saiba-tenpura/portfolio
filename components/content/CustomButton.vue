@@ -15,9 +15,10 @@ const types: AssociativeArray<string> = {
 </script>
 
 <script setup lang="ts">
-defineProps({
-  icon: {
+const props = defineProps({
+  to: {
     type: String,
+    default: null,
   },
   position: {
     type: String,
@@ -33,6 +34,12 @@ defineProps({
     },
   }
 });
+
+const component = computed(() => {
+  if (props.to) return resolveComponent('NuxtLink');
+
+  return 'button';
+});
 </script>
 
 <template>
@@ -40,13 +47,15 @@ defineProps({
     class="flex"
     :class="positions[position]"
   >
-    <button
-      type="button"
+    <component
       class="font-medium rounded-lg text-sm text-center px-5 py-2.5 mr-2 mb-2"
       :class="types[type]"
+      :is="component"
+      :to="to"
     >
-      <font-awesome-icon v-if="icon" class="mr-2" :icon="icon" size="lg" />
+      <slot name="prepend"></slot>
       <ContentSlot :use="$slots.default" unwrap="p" />
-    </button>
+      <slot name="append"></slot>
+    </component>
   </div>
 </template>
