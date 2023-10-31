@@ -3,7 +3,7 @@ const layout = 'article';
 </script>
 
 <template>
-  <div>
+  <div class="flex">
     <NuxtLayout :name="layout" />
   </div>
 </template>

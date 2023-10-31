@@ -34,7 +34,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="rootEl">
+  <div ref="rootEl" class="flex">
     <ContentDoc>
       <template v-slot="{ doc }">
         <section class="grid grid-cols-1 lg:grid-cols-[auto_minmax(0,_1fr)] gap-16">
@@ -76,15 +76,13 @@ onUnmounted(() => {
         </section>
       </template>
       <template #not-found>
-        <section class="flex items-center justify-center">
-          <div class="text-center">
-            <h1 class="mb-4 text-7xl lg:text-9xl">404</h1>
-            <p class="mb-4 text-3xl md:text-4xl">Blog entry not found!</p>
-            <p class="mb-4 text-lg">Sorry, we can't find the blog entry you're looking for.</p>
-            <CustomButton class="px-5 py-2.5" to="/blog" type="primary" position="center">
-              Back to overview
-            </CustomButton>
-          </div>
+        <section class="self-center text-center">
+          <h1 class="mb-4 text-7xl lg:text-9xl">404</h1>
+          <p class="mb-4 text-3xl md:text-4xl">Blog entry not found!</p>
+          <p class="mb-4 text-lg">Sorry, we can't find the blog entry you're looking for.</p>
+          <CustomButton class="px-5 py-2.5" to="/blog" type="primary" position="center">
+            Back to overview
+          </CustomButton>
         </section>
       </template>
     </ContentDoc>
