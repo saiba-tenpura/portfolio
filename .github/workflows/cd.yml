@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - run: corepack enable
+      - uses: actions/setup-node@v3
         with:
           node-version: 18
 
@@ -23,3 +22,28 @@ jobs:
 
       - name: Generate
         run: npm run generate
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: ./.output/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - name: Upload artifact
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.IP_ADDRESS }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          source: ./output/public
+          target: /srv/www/portfolio
