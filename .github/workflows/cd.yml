@@ -45,5 +45,6 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
           source: ./output/public
-          target: /srv/www/portfolio
+          target: ${{ secrets.TARGET_PATH }}
