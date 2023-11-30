@@ -16,7 +16,12 @@ const dropdownHeight = computed(() => {
   <nav class="max-w-4xl mx-auto py-4 px-6">
     <div class="flex flex-wrap justify-between items-center">
       <NuxtLink to="/" @click="show = false">
-        Logo
+        <NuxtImg
+          src="/images/logo.png"
+          alt="Logo"
+          height="48px"
+          loading="lazy"
+        />
       </NuxtLink>
       <button @click="toggleNav" class="inline-flex items-center p-2 rounded-lg md:hidden">
         <span class="sr-only">Toggle navigation menu</span>
