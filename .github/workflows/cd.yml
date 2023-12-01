@@ -41,10 +41,10 @@ jobs:
       - name: Upload artifact
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.IP_ADDRESS }}
-          port: ${{ secrets.PORT }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ vars.USERNAME }}
+          host: ${{ vars.IP_ADDRESS }}
+          port: ${{ vars.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
           source: '.'
-          target: ${{ secrets.TARGET_PATH }}
+          target: ${{ vars.TARGET_PATH }}
