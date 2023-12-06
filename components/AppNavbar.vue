@@ -18,8 +18,8 @@ const dropdownHeight = computed(() => {
       <NuxtLink to="/" @click="show = false">
         <NuxtImg
           src="/images/logo.png"
-          alt="Logo"
-          height="48px"
+          alt="Saiba Tenpura Logo"
+          sizes="sm:36px md:42px"
           loading="lazy"
         />
       </NuxtLink>
