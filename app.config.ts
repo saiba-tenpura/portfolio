@@ -33,6 +33,7 @@ export default defineAppConfig({
         'MySQL',
         'Bash',
         'Python',
+        'Traefik',
         'Powershell',
       ],
     },
