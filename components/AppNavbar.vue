@@ -17,7 +17,7 @@ const dropdownHeight = computed(() => {
     <div class="flex flex-wrap justify-between items-center">
       <NuxtLink to="/" @click="show = false">
         <NuxtImg
-          src="/images/logo.png"
+          src="/logo.png"
           alt="Saiba Tenpura Logo"
           sizes="sm:36px md:42px"
           loading="lazy"
