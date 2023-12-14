@@ -37,12 +37,7 @@ onUnmounted(() => {
         :style="'--order: ' + index"
       >
         <div class="flex justify-center items-center h-[86px] w-[86px] ring-1 ring-gray-100 dark:ring-0 bg-zinc-200 dark:bg-zinc-800 rounded-lg mb-1 p-2">
-          <NuxtImg
-            :src="'/images/skill-icons/' + skill.replace(/\s+/g, '-').toLowerCase() + '.svg'"
-            :alt="skill"
-            class="w-auto h-12"
-            loading="lazy"
-          />
+          <SkillIcon class="w-auto h-12" :name="skill.replace(/\s+/g, '-').toLowerCase()" />
         </div>
         <div class="whitespace-nowrap text-base text-zinc-700 dark:text-zinc-300">
           {{ skill }}

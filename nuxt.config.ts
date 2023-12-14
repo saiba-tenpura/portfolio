@@ -1,3 +1,5 @@
+import svgLoader from 'vite-svg-loader';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -47,4 +49,20 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
   ],
+  vite: {
+    plugins: [
+      svgLoader({
+        svgoConfig: {
+          plugins: [
+            {
+              name: "cleanupIds",
+              params: {
+                minify: false,
+              },
+            },
+          ],
+        },
+      }),
+    ],
+  },
 });
