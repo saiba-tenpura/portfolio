@@ -3,9 +3,12 @@ My personal web portfolio powered by [Nuxt](https://nuxt.com/), [Tailwind CSS](h
 
 ## Features
 * Index page, about page and blog pages.
-* [Nuxt Content](https://content.nuxtjs.org/) is used for writing blog entries.
-* [Nuxt Image](https://image.nuxtjs.org/) handles the automatic optimization of images.
-* Light & Dark mode switch.
+* Configure navbar, skill section and social links via the [app.config.ts](app.config.ts)
+* The icons for various tools can be used in the skill section. (Optimized, Dark & Light Mode)
+* Custom page transition.
+* [Nuxt Content](https://content.nuxtjs.org/) is used for managing the blog entries.
+* [Nuxt Image](https://image.nuxtjs.org/) handles the optimization of images.
+* [Nuxt Color Mode](https://color-mode.nuxtjs.org/) powered light & dark mode switch.
 
 ## License
 [MIT](./LICENSE)
