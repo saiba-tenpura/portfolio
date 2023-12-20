@@ -17,6 +17,8 @@ As for the technologies used in this project:
 
 I continously work on the portfolio to improve it bit by bit. Thus in order to save me the hassle of publishing every change myself I utilise Github Action workflows to automatically build and publish it on every commit. Since the portfolio basically only consists of static files I also use the Static Site Generation (SSG) of Nuxt to increase performance.
 
+In the case of the logo I wanted something to illustrate my alias *Saiba Tenpura* which can be translated as *Cyber Templar* and because of that I decided to create a sci-fi helmet. I first started by creating some basic sketches of what I had in mind. Then I moved on to create a basic headshape in blender so I could use it as size reference.
+
 Rough content ideas:
 * Describe the logo design process.
 * Continous improvement.
