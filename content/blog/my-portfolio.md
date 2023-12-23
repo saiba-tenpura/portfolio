@@ -17,7 +17,15 @@ As for the technologies used in this project:
 
 I continously work on the portfolio to improve it bit by bit. Thus in order to save me the hassle of publishing every change myself I utilise Github Action workflows to automatically build and publish it on every commit. Since the portfolio basically only consists of static files I also use the Static Site Generation (SSG) of Nuxt to increase performance.
 
-In the case of the logo I wanted something which would illustrate my alias *Saiba Tenpura* (translates to *Cyber Templar*) because of that I settled on creating a sci-fi themed helmet. I started by drawing some sketches in Krita and after I got a feel for the direction I wanted to head into I jumped over to Blender. You might ask yourself "Why Blender? Isn't it a 3D modelling software?", well yes you would be correct I decided to do so because I'm going to use the helmet for other projects in future. Another benefit of using Blender is that I have more creative freedom since I can use the Freestyle Line feature to render an SVG and continue from there. In order to ensure dimensional accuracy I began by modelling a basic 3D head and then modelled the helmet around it. I actually went through a couple of iterations and deviated from the original sketch before I had something I was actually pleased with for now I kept low on the details since the logo was going to be minimalstic anyway and I could always add them later when I actually need them. The next step was to render a SVG from the model and move on to Inkscape where I first added colors and then made the logo even more minimalistic because the rendered version still felt to cluttered to be actually readable especially when small.
+In the case of the logo I wanted something which would illustrate my alias *Saiba Tenpura* (translates to *Cyber Templar*) because of that I settled on creating a sci-fi themed helmet. I started by drawing some sketches in Krita and after I got a feel for the direction I wanted to take it into.
+
+The next step for me was to turn the sketch of the helmet into a 3D model in blender which I could reuse for other projects in the future as well. I began by modelling a basic 3D head shape that I could use to ensure the dimensions are reasonable.
+
+I actually went through a couple of iterations and deviated from the original sketch before I had something I was actually pleased with. I kept low on the details for now since my aim was to keep it minimalstic and I could always add more later when I actually need them.
+
+Another benefit of using Blender in this case is that you have more creative freedom as one is able to use the Freestyle Line feature to render an SVG of the model from different perspectives.
+
+After rendering the SVG I switched over to Inkscape added colors and because the logo still felt cluttered I made it even more minimalstic so I would still be readable even when very small.
 
 Rough content ideas:
 * Describe the logo design process.
