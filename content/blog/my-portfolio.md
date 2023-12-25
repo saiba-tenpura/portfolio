@@ -35,7 +35,11 @@ I actually went through a couple of iterations and deviated from the original sk
 
 Another benefit of using Blender in this case is that you have more creative freedom as one is able to use the Freestyle Line feature to render an SVG of the model from different perspectives.
 
+![SVG Export](/blog/my-portfolio/svg-export.png)
+
 After rendering the SVG I switched over to Inkscape added colors and because the logo still felt cluttered I made it even more minimalstic so I would still be readable even when very small.
+
+![Logo SVG Stages](/blog/my-portfolio/logo-svg-stages.png)
 
 Rough content ideas:
 * Describe the logo design process.
