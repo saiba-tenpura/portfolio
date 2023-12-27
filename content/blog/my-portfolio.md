@@ -1,13 +1,13 @@
 ---
 title: My Portfolio
 cover: /blog/my-portfolio/cover.png
-description: Are you curious about what makes my portfolio tick? Well, you're in luck you can find the details in this post, including the code and a little more.
+description: Explore the inner workings of my portfolio through this post! Dive into the code, gain insight into its tech stack and learn about the logo design process.
 created_at: 2023-12-19
 ---
 
 If you're are only here for the code then feel free to [check it out on Github](https://github.com/saiba-tenpura/portfolio).
 
-## Tech-Stack
+## Tech Stack
 
 As for the technologies used in this project:
 * [Nuxt](https://nuxt.com/) a Vue based Full Stack framework.
@@ -17,26 +17,28 @@ As for the technologies used in this project:
 * [Tailwind CSS](https://tailwindcss.com/) a utility-first CSS framework.
 * [Font Awesome](https://fontawesome.com/) as icon library.
 
-I also continously work on the portfolio to improve it bit by bit. Thus in order to save me the hassle of publishing every change myself I utilise the Github Action workflows to automatically build and publish it on every commit. Since the portfolio only consists of static files I also use the Static Site Generation (SSG) feature of Nuxt to increase performance and security.
+Continous improvement is an essential part of the development process in every software project. Thus in order to streamline the deployment process, GitHub Action workflows are used to automatically build and publish the changes of each commit. Additionally, the Static Site Generation (SSG) feature of Nuxt is implemented to enhance performance and security by generating static files.
 
 ## Logo
 
-In the case of the logo I wanted something which would illustrate my alias *Saiba Tenpura* (translates to *Cyber Templar*) and thus settled on creating a sci-fi themed helmet. I started by drawing up some sketches in Krita to get a feel for the direction I wanted to take it.
+The logo design for *Saiba Tenpura* (translated as *Cyber Templar*) my alias is illustrated by a sci-fi themed helmet. The first step in the creation of it was to draw up a couple of sketches in Krita to get a sense for the direction I wanted to take it.
 
 ![Logo Sketch](/blog/my-portfolio/logo-sketch.png)
 
-The next step was to turn the sketch of the helmet into a 3D model in Blender. I did so because I'm going to reuse the model for other projects in the future as well. I began by modelling a basic 3D head shape that I could use as reference to make sure the dimensions are realistic.
+The next step was to turn the sketch of the helmet into a 3D model in Blender. I did so because I'm going to reuse the model for other projects in the future as well. I began by modelling a basic 3D head shape that served as reference for ensuring the dimensions are realistic.
 
 ![3D Head](/blog/my-portfolio/3d-head.png)
 
-After that I actually went through a couple of iterations and deviated a bit from the original sketch before I had something that I was content with. I kept low on the details for now since my aim was to keep it minimalstic and I could always add them later when I actually needed them.
+After that I actually went through a couple of iterations and deviated slightly from the original sketches before achieving something I was content with. I kept low on the details for now since my aim was to keep it minimalstic and more could always be added later on when they were actually needed.
 
 ![3D Helmet](/blog/my-portfolio/3d-helmet.png)
 
-Another benefit of using Blender is that you have more creative freedom as you are able to use the Freestyle Line feature to render an SVG of the model from different perspectives.
+Another benefit of using Blender is the Freestyle Line feature which provides the freedom to render an SVG of the model from various perspectives.
 
 ![SVG Export](/blog/my-portfolio/svg-export.png)
 
-After rendering the SVG I switched over to Inkscape added colors and because the logo still felt cluttered I made it even more minimalstic so it would still be readable even when small.
+After rendering the SVG I transitioned to Inkscape, added colors, and made adjustments to the logo to make it more minimalistic to ensure readability, event at smaller sizes.
 
 ![Logo SVG Stages](/blog/my-portfolio/logo-svg-stages.png)
+
+Future design iterations of the logo are planed to incorporate new details and adjustments, aligning with the overall continuos spirit of the portfolio.
