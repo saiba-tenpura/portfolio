@@ -1,7 +1,9 @@
 ---
 title: My Linux journey
-cover: /blog/my-linux-journey/cover.png
 description: A short summary of my transition from Windows to Linux, my experiences on they way and my plans moving forward.
+image:
+  src: /blog/my-linux-journey/cover.png
+  alt: Screenshot of Linux Rice
 created_at: 2023-08-03
 ---
 

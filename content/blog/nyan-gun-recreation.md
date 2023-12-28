@@ -1,7 +1,9 @@
 ---
 title: Recreation of the "Nyan Gun"
-cover: /blog/nyan-gun-recreation/cover.png
 description: How I recreated the "Nyan Gun" from Garry's Mod using Blender and Godot.
+image:
+  src: /blog/nyan-gun-recreation/cover.png
+  alt: Nyan Gun
 created_at: 2022-04-27
 ---
 

@@ -1,7 +1,9 @@
 ---
 title: Unlocking the Art of Cel-Shading
-cover: /blog/custom-cel-shaded-avatar/cover.png
 description: How I used cel-shading techniques to translate a 2D character into a 3D world.
+image:
+  src: /blog/custom-cel-shaded-avatar/cover.png
+  alt: Cel-shaded avatar
 created_at: 2020-12-20
 ---
 

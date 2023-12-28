@@ -49,9 +49,9 @@ onUnmounted(() => {
                 {{ formatDate(doc.created_at) }}
               </time>
               <NuxtImg
-                v-if="doc?.cover"
-                :src="doc.cover"
-                :alt="doc.title"
+                v-if="doc?.image.src"
+                :src="doc?.image.src"
+                :alt="doc?.image.alt"
                 sizes="sm:100vw md:100vw lg:100vw"
                 loading="lazy"
               />

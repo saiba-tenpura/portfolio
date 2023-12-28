@@ -1,7 +1,9 @@
 ---
 title: My Portfolio
-cover: /blog/my-portfolio/cover.png
 description: Explore the inner workings of my portfolio through this post! Dive into the code, gain insight into its tech stack and learn about the logo design process.
+image:
+  src: /blog/my-portfolio/cover.png
+  alt: Saiba Tenpura logo
 created_at: 2023-12-19
 ---
 

@@ -3,7 +3,10 @@ interface BlogEntry {
   _path: string,
   title: string,
   description: string,
-  data: string,
+  image: {
+    src: string,
+    alt: string,
+  },
 }
 
 defineProps({
@@ -21,8 +24,8 @@ defineProps({
   <NuxtLink :to="blogEntry._path" class="block mb-4 p-4 scale-95 rounded-lg hover:bg-zinc-200/80 hover:dark:bg-zinc-800/80 hover:scale-100 hover:shadow-lg">
     <article class="flex flex-col md:flex-row">
       <NuxtImg
-        :src="blogEntry.cover"
-        :alt="blogEntry.title"
+        :src="blogEntry?.image?.src"
+        :alt="blogEntry?.image?.alt"
         sizes="sm:100vw md:100vw lg:100vw"
         class="object-cover w-full rounded-lg h-48 md:h-auto md:w-64"
         loading="lazy"
