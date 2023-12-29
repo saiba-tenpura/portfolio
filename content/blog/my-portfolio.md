@@ -4,6 +4,10 @@ description: Explore the inner workings of my portfolio through this post! Dive 
 image:
   src: /blog/my-portfolio/cover.png
   alt: Saiba Tenpura logo
+head:
+  meta:
+    - name: keywords
+      content: 'Nuxt, Portfolio, Logo Design'
 created_at: 2023-12-19
 ---
 

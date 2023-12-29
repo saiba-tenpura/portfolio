@@ -4,6 +4,10 @@ description: A short summary of my transition from Windows to Linux, my experien
 image:
   src: /blog/my-linux-journey/cover.png
   alt: Screenshot of Linux Rice
+head:
+  meta:
+    - name: keywords
+      content: 'Linux Rice, Dotfiles'
 created_at: 2023-08-03
 ---
 
