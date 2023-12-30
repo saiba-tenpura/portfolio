@@ -1,3 +1,11 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'About',
+  description: 'A short summary about me and my ambitions.',
+  ogDescription: 'A short summary about me and my ambitions.',
+});
+</script>
+
 <template>
   <div>
     <section class="mb-4">

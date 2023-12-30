@@ -3,6 +3,16 @@ import svgLoader from 'vite-svg-loader';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
+    head: {
+      title: 'Saiba Tenpura',
+      meta: [
+        { name: 'og:title', content: 'Saiba Tenpura' },
+        { name: 'description', content: 'Full Stack Developer / DevOps / Hobbyist Game Dev' },
+        { name: 'og:description', content: 'Full Stack Developer / DevOps / Hobbyist Game Dev' },
+        { name: 'og:image', content: 'https://saiba-tenpura.com/blog/my-portfolio/cover.png' },
+        { name: 'twitter:card', content: 'content_summary_large' },
+      ],
+    },
     pageTransition: {
       enterFromClass: 'opacity-0 translate-x-20',
       enterToClass: 'opacity-100 translate-x-0',

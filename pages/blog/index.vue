@@ -10,6 +10,12 @@ const { data } = await useAsyncData(() => {
 useSafeOnMounted(rootEl, () => {
   showBlogEntries.value = true
 });
+
+useSeoMeta({
+  title: 'Blog',
+  description: 'Some of my private projects I worked on.',
+  ogDescription: 'Some of my private projects I worked on.',
+});
 </script>
 
 <template>
