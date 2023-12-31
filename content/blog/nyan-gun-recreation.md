@@ -7,7 +7,7 @@ image:
 head:
   meta:
     - name: keywords
-      content: 'Nyan Gun, Blender, Godot, Garry\'s Mod'
+      content: "Nyan Gun, Blender, Godot, Garry's Mod"
 created_at: 2022-04-27
 ---
 

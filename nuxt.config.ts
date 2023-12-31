@@ -6,11 +6,26 @@ export default defineNuxtConfig({
     head: {
       title: 'Saiba Tenpura',
       meta: [
-        { name: 'og:title', content: 'Saiba Tenpura' },
-        { name: 'description', content: 'Full Stack Developer / DevOps / Hobbyist Game Dev' },
-        { name: 'og:description', content: 'Full Stack Developer / DevOps / Hobbyist Game Dev' },
-        { name: 'og:image', content: 'https://saiba-tenpura.com/blog/my-portfolio/cover.png' },
-        { name: 'twitter:card', content: 'content_summary_large' },
+        {
+          name: 'og:title',
+          content: 'Saiba Tenpura',
+        },
+        {
+          name: 'description',
+          content: 'Full Stack Developer / DevOps / Hobbyist Game Dev',
+        },
+        {
+          name: 'og:description',
+          content: 'Full Stack Developer / DevOps / Hobbyist Game Dev',
+        },
+        {
+          name: 'og:image',
+          content: 'https://saiba-tenpura.com/blog/my-portfolio/cover.png',
+        },
+        {
+          name: 'twitter:card',
+          content: 'content_summary_large',
+        },
       ],
     },
     pageTransition: {

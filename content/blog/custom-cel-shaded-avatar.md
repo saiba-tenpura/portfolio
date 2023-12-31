@@ -7,7 +7,7 @@ image:
 head:
   meta:
     - name: keywords
-      content: 'Blender, Spooky Boogie, Cel-Shading'
+      content: 'Blender, Cel-Shading, Guilty Gear, Spooky Boogie'
 created_at: 2020-12-20
 ---
 
