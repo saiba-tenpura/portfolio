@@ -13,8 +13,8 @@ useSafeOnMounted(rootEl, () => {
 
 useSeoMeta({
   title: 'Blog',
-  description: 'Some of my private projects I worked on.',
-  ogDescription: 'Some of my private projects I worked on.',
+  description: 'A couple of my personal projects.',
+  ogDescription: 'A couple of my personal projects.',
 });
 </script>
 

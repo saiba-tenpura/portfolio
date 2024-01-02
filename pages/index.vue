@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const socials = useAppConfig().socials;
+useSeoMeta({
+  title: 'Saiba Tenpura',
+  description: 'Full Stack Developer / DevOps / Hobbyist Game Dev',
+  ogDescription: 'Full Stack Developer / DevOps / Hobbyist Game Dev',
+});
 </script>
 
 <template>
