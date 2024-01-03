@@ -20,13 +20,16 @@ export default defineNuxtConfig({
         },
         {
           name: 'og:image',
-          content: 'https://saiba-tenpura.com/blog/my-portfolio/cover.png',
+          content: 'https://www.saiba-tenpura.com/blog/my-portfolio/cover.png',
         },
         {
           name: 'twitter:card',
           content: 'content_summary_large',
         },
       ],
+      htmlAttrs: {
+        lang: 'en',
+      }
     },
     pageTransition: {
       enterFromClass: 'opacity-0 translate-x-20',
@@ -73,7 +76,14 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
+    'nuxt-simple-sitemap',
   ],
+  site: {
+    url: 'https://www.saiba-tenpura.com',
+  },
+  sitemap: {
+    strictNuxtContentPaths: true,
+  },
   vite: {
     plugins: [
       svgLoader({
