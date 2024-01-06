@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deployment:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,21 +24,6 @@ jobs:
         run: npm run generate
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: build
-          path: ./.output/public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: build
-
-      - name: Upload artifact
         uses: appleboy/scp-action@master
         with:
           username: ${{ vars.USERNAME }}
@@ -46,5 +31,6 @@ jobs:
           port: ${{ vars.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-          source: '.'
+          source: './.output/public'
+          strip_components: 3
           target: ${{ vars.TARGET_PATH }}
