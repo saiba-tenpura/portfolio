@@ -86,8 +86,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/color-mode',
+    '@nuxtjs/sitemap',
     '@nuxtjs/tailwindcss',
-    'nuxt-simple-sitemap',
   ],
   site: {
     url: 'https://www.saiba-tenpura.com',
