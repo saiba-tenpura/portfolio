@@ -47,4 +47,4 @@ After rendering the SVG I transitioned to Inkscape, added colors, and made adjus
 
 ![Logo SVG Stages](/blog/my-portfolio/logo-svg-stages.png)
 
-Future design iterations of the logo are planed to incorporate new details and adjustments, aligning with the overall continuos spirit of the portfolio.
+Future design iterations of the logo are planed to incorporate new details and adjustments, aligning with the overall continuous spirit of the portfolio.
