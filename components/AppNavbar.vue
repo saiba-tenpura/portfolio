@@ -30,7 +30,13 @@ const dropdownHeight = computed(() => {
       </NuxtLink>
       <button @click="toggleNav" class="inline-flex items-center p-2 rounded-lg md:hidden">
         <span class="sr-only">Toggle navigation menu</span>
-        <font-awesome-icon :icon="show ? 'fa-xmark' : 'fa-bars'" class="link-hover" />
+        <svg class="menu-icon link-hover d-flex items-center overflow-visible" viewBox="0 0 100 100" :aria-expanded="show">
+          <g>
+            <path id="top" class="path" d="m 20,20 h 30 30 c 20,0 18.227928,30 20,55 0.0356,7.961535 0,12.5 -7.5,12.5 C 88.792524,87.5 87.022601,85.888733 80,80 L 50,50 20,20" />
+            <path id="middle" class="path" d="M 20,50 H 81" />
+            <path id="bottom" class="path" d="m 20,80 h 30 30 c 20,0 18.227928,-30 20,-55 0.0356,-7.961535 0,-12.5 -7.5,-12.5 -3.707476,0 -5.477399,1.611267 -12.5,7.5 L 50,50 20,80" />
+          </g>
+        </svg>
       </button>
       <div
         class="md:flex md:w-auto md:!h-full md:!opacity-100 justify-between items-center w-full overflow-hidden transition-all duration-500"
@@ -54,3 +60,37 @@ const dropdownHeight = computed(() => {
     </div>
   </nav>
 </template>
+
+<style scoped>
+.menu-icon {
+  @apply stroke-zinc-950 dark:stroke-zinc-100;
+  fill: none;
+  width: 1.25em;
+  stroke-width: 0.75em;
+  stroke-linecap: round;
+}
+
+.menu-icon .path {
+  stroke-linejoin: round;
+  transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, opacity 400ms 100ms;
+}
+
+.menu-icon :is(#top, #bottom) {
+  stroke-dasharray: 60 1000;
+}
+
+.menu-icon #middle {
+  stroke-dasharray: 60;
+}
+
+.menu-icon[aria-expanded="true"] :is(#top, #bottom) {
+  stroke-dasharray: 155 1000;
+  stroke-dashoffset: -155;
+}
+
+.menu-icon[aria-expanded="true"] #middle {
+  stroke-dasharray: 0 50;
+  stroke-dashoffset: 30;
+  opacity: 0;
+}
+</style>
