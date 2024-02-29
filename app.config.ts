@@ -53,6 +53,7 @@ export default defineAppConfig({
         'Gimp',
         'Godot',
         'Inkscape',
+        'LaTeX',
       ],
     },
   ],
