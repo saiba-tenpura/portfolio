@@ -1,5 +1,5 @@
 ---
-title: Neovim + Ollama - Run local LLMs as coding assistant
+title: Neovim + Ollama - Run a local LLM as coding assistant
 description: Follow this guide to utilize the power of LLMs inside of Neovim.
 image:
   src: /blog/my-portfolio/cover.png
@@ -50,13 +50,55 @@ require('gen').setup({
 vim.keymap.set({'n', 'v'}, '<leader>]', ':Gen<CR>')
 ```
 
-## 3. Adding Custom Prompts
+## 3. Usage
+
+The previously defined shortcut can be used to prompt the LLM either by selecting text marked in visual mode or inputting a prompt manually.
+
+The plugin comes equipped with a few prompts by default.
 
 ```
-
+Prompt:
+1: Ask
+2: Change
+3: Change Code
+4: Chat
+5: Enhance Code
+6: Enhance Grammar Spelling
+7: Enhance Wording
+8: Generate
+9: Make Concise
+10: Make List
+11: Make Table
+12: Review Code
+13: Summarize
+Type number and <Enter> or click with the mouse (q or empty cancels): 8
+Prompt: Write a hello world function in JavaScript.
 ```
 
-## Usage
+The resulting output:
+
+````
+```
+function helloWorld() {
+  console.log("Hello, World!");
+}
+```
+This function will print "Hello, World!" to the console when it is called.
+````
+
+## 4. Adding Custom Prompts
+
+You are also able to add your own prompts additional prompts.
+
+In the definition you can specify a base prompt, if the selection should be replaced, the regex used for extraction and the model which should be used.
+```
+require('gen').prompts['Enhance_Code_Maintainability'] = {
+  prompt = "Enhance the maintainability of the following code, only output the result in the format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+  replace = true,
+  extract = "```$filetype\n(.-)```",
+  model = "llama3"
+}
+```
 
 ## Sources
 
