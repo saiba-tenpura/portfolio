@@ -93,10 +93,10 @@ You are also able to add your own prompts additional prompts.
 In the definition you can specify a base prompt, if the selection should be replaced, the regex used for extraction and the model which should be used.
 ```
 require('gen').prompts['Enhance_Code_Maintainability'] = {
-  prompt = "Enhance the maintainability of the following code, only output the result in the format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
+  prompt = "Enhance the maintainability of the following code, $input, only output the result in the format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
   replace = true,
   extract = "```$filetype\n(.-)```",
-  model = "llama3"
+  model = "codellama"
 }
 ```
 
