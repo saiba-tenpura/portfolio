@@ -11,27 +11,29 @@ head:
 created_at: 2024-05-20
 ---
 
-ToDo: Write a small intro for the blog entry.
+Back when GitHub Copilot first released, I was able to join the technical preview and test it out for myself. During that time, I came to appreciate the convenience of having someone to pair program with integrated into my IDE.
+
+To be fair, I don't think of an AI coding assistant as an absolute must-have, but rather a convenient tool that allows one to do more in less time. As technology advances, AI will likely become an increasingly integral part of a developer's arsenal, similar to how LSPs did before them. Therefore, I have been looking for something similar ever since, without wanting to spend a lot of money on it or compromise on security by sending my code through across the internet.
+
+Enter Ollama, an open-source tool for running LLMs on your local machine, similar to Docker and its containers, which is particularly useful if you have some GPU computing power to spare that won't be utilized during regular coding otherwise anyway.
 
 ## 1. Installing Ollama
 
-Let's start off by first installing Ollama which is an open-source tool for running LLMs on your local machine akin to Docker and it's containers.
-
-If you are running Linux like me you can just run the following command to install it. Otherwise please refer to the instructions in the [official GitHub repository](https://github.com/ollama/ollama).
+So let's first start off by installing Ollama. If you are running Linux like me you can just run the following command to install it. Otherwise please refer to the instructions in the [official GitHub repository](https://github.com/ollama/ollama).
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-After the installation process has finished you can try to startup the model of your choice and since I'm mainly going to use the LLM as a coding assistant I decided to use the Code Llama model.
+After the installation process has finished you can try to startup the model of your choice and since I'm mainly going to use the LLM as a coding assistant as mentioned before I decided to use the Code Llama model.
 ```
 ollama run codellama
 ```
 
-This will automatically pull and run the 7B parameter version of the model. Feel free to play around with it for a bit. When you are done you can exit by entering `/bye`.
+This will automatically pull and run the 7B parameter version of the model.
 
 ## 2. Configure the Neovim Plugin
 
-Next add the [gen.nvim](https://github.com/David-Kunz/gen.nvim) plugin via your Neovim plugin manager of choice in my case I'm using [lazy.nvim](https://github.com/folke/lazy.nvim).
+Next add the [gen.nvim](https://github.com/David-Kunz/gen.nvim) plugin, which is going to serve as the interface between Neovim and Ollama, via your plugin manager of choice in my case I'm using [lazy.nvim](https://github.com/folke/lazy.nvim).
 ```
 require('lazy').setup({
   "David-Kunz/gen.nvim",
