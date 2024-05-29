@@ -20,27 +20,28 @@ Enter Ollama, an open-source tool for running LLMs on your local machine, simila
 ## 1. Installing Ollama
 
 So let's first start off by installing Ollama. If you are running Linux like me you can just run the following command to install it. Otherwise please refer to the instructions in the [official GitHub repository](https://github.com/ollama/ollama).
+
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-After the installation process has finished you can try to startup the model of your choice and since I'm mainly going to use the LLM as a coding assistant as mentioned before I decided to use the Code Llama model.
+After the installation process has finished, you can setup the model of your choice. In this case, I decided on the Code Llama model since it covers my primary programming languages. The following command will automatically pull and run the 7B parameter version of it.
+
 ```
 ollama run codellama
 ```
 
-This will automatically pull and run the 7B parameter version of the model.
-
 ## 2. Configure the Neovim Plugin
 
-Next add the [gen.nvim](https://github.com/David-Kunz/gen.nvim) plugin, which is going to serve as the interface between Neovim and Ollama, via your plugin manager of choice in my case I'm using [lazy.nvim](https://github.com/folke/lazy.nvim).
+Next add the [gen.nvim](https://github.com/David-Kunz/gen.nvim) plugin, which is going to serve as the interface between Neovim and Ollama, via your plugin manager of choice. In this example I'm using [lazy.nvim](https://github.com/folke/lazy.nvim).
+
 ```
 require('lazy').setup({
   "David-Kunz/gen.nvim",
 })
 ```
 
-Then you can setup the plugin by specifying the model and keyboard shortcuts you would like to use for interacting with the model.
+Then, you can set up the plugin by specifying the model, keyboard shortcuts, and other options you want to use for interacting with the model.
 
 ```
 require('gen').setup({
@@ -54,9 +55,7 @@ vim.keymap.set({'n', 'v'}, '<leader>]', ':Gen<CR>')
 
 ## 3. Usage
 
-The previously defined shortcut can be used to prompt the LLM either by selecting text marked in visual mode or inputting a prompt manually.
-
-The plugin comes equipped with a few prompts by default.
+The previously defined shortcut can be used to prompt the LLM either by selecting text marked in visual mode or inputting a prompt manually. The plugin is equipped with a few useful prompts by default.
 
 ```
 Prompt:
@@ -90,9 +89,8 @@ This function will print "Hello, World!" to the console when it is called.
 
 ## 4. Adding Custom Prompts
 
-You are also able to add your own prompts additional prompts.
+You are also able to add your own base prompts to suit it to your own needs. In the definition you can specify a base prompt, if the selection should be automatically replaced, the regex used for extraction and the LLM which should be used.
 
-In the definition you can specify a base prompt, if the selection should be replaced, the regex used for extraction and the model which should be used.
 ```
 require('gen').prompts['Enhance_Code_Maintainability'] = {
   prompt = "Enhance the maintainability of the following code, $input, only output the result in the format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
@@ -101,6 +99,8 @@ require('gen').prompts['Enhance_Code_Maintainability'] = {
   model = "codellama"
 }
 ```
+
+Depending on the specific use case, the results achieved by using different prompts and models might differ. Thus is makes sense to further experiment with the basic setup provided here to suit it to your own needs as I'm still working this out for myself.
 
 ## Sources
 
