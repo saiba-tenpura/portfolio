@@ -4,6 +4,11 @@ useSeoMeta({
   description: 'A short summary of me and my ambitions.',
   ogDescription: 'A short summary of me and my ambitions.',
 });
+
+const getAge = (birthYear: number) => {
+  const today: Date = new Date();
+  return today.getFullYear() - birthYear;
+}
 </script>
 
 <template>
@@ -12,7 +17,7 @@ useSeoMeta({
       <h1 class="text-3xl font-bold py-2">About</h1>
       <div class="text-zinc-700 dark:text-zinc-300">
         <p class="mb-4">
-          Hello I'm Jan, a dedicated 25-year-old <span class="font-bold">Full Stack Developer</span> based in Germany. I specialize in crafting web applications from the initial design all the way through to the full implementation, with a commitment to continous improvement and providing a seamless user experience.
+          Hello I'm Jan, a dedicated {{ getAge(1998) }}-year-old <span class="font-bold">Full Stack Developer</span> based in Germany. I specialize in crafting web applications from the initial design all the way through to the full implementation, with a commitment to continous improvement and providing a seamless user experience.
         </p>
         <p class="mb-4">
           In my free time, I'm an avid tech enthusiast, constantly exploring and embracing new technologies to stay at the forefront of the industry. I also enjoy customizing my Linux desktop to optimize my workfow and make it uniquely mine.
