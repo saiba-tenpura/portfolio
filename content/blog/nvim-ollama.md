@@ -1,8 +1,8 @@
 ---
 title: Neovim + Ollama - Run a local LLM as coding assistant
-description: Follow this guide to utilize the power of LLMs inside of Neovim.
+description: A short guide on how to utilize the power of LLMs inside of Neovim via Ollama.
 image:
-  src: /blog/my-portfolio/cover.png
+  src: /blog/nvim-ollama/cover.png
   alt: Neovim + Ollama
 head:
   meta:
