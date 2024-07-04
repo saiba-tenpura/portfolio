@@ -1,11 +1,11 @@
 export default defineAppConfig({
   navigation: [
     {
-      'title': 'About',
+      'text': 'About',
       'path': '/about',
     },
     {
-      'title': 'Blog',
+      'text': 'Blog',
       'path': '/blog',
     },
   ],

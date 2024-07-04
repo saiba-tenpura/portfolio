@@ -1,9 +1,7 @@
 <script setup lang="ts">
-const show = ref(false);
 const navigation = useAppConfig().navigation;
-const toggleNav = () => {
-  show.value = ! show.value;
-}
+const show: Ref<boolean> = ref(false);
+const toggleNav = () => show.value = !show.value;
 
 const dropdownHeight = computed(() => {
   const baseHeight = 16;
@@ -42,20 +40,20 @@ const dropdownHeight = computed(() => {
         class="md:flex md:w-auto md:!h-full md:!opacity-100 justify-between items-center w-full overflow-hidden transition-all duration-500"
         :class="{ 'opacity-0': ! show, 'opacity-100': show }"
         :style="{ height: (show ? dropdownHeight : 0) + 'px' }"
-        :aria-expanded="show">
-        <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
-          <li v-for="link of navigation">
-            <NuxtLink
-              :key="link.path"
-              :to="link.path"
-              active-class="bg-zinc-200 dark:bg-zinc-800 font-bold"
-              class="block p-2 rounded hover:bg-zinc-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent link-hover"
-              @click="toggleNav"
-            >
-              {{ link.title }}
-            </NuxtLink>
-          </li>
-        </ul>
+        :aria-expanded="show"
+      >
+        <div class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+          <NuxtLink
+            v-for="link of navigation"
+            :key="link.path"
+            :to="link.path"
+            active-class="bg-zinc-200 dark:bg-zinc-800 font-bold"
+            class="block p-2 rounded hover:bg-zinc-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent link-hover"
+            @click="toggleNav"
+          >
+            {{ link.text }}
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </nav>
