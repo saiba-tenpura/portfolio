@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <header id="header" class="sticky top-[-1px] bg-zinc-50/80 dark:bg-zinc-900/80 backdrop-blur z-50">
+  <header id="header" class="sticky top-[-1px] bg-neutral-50/80 dark:bg-neutral-900/80 backdrop-blur z-50">
     <AppNavbar/>
   </header>
 </template>

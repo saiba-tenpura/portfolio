@@ -34,7 +34,7 @@ useSeoMeta({
     <div v-else class="flex items-center justify-center">
       <div class="text-center">
         <h2 class="text-2xl font-bold mb-3">There are no blog entries yet!</h2>
-        <div class="text-zinc-700 dark:text-zinc-300">
+        <div class="text-neutral-700 dark:text-neutral-300">
           Please check back later when some have been added.
         </div>
       </div>

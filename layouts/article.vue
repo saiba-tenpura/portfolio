@@ -38,13 +38,13 @@ onUnmounted(() => {
     <ContentDoc>
       <template v-slot="{ doc }">
         <section class="grid grid-cols-1 lg:grid-cols-[auto_minmax(0,_1fr)] gap-16">
-          <article id="article-navigation" class="prose prose-zinc dark:prose-invert">
+          <article id="article-navigation" class="prose prose-neutral dark:prose-invert">
             <header class="mb-4">
               <h1 class="mb-0">{{ doc.title }}</h1>
               <time
                 v-if="doc?.created_at"
                 :datetime="doc.created_at"
-                class="text-sm text-zinc-500 dark:text-zinc-400"
+                class="text-sm text-neutral-500 dark:text-neutral-400"
               >
                 {{ formatDate(doc.created_at) }}
               </time>

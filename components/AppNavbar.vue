@@ -47,8 +47,8 @@ const dropdownHeight = computed(() => {
             v-for="link of navigation"
             :key="link.path"
             :to="link.path"
-            active-class="bg-zinc-200 dark:bg-zinc-800 font-bold"
-            class="block p-2 rounded hover:bg-zinc-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent link-hover"
+            active-class="bg-neutral-200 dark:bg-neutral-800 font-bold"
+            class="block p-2 rounded hover:bg-neutral-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent link-hover"
             @click="toggleNav"
           >
             {{ link.text }}
@@ -61,7 +61,7 @@ const dropdownHeight = computed(() => {
 
 <style scoped>
 .menu-icon {
-  @apply stroke-zinc-950 dark:stroke-zinc-100;
+  @apply stroke-neutral-950 dark:stroke-neutral-100;
   fill: none;
   width: 1.25em;
   stroke-width: 0.75em;

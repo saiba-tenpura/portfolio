@@ -36,10 +36,10 @@ onUnmounted(() => {
         class="flex flex-col items-center mr-4 mb-2 transition duration-500 opacity-0 translate-x-20 delay-order"
         :style="'--order: ' + index"
       >
-        <div class="flex justify-center items-center h-[86px] w-[86px] ring-1 ring-gray-100 dark:ring-0 bg-zinc-200 dark:bg-zinc-800 rounded-lg mb-1 p-2">
+        <div class="flex justify-center items-center h-[86px] w-[86px] ring-1 ring-gray-100 dark:ring-0 bg-neutral-200 dark:bg-neutral-800 rounded-lg mb-1 p-2">
           <SkillIcon class="w-auto h-12" :name="skill.replace(/\s+/g, '-').toLowerCase()" />
         </div>
-        <div class="whitespace-nowrap text-base text-zinc-700 dark:text-zinc-300">
+        <div class="whitespace-nowrap text-base text-neutral-700 dark:text-neutral-300">
           {{ skill }}
         </div>
       </div>
