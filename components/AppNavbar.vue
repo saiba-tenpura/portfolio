@@ -11,7 +11,7 @@ const dropdownHeight = computed(() => {
 </script>
 
 <template>
-  <nav class="max-w-4xl mx-auto px-4 py-4 lg:px-0">
+  <nav class="max-w-6xl mx-auto px-6 py-4">
     <div class="flex flex-wrap justify-between items-center">
       <NuxtLink to="/" @click="show = false">
         <div class="flex">
