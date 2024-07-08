@@ -5,7 +5,7 @@ const toggleNav = () => show.value = !show.value;
 
 const dropdownHeight = computed(() => {
   const baseHeight = 16;
-  const itemHeight = 40;
+  const itemHeight = 48;
   return baseHeight + navigation.length * itemHeight;
 });
 </script>
@@ -37,18 +37,18 @@ const dropdownHeight = computed(() => {
         </svg>
       </button>
       <div
-        class="md:flex md:w-auto md:!h-full md:!opacity-100 justify-between items-center w-full overflow-hidden transition-all duration-500"
+        class="justify-between items-center w-full overflow-hidden transition-all duration-500 md:flex md:w-auto md:!h-full md:overflow-visible md:!opacity-100"
         :class="{ 'opacity-0': ! show, 'opacity-100': show }"
         :style="{ height: (show ? dropdownHeight : 0) + 'px' }"
         :aria-expanded="show"
       >
-        <div class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+        <div class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8">
           <NuxtLink
             v-for="link of navigation"
             :key="link.path"
             :to="link.path"
             active-class="bg-neutral-200 dark:bg-neutral-800 font-bold"
-            class="block p-2 rounded hover:bg-neutral-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent link-hover"
+            class="block m-1 p-2 rounded hover:bg-neutral-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent link-hover"
             @click="toggleNav"
           >
             {{ link.text }}
