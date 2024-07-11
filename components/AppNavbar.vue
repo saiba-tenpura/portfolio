@@ -42,7 +42,7 @@ const dropdownHeight = computed(() => {
         :style="{ height: (show ? dropdownHeight : 0) + 'px' }"
         :aria-expanded="show"
       >
-        <div class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8">
+        <div class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
           <NuxtLink
             v-for="link of navigation"
             :key="link.path"
