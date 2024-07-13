@@ -34,11 +34,12 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/x-icon',
-          href: 'favicon.ico',
+          href: '/favicon.ico',
         },
         {
           rel: 'apple-touch-icon',
-          href: 'apple-touch-icon.png',
+          type: 'image/png',
+          href: '/apple-touch-icon.png',
         },
       ],
     },
