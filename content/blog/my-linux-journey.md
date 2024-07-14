@@ -29,7 +29,7 @@ At the time I was amazed by the beautiful setups some people had come up with, t
 
 In my latest addition I added configuration files to allow for the usage of Wayland as a display server inplace of Xorg so I could try it out on my laptop. I'm also planing to move my main system to Wayland at some point in the future, migrate the Xorg related configuration files to a separate branch and remove them from the main branch to make it less cluttered.
 
-::CustomButton{.no-underline href="https://github.com/saiba-tenpura/dotfiles" position="center" type="primary"}
+::CustomButton{.no-underline to="https://github.com/saiba-tenpura/dotfiles" position="center" type="primary"}
 Check out my dotfiles!
 
 #prepend

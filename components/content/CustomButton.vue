@@ -36,7 +36,9 @@ const props = defineProps({
 });
 
 const component = computed(() => {
-  if (props.to) return resolveComponent('NuxtLink');
+  if (props.to) {
+    return resolveComponent('NuxtLink');
+  }
 
   return 'button';
 });
