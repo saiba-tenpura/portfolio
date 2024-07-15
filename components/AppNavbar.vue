@@ -18,12 +18,9 @@ const dropdownHeight = computed(() => {
           <NuxtImg
             src="/logo.png"
             alt="Logo"
-            sizes="sm:32px md:36px"
+            sizes="sm:96px md:108px"
             loading="lazy"
           />
-          <div class="self-end text-2xl font-bold ml-1">
-            Saiba Tenpura
-          </div>
         </div>
       </NuxtLink>
       <button @click="toggleNav" class="inline-flex items-center p-2 rounded-lg md:hidden">
