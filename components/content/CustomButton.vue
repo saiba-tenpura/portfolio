@@ -1,16 +1,12 @@
 <script lang="ts">
-interface AssociativeArray<T> {
-  [key: string]: T | undefined,
-}
-
-const positions: AssociativeArray<string> = {
+const positions: Record<string, string> = {
   start: "justify-start",
   center: "justify-center",
   end: "justify-end",
 };
 
-const types: AssociativeArray<string> = {
-  primary: "text-neutral-100 bg-gradient-to-r from-secondary-500 to-primary-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-secondary-300 dark:focus:ring-secondary-800",
+const types: Record<string, string> = {
+  primary: "bg-gradient-to-r from-primary-500 to-secondary-500 text-neutral-100 no-underline hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800",
 };
 </script>
 
