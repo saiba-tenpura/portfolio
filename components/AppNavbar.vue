@@ -28,7 +28,7 @@ const dropdownHeight = computed(() => {
         </svg>
       </button>
       <div
-        class="justify-between items-center w-full overflow-hidden transition-all duration-500 md:flex md:w-auto md:!h-full md:overflow-visible md:!opacity-100"
+        class="w-full overflow-hidden transition-all duration-500 md:w-auto md:!h-full md:overflow-visible md:!opacity-100"
         :class="{ 'opacity-0': ! show, 'opacity-100': show }"
         :style="{ height: (show ? dropdownHeight : 0) + 'px' }"
         :aria-expanded="show"
