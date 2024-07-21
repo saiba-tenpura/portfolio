@@ -10,6 +10,21 @@ useSeoMeta({
 
 <template>
   <section class="flex items-center justify-center">
+    <TresCanvas class="-z-50" window-size>
+      <TresAmbientLight :intensity="1" />
+      <TresDirectionalLight
+        cast-shadow
+        :intensity="1"
+        :position="[0, 2, 5]"
+      />
+      <TresPerspectiveCamera :position="[0, 1, 5]" :look-at="[0, 0, 0]" />
+      <Suspense>
+        <TresMesh>
+          <TresSphereGeometry :args="[1, 32, 32]" />
+          <TresMeshToonMaterial color="#233a76" />
+        </TresMesh>
+      </Suspense>
+    </TresCanvas>
     <div class="text-center">
       <h1 class="text-3xl font-bold py-2">Saiba Tenpura</h1>
       <section id="title-animation" class="h-7 text-lg overflow-hidden">

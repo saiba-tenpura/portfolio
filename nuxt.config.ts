@@ -89,6 +89,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/sitemap',
     '@nuxtjs/tailwindcss',
+    '@tresjs/nuxt',
   ],
   site: {
     url: 'https://www.saiba-tenpura.com',

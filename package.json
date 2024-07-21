@@ -23,5 +23,9 @@
     "@types/node": "^20",
     "nuxt": "^3.8.0",
     "vite-svg-loader": "^5.1.0"
+  },
+  "dependencies": {
+    "@tresjs/nuxt": "^3.0.2",
+    "three": "^0.166.1"
   }
 }
