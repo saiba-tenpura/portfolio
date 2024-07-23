@@ -26,18 +26,18 @@ const data = reactive({
 });
 
 // Local variables
+let _cut;
 let _timer = null;
 let _throttle = null;
-let _cut;
 
 // Functions
-function clear () {
+function clear() {
   _timer && clearInterval(_timer);
   _throttle && clearTimeout(_throttle);
   _timer = null;
 }
 
-function start () {
+function start() {
   if (data.show) {
     return;
   }
@@ -52,16 +52,16 @@ function start () {
   }
 }
 
-function increase (num) {
+function increase(num) {
   data.percent = Math.min(100, Math.floor(data.percent + num));
 }
 
-function finish () {
+function finish() {
   data.percent = 100;
   hide();
 }
 
-function hide () {
+function hide() {
   clear();
   setTimeout(() => {
     data.show = false;
@@ -71,7 +71,7 @@ function hide () {
   }, 500);
 }
 
-function startTimer () {
+function startTimer() {
   data.show = true;
   _cut = 10000 / Math.floor(props.duration);
   _timer = setInterval(() => {
@@ -95,7 +95,6 @@ onBeforeUnmount(() => clear);
     }"
     :style="{
       width: `${data.percent}%`,
-      left: data.left,
       height: `${props.height}px`,
       opacity: data.show ? 1 : 0,
       backgroundSize: `${(100 / data.percent) * 100}% auto`,
