@@ -11,11 +11,11 @@ const dropdownHeight = computed(() => {
 </script>
 
 <template>
-  <nav class="max-w-6xl mx-auto px-4 py-4 md:px-6">
+  <nav class="max-w-7xl mx-auto p-4">
     <div class="flex flex-wrap justify-between items-center">
       <NuxtLink to="/" @click="show = false">
         <span class="sr-only">Logo</span>
-        <Logo class="h-8 md:h-10 w-auto" />
+        <Logo class="h-8 w-auto" />
       </NuxtLink>
       <button @click="toggleNav" class="inline-flex items-center p-2 rounded-lg md:hidden">
         <span class="sr-only">Toggle navigation menu</span>
