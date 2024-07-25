@@ -14,7 +14,7 @@ withDefaults(defineProps<{
 <template>
   <aside>
     <div :class="{ 'sticky top-32': sticky }">
-      <h2 class="text-lg font-bold mb-2 tracking-tight text-neutral-900 dark:text-neutral-100" :class="{ 'mt-10': sticky }">Table of Contents</h2>
+      <h2 class="text-2xl font-bold mb-2 tracking-tight text-neutral-900 dark:text-neutral-100" :class="{ 'mt-10': sticky }">Table of Contents</h2>
       <nav :aria-labelledby="ariaLabelledby">
         <TocSection :links="links" :current="current" />
       </nav>

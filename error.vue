@@ -17,8 +17,8 @@ const handleError = () => clearError({ redirect: '/' });
   <main class="flex min-h-screen">
     <section class="flex flex-auto items-center justify-center">
       <div class="text-center">
-        <h1 class="mb-4 text-7xl lg:text-9xl">{{ error.statusCode }}</h1>
-        <p class="mb-4 text-lg">{{ error.message }}</p>
+        <h1 class="text-7xl mb-3">{{ error.statusCode }}</h1>
+        <p class="text-lg mb-5">{{ error.message }}</p>
         <CustomButton class="px-5 py-2.5" type="primary" position="center" @click="handleError">
           Back to home
         </CustomButton>

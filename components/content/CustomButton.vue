@@ -46,7 +46,7 @@ const component = computed(() => {
     :class="positions[position]"
   >
     <component
-      class="font-medium rounded-lg text-sm text-center px-5 py-2.5 mr-2 mb-2"
+      class="text-center text-sm rounded-lg px-5 py-2.5 mr-2 mb-2"
       :class="types[type]"
       :is="component"
       :to="to"

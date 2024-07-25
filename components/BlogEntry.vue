@@ -31,7 +31,7 @@ defineProps({
         loading="lazy"
       />
       <div class="flex flex-col justify-between p-4">
-        <h2 class="text-lg font-bold mb-2 tracking-tight text-neutral-900 dark:text-neutral-100">{{ blogEntry.title }}</h2>
+        <h2 class="text-xl font-bold mb-1 tracking-tight text-neutral-900 dark:text-neutral-100">{{ blogEntry.title }}</h2>
         <p class="mb-3 text-neutral-700 dark:text-neutral-200">{{ blogEntry.description }}</p>
         <time class="text-sm text-neutral-500 dark:text-neutral-400" :datetime="blogEntry.created_at">{{ formatDate(blogEntry.created_at) }}</time>
       </div>

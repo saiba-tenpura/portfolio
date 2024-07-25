@@ -27,7 +27,7 @@ onUnmounted(() => {
 
 <template>
   <div class="mb-4">
-    <h3 class="text-xl font-bold py-2">{{ category }}</h3>
+    <h3 class="text-2xl font-bold py-2">{{ category }}</h3>
     <div class="flex flex-wrap">
       <div
         ref="targetRefs"

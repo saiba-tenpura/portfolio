@@ -9,7 +9,7 @@ const skillSets: SkillSet[] = useAppConfig().skillSets;
 
 <template>
   <section>
-    <h2 class="text-2xl font-bold py-2">Skills</h2>
+    <h2 class="text-3xl font-bold py-2">Skills</h2>
     <SkillSet
       v-for="(skillSet) in skillSets"
       :key="skillSet.category"

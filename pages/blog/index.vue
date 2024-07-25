@@ -21,7 +21,7 @@ useSeoMeta({
 <template>
   <section ref="rootEl">
     <div v-if="Array.isArray(data) && data.length > 0">
-      <h1 class="text-3xl font-bold py-2 mb-4">Blog</h1>
+      <h1 class="text-4xl font-bold py-2 mb-4">Blog</h1>
       <BlogEntry
         v-for="(blogEntry, index) in data"
         class="transition duration-300"
@@ -33,7 +33,7 @@ useSeoMeta({
     </div>
     <div v-else class="flex items-center justify-center">
       <div class="text-center">
-        <h2 class="text-2xl font-bold mb-3">There are no blog entries yet!</h2>
+        <h2 class="text-3xl font-bold mb-3">There are no blog entries yet!</h2>
         <div class="text-neutral-700 dark:text-neutral-300">
           Please check back later when some have been added.
         </div>
