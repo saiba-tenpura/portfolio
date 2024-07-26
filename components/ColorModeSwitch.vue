@@ -9,7 +9,7 @@ const swapColorMode = () => {
 </script>
 
 <template>
-  <button aria-label="Swap Color Mode" class="link-hover" @click="swapColorMode">
+  <button aria-label="Swap Color Mode" class="hover:text-neutral-300 dark:hover:text-neutral-400" @click="swapColorMode">
     <ColorScheme>
       <template v-if="colorMode.preference === 'dark'">
         <font-awesome-icon icon="fa-moon" />

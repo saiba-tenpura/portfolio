@@ -21,7 +21,7 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :to="blogEntry._path" class="block mb-4 p-4 rounded-lg hover:shadow-lg max-lg:bg-neutral-200/40 max-lg:dark:bg-neutral-800/40 lg:hover:bg-neutral-200/40 lg:hover:dark:bg-neutral-800/40 lg:hover:scale-105">
+  <NuxtLink :to="blogEntry._path" class="block mb-4 p-4 rounded-lg hover:shadow-lg max-lg:bg-neutral-200/50 max-lg:dark:bg-neutral-800/50 lg:hover:bg-neutral-200/40 lg:hover:dark:bg-neutral-800/40 lg:hover:scale-105">
     <article class="flex flex-col md:flex-row">
       <NuxtImg
         :src="blogEntry?.image?.src"

@@ -18,7 +18,7 @@ useSeoMeta({
         </div>
       </section>
       <div class="py-2">
-        <NuxtLink v-for="(link, social) in socials" :to="link" class="link-hover" target="_blank">
+        <NuxtLink v-for="(link, social) in socials" :to="link" class="hover:text-neutral-300 dark:hover:text-neutral-400" target="_blank">
           <font-awesome-icon :icon="'fa-brands fa-' + social" size="xl" />
         </NuxtLink>
       </div>

@@ -19,7 +19,7 @@ const dropdownHeight = computed(() => {
       </NuxtLink>
       <button @click="toggleNav" class="inline-flex items-center p-2 rounded-lg md:hidden">
         <span class="sr-only">Toggle navigation menu</span>
-        <svg class="menu-icon link-hover d-flex items-center overflow-visible" viewBox="0 0 100 100" :aria-expanded="show">
+        <svg class="menu-icon d-flex items-center overflow-visible hover:text-neutral-300 dark:hover:text-neutral-400" viewBox="0 0 100 100" :aria-expanded="show">
           <g>
             <path id="top" class="path" d="m 20,20 h 30 30 c 20,0 18.227928,30 20,55 0.0356,7.961535 0,12.5 -7.5,12.5 C 88.792524,87.5 87.022601,85.888733 80,80 L 50,50 20,20" />
             <path id="middle" class="path" d="M 20,50 H 81" />
@@ -39,7 +39,7 @@ const dropdownHeight = computed(() => {
             :key="link.path"
             :to="link.path"
             active-class="bg-neutral-200 dark:bg-neutral-800 font-bold"
-            class="block m-1 p-2 rounded hover:bg-neutral-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent link-hover"
+            class="block m-1 p-2 rounded hover:bg-neutral-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent hover:text-neutral-300 dark:hover:text-neutral-400"
             @click="toggleNav"
           >
             {{ link.text }}

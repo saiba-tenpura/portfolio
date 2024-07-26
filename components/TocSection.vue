@@ -14,9 +14,9 @@ defineProps<{
       :key="link.id"
     >
       <a
-        :href="'#' + link.id"
-        class="block mb-2 link-hover text-base whitespace-nowrap"
+        class="block text-base whitespace-nowrap mb-2 hover:text-neutral-300 dark:hover:text-neutral-400"
         :class="{ 'font-bold': link.id == current }"
+        :href="'#' + link.id"
       >{{ link.text }}</a>
       <TocSection
         v-if="link.children"
