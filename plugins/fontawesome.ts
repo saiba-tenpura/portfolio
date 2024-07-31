@@ -10,5 +10,5 @@ config.autoAddCss = false;
 library.add(faBars, faDisplay, faGithub, faMoon, faSun, faXmark);
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.component('FontAwesomeIcon', FontAwesomeIcon, {});
+  nuxtApp.vueApp.component('FontAwesomeIcon', FontAwesomeIcon);
 });
