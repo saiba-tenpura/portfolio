@@ -6,7 +6,10 @@ const positions: Record<string, string> = {
 };
 
 const types: Record<string, string> = {
-  primary: "bg-gradient-to-r from-primary-500 to-secondary-500 text-neutral-100 no-underline hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800",
+  'primary': "bg-primary-500 text-neutral-100 no-underline hover:bg-primary-600 hover:text-neutral-300 focus:ring-2 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800",
+  'primary-to-secondary': "bg-gradient-to-r from-primary-500 to-secondary-500 text-neutral-100 no-underline hover:from-primary-600 hover:to-secondary-600 focus:ring-2 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800",
+  'secondary': "bg-secondary-500 text-neutral-100 no-underline hover:bg-secondary-600 hover:text-neutral-300 focus:ring-2 focus:outline-none focus:ring-secondary-300 dark:focus:ring-secondary-800",
+  'secondary-to-primary': "bg-gradient-to-r from-secondary-500 to-primary-500 text-neutral-100 no-underline hover:from-secondary-600 hover:to-primary-600 focus:ring-2 focus:outline-none focus:ring-secondary-300 dark:focus:ring-secondary-800",
 };
 </script>
 
