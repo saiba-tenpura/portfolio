@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const socials = useAppConfig().socials;
 const roles = ['Full Stack Developer', 'DevOps', 'Hobbyist Game Dev'];
+
 useSeoMeta({
   title: 'Saiba Tenpura',
   description: roles.join(' / '),
