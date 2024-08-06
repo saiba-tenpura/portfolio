@@ -1,5 +1,5 @@
 <script lang="ts">
-const types: Record<string, string> = {
+const variants: Record<string, string> = {
   'primary': 'bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800',
   'primary-to-secondary': 'bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 focus:ring-primary-300 dark:focus:ring-primary-800',
   'secondary': 'bg-secondary-500 hover:bg-secondary-600 focus:ring-secondary-300 dark:focus:ring-secondary-800',
@@ -9,33 +9,24 @@ const types: Record<string, string> = {
 
 <script setup lang="ts">
 const props = defineProps({
-  to: {
-    type: String,
-    default: null,
+  as: {
+    type: [String, Object],
+    default: 'button',
   },
-  type: {
+  variant: {
     type: String,
     validator: (value: string) => {
-      return Object.keys(types).includes(value);
+      return Object.keys(variants).includes(value);
     },
-  }
-});
-
-const component = computed(() => {
-  if (props.to) {
-    return resolveComponent('NuxtLink');
-  }
-
-  return 'button';
+  },
 });
 </script>
 
 <template>
   <component
+    :is="props.as"
     class="text-center text-sm text-neutral-100 no-underline rounded-lg px-5 py-2.5 mr-2 mb-2 hover:text-neutral-300 focus:ring-2 focus:outline-none"
-    :class="types[type]"
-    :is="component"
-    :to="to"
+    :class="variants[variant]"
   >
     <slot name="prepend"></slot>
     <ContentSlot :use="$slots.default" unwrap="p" />

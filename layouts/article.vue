@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components';
+
 const rootEl = ref();
 const currentHeadingId: Ref<string | null> = ref('');
 const headingObserver: Ref<IntersectionObserver | undefined> = ref();
@@ -80,8 +82,8 @@ onUnmounted(() => {
           <h1 class="mb-4 text-7xl lg:text-9xl">404</h1>
           <p class="mb-4 text-3xl md:text-4xl">Blog entry not found!</p>
           <p class="mb-4 text-lg">Sorry, we can't find the blog entry you're looking for.</p>
-          <CustomButton class="px-5 py-2.5" to="/blog" type="primary">
-            Back to overview
+          <CustomButton class="px-5 py-2.5" variant="primary" :as="NuxtLink" to="/blog">
+            Return to overview
           </CustomButton>
         </section>
       </template>
