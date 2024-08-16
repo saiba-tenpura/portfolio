@@ -7,6 +7,7 @@ interface BlogEntry {
     src: string,
     alt: string,
   },
+  created_at: string,
 }
 
 defineProps({
