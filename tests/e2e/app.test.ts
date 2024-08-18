@@ -1,5 +1,5 @@
-import { setup } from '@nuxt/test-utils/e2e';
-import { describe, test, expect } from 'vitest';
+import { $fetch, fetch, setup } from '@nuxt/test-utils/e2e';
+import { describe, expect, test } from 'vitest';
 
 describe('app', async () => {
   await setup();
@@ -16,4 +16,9 @@ describe('app', async () => {
       expect(html).toMatch(heading + '</h1>');
     });
   }
+
+  test('404 error page', async () => {
+    const response = await fetch('/non-existent').then(r => r.text());
+    expect(response).toContain('Page not found:');
+  });
 });
