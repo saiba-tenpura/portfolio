@@ -1,4 +1,4 @@
-import { $fetch, fetch, setup } from '@nuxt/test-utils/e2e';
+import { fetch, setup, createPage } from '@nuxt/test-utils/e2e';
 import { describe, expect, test } from 'vitest';
 
 describe('app', async () => {
@@ -10,10 +10,10 @@ describe('app', async () => {
     '/blog': 'Blog',
   };
 
-  for (const [page, heading] of Object.entries(pages)) {
-    test('page: ' + page + ' to contain heading: ' + heading, async () => {
-      const html = await $fetch<string>(page);
-      expect(html).toMatch(heading + '</h1>');
+  for (const [path, heading] of Object.entries(pages)) {
+    test('page: ' + path + ' to contain heading: ' + heading, async () => {
+      const page = await createPage(path);
+      expect(await page.getByRole('heading', { name: heading }).isVisible()).toBe(true);
     });
   }
 
