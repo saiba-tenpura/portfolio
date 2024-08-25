@@ -23,7 +23,7 @@ As for the technologies used in this project:
 * [Tailwind CSS](https://tailwindcss.com/) a utility-first CSS framework.
 * [Font Awesome](https://fontawesome.com/) as icon library.
 
-Continous improvement is an essential part of the development process in every software project. Thus in order to streamline the deployment process, GitHub Action workflows are used to automatically build and publish the changes of each commit. Additionally, the Static Site Generation (SSG) feature of Nuxt is implemented to enhance performance and security by generating static files.
+Continuous improvement is an essential part of the development process in every software project. Thus in order to streamline the deployment process, GitHub Action workflows are used to automatically build and publish the changes of each commit. Additionally, the Static Site Generation (SSG) feature of Nuxt is implemented to enhance performance and security by generating static files.
 
 ## Logo
 
@@ -35,7 +35,7 @@ The next step was to turn the sketch of the helmet into a 3D model in Blender. I
 
 ![3D Head](/blog/my-portfolio/3d-head.png)
 
-After that I actually went through a couple of iterations and deviated slightly from the original sketches before achieving something I was content with. I kept low on the details for now since my aim was to keep it minimalstic and more could always be added later on when they were actually needed.
+After that I actually went through a couple of iterations and deviated slightly from the original sketches before achieving something I was pleased with. I kept low on the details for now since my aim was to keep it minimalistic and more could always be added later on when they were actually needed.
 
 ![3D Helmet](/blog/my-portfolio/3d-helmet.png)
 
