@@ -20,6 +20,8 @@ As for the technologies used in this project:
   * [Nuxt Content](https://content.nuxtjs.org/) module for managing the markdown based blog entries.
   * [Nuxt Image](https://image.nuxtjs.org/) module for handling image optimizations.
   * [Nuxt Color Mode](https://color-mode.nuxtjs.org/) module for handling light & dark mode switching.
+  * [Nuxt Testutils](https://nuxt.com/docs/getting-started/testing) modules is used to perform End-to-End, component and unit testing.
+  * [Nuxt Sitemap](https://nuxtseo.com/sitemap/getting-started/installation) module for generating a sitemap.
 * [Tailwind CSS](https://tailwindcss.com/) a utility-first CSS framework.
 * [Font Awesome](https://fontawesome.com/) as icon library.
 
