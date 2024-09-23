@@ -28,6 +28,7 @@ export default defineNuxtConfig({
         },
       ],
       htmlAttrs: {
+        class: 'dark',
         lang: 'en',
       },
       link: [
@@ -68,9 +69,6 @@ export default defineNuxtConfig({
       '@fortawesome/fontawesome-svg-core',
     ],
   },
-  colorMode: {
-    classSuffix: '',
-  },
   content: {
     markdown: {
       anchorLinks: {
@@ -87,7 +85,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/test-utils/module',
-    '@nuxtjs/color-mode',
     '@nuxtjs/sitemap',
     '@nuxtjs/tailwindcss',
   ],
