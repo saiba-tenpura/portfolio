@@ -17,7 +17,7 @@ export default <Partial<Config>>{
           50:  '#e6f1fe',
           100: '#cee3fd',
           200: '#9cc7fc',
-          300: '#6babfa',
+          300: '#61a6fa',
           400: '#398ff9',
           500: '#0874f7',
           600: '#065cc6',
