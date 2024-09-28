@@ -32,7 +32,7 @@ Then I continued by using Blenders shader nodes to create procedural textures fo
 
 ![MP7 textured](/blog/nyan-gun-recreation/mp7-textured.png)
 
-Since the basic models and textures were now complete I moved onto creating the four animations I needed for drawing, firing and reloading the weapon as well as a simple idle/walk cycle. In order to be able to create the necessary animations I first had to rig and weight paint the models which involves the creation of a digital skeleton, where each bone controls and deforms specific parts of the model based on an assigned weight. As for defining the movement of each action this is achieved by setting specific points which define the state of the 3D model across a timeline aka. keyframes. Said keyframes are defined for key moments in the animation and the gaps between them are automatically interpolated by Blender to create a continous motion.
+Since the basic models and textures were now complete I moved onto creating the four animations I needed for drawing, firing and reloading the weapon as well as a simple idle/walk cycle. In order to be able to create the necessary animations I first had to rig and weight paint the models which involves the creation of a digital skeleton, where each bone controls and deforms specific parts of the model based on an assigned weight. As for defining the movement of each action this is achieved by setting specific points which define the state of the 3D model across a timeline aka. keyframes. Said keyframes are defined for key moments in the animation and the gaps between them are automatically interpolated by Blender to create a continuous motion.
 
 <video autoplay loop>
   <source src="/blog/nyan-gun-recreation/mp7-reload.mp4" type="video/mp4" />

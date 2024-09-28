@@ -23,7 +23,7 @@ At first I decided to play it safe and dual booted Windows and Linux but I quick
 
 ## Rice and Shine: Transforming My Linux Desktop
 
-At the time I was amazed by the beautiful setups some people had come up with, the sheer endless variety of options to choose from and so I set out to create one of my own. It obviously took a lot of trial and error, fiddling with different tools, reading a bunch of documentations but ultimatetly my accumalted efforts were not only a great learning opportunity but also resulted in the dotfiles you can find in the link below. As with everything else in life nothing is ever perfect so I continously improve my dotfiles to suit my workflow and personal taste.
+At the time I was amazed by the beautiful setups some people had come up with, the sheer endless variety of options to choose from and so I set out to create one of my own. It obviously took a lot of trial and error, fiddling with different tools, reading a bunch of documentations but ultimatetly my accumalted efforts were not only a great learning opportunity but also resulted in the dotfiles you can find in the link below. As with everything else in life nothing is ever perfect so I continuously improve my dotfiles to suit my workflow and personal taste.
 
 ## Moving Forward
 

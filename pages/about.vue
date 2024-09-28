@@ -17,7 +17,7 @@ const getAge = (birthYear: number) => {
       <h1 class="text-4xl font-bold py-2">About</h1>
       <div class="text-neutral-700 dark:text-neutral-300">
         <p class="mb-4">
-          Hello I'm Jan, a dedicated {{ getAge(1998) }}-year-old <span class="font-bold">Full Stack Developer</span> based in Germany. I specialize in crafting web applications from the initial design all the way through to the full implementation, with a commitment to continous improvement and providing a seamless user experience.
+          Hello I'm Jan, a dedicated {{ getAge(1998) }}-year-old <span class="font-bold">Full Stack Developer</span> based in Germany. I specialize in crafting web applications from the initial design all the way through to the full implementation, with a commitment to continuous improvement and providing a seamless user experience.
         </p>
         <p class="mb-4">
           In my free time, I'm an avid tech enthusiast, constantly exploring and embracing new technologies to stay at the forefront of the industry. I also enjoy customizing my Linux desktop to optimize my workfow and make it uniquely mine.
