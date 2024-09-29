@@ -53,6 +53,9 @@ export default <Partial<Config>>{
           950: '#0d0c0d',
         },
       },
+      boxShadow: {
+        surround: '0 20px 80px -10px',
+      }
     },
   },
   plugins: [
