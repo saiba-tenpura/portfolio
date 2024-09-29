@@ -5,7 +5,7 @@ describe('app', async () => {
   await setup();
 
   const pages = {
-    '/': 'Saiba Tenpura',
+    '/': 'Full Stack Developer',
     '/about': 'About',
     '/blog': 'Blog',
   };

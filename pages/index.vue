@@ -9,8 +9,8 @@
       />
     </div>
     <div class="place-self-center lg:col-span-7 lg:-order-1">
-      <h1 class="text-3xl font-extrabold tracking-tight mb-3 md:text-4xl xl:text-6xl">Full Stack Developer</h1>
-      <p class="font-light text-neutral-500 mb-6 lg:mb-8 md:text-lg lg:text-xl dark:text-neutral-400">
+      <h1 class="text-3xl font-extrabold tracking-tight mb-3 md:text-4xl xl:text-5xl">Full Stack Developer</h1>
+      <p class="font-light text-neutral-500 mb-5 lg:mb-8 md:text-lg lg:text-xl dark:text-neutral-400">
         Hi, I'm Jan, a dedicated full stack developer with a passion for problem solving, technology, and learning. Taking web applications from concept to completion, I enjoy experimenting with new technologies and exploring the intersection of art and science through 3D modeling and game development.
       </p>
       <CustomButton class="mx-auto" variant="primary" as="a" href="https://github.com/saiba-tenpura/dotfiles">
