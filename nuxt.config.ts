@@ -5,28 +5,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Saiba Tenpura',
-      meta: [
-        {
-          name: 'description',
-          content: 'Hi, I\'m Jan, a dedicated full stack developer with a passion for problem solving, technology, and learning. Taking web applications from concept to completion, I enjoy experimenting with new technologies and exploring the intersection of art and science through 3D modeling and game development.',
-        },
-        {
-          name: 'og:title',
-          content: 'Saiba Tenpura',
-        },
-        {
-          name: 'og:description',
-          content: 'Full Stack Developer / Hobbyist Game Dev',
-        },
-        {
-          name: 'og:image',
-          content: 'https://www.saiba-tenpura.com/blog/my-portfolio/cover.png',
-        },
-        {
-          name: 'twitter:card',
-          content: 'content_summary_large',
-        },
-      ],
       htmlAttrs: {
         class: 'dark',
         lang: 'en',

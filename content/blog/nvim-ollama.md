@@ -4,10 +4,6 @@ description: A short guide on how to utilize the power of LLMs inside of Neovim 
 image:
   src: /blog/nvim-ollama/cover.png
   alt: Neovim + Ollama
-head:
-  meta:
-    - name: keywords
-      content: 'Neovim, Ollama, Code Llama'
 created_at: 2024-05-20
 ---
 

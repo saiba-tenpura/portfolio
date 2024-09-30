@@ -2,6 +2,7 @@
 import { NuxtLink } from '#components';
 
 const rootEl = ref();
+const url = useRequestURL();
 const currentHeadingId: Ref<string | null> = ref('');
 const headingObserver: Ref<IntersectionObserver | undefined> = ref();
 const videoObserver: Ref<IntersectionObserver | undefined> = ref();
@@ -39,6 +40,10 @@ onUnmounted(() => {
   <div ref="rootEl" class="flex">
     <ContentDoc>
       <template v-slot="{ doc }">
+        <Meta property="og:title" :content="doc.title" />
+        <Meta property="og:description" :content="doc.description" />
+        <Meta property="og:image" :content="url.origin + (doc?.image?.src ?? '/blog/my-portfolio/cover.png')" />
+        <Meta property="og:image:alt" :content="doc?.image?.alt" />
         <section class="grid grid-cols-1 lg:grid-cols-[auto_minmax(0,_1fr)] gap-16">
           <article id="article-navigation" class="prose prose-neutral dark:prose-invert">
             <header class="mb-4">
