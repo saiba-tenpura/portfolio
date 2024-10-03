@@ -24,7 +24,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 After the installation process has finished, you can setup the model of your choice. In this case, I decided on the Code Llama model since it covers my primary programming languages. The following command will automatically pull and run the 7B parameter version of it.
 
 ```
-ollama run codellama
+ollama run llama3.1
 ```
 
 ## 2. Configure the Neovim Plugin
@@ -41,7 +41,7 @@ Then, you can set up the plugin by specifying the model, keyboard shortcuts, and
 
 ```
 require('gen').setup({
-  model = "codellama",
+  model = "llama3.1",
   host = "localhost",
   port = "11434",
 })
