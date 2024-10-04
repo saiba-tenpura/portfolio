@@ -11,10 +11,6 @@ body {
   backdrop-filter: blur(1rem);
 }
 
-.link-hover {
-  @apply hover:text-neutral-300 dark:hover:text-neutral-400;
-}
-
 .prose img, .prose video {
   @apply rounded-lg;
 }
