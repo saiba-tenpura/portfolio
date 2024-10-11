@@ -12,13 +12,22 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'icon',
-          type: 'image/x-icon',
           href: '/favicon.ico',
+          sizes: '48x48',
+        },
+        {
+          rel: 'icon',
+          href: '/favicon.svg',
+          sizes: 'any',
+          type: 'image/svg+xml',
         },
         {
           rel: 'apple-touch-icon',
-          type: 'image/png',
           href: '/apple-touch-icon.png',
+        },
+        {
+          rel: 'manifest',
+          href: '/site.webmanifest',
         },
       ],
     },
