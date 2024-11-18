@@ -9,20 +9,31 @@ export default defineNuxtConfig({
         class: 'dark',
         lang: 'en',
       },
+      meta: [
+        {
+          name: 'apple-mobile-web-app-title',
+          content: 'Saiba Tenpura',
+        },
+      ],
       link: [
         {
-          rel: 'icon',
+          rel: 'shortcut icon',
           href: '/favicon.ico',
-          sizes: '48x48',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '96x96',
+          href: '/favicon-96x96.png',
         },
         {
           rel: 'icon',
           href: '/favicon.svg',
-          sizes: 'any',
           type: 'image/svg+xml',
         },
         {
           rel: 'apple-touch-icon',
+          sizes: '180x180',
           href: '/apple-touch-icon.png',
         },
         {
