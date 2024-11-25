@@ -52,20 +52,20 @@ Future design iterations of the logo are planed to incorporate new details and a
 
 ## Update (August 22, 2024)
 
-In the end I decided to go through one more design iteration for the logo to improve it but this time I actually went and did it the other way around by first designing the logo and then creating a new 3D model from scratch.
+In the end I decided to go through one more design phase for the logo to improve its overall quality but this time, I reversed my approach first conceptualizing the design and then creating a 3D model from scratch.
 
-So first of all I wanted to make the shape more readable and appealing by adjusting. Thus I created multiple iterations in Inkscape and put them side by side improving each iteration over the previous one. (It obviously took way more than four iterations but I didn't want to squeeze more into the screenshot.)
+First of all I went through multiple iterations in Inkscape, refining each subsequent design based on my previous improvements, to refine the silhouette and make it more aesthetically pleasing. It took way more than four iterations of course, but I couldn't squeeze more into the screenshot.
 
 ![Logo v2 Readability](/blog/my-portfolio/logo-v2-readability.png)
 
-Another issues was that the icon could become hardly legible on grey or dark backgrounds like window tabs in dark mode browsers. After playing with multiple color combinations I settled on sticking to original colors just way brighter.
+Another issues was that the icon could become hardly legible on gray or dark backgrounds like window tabs in dark mode browsers. After experimenting with various color combinations, I settled on sticking with the original colors just significantly brighter.
 
 ![Logo v2 Gradient](/blog/my-portfolio/logo-v2-gradient.png)
 
-As you can see there will of course still be scenarios in which it will struggle but it should be able to handle darker shades way better than before. I also wasn't really willing to push the colors any further.
+As you can see it may not excel in every situation, but the updated version is able to handle darker backgrounds way better than before. I also wasn't really willing to push the colors any further.
 
-And as promised I went back and also created a 3d model based on the new logo using the previously created references and bits and bobs from the first one.
+As promised, I also went back and a 3D model based on the revised logo by using the previously created references and parts from the original one.
 
 ![Logo v2 3D](/blog/my-portfolio/logo-v2-3d.png)
 
-Which I then used to create the image on the landing page but that's it for now until the next iteration.
+I then used it to create the image you can see on the landing page, but that's it for now, until the next iteration.
