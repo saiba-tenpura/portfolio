@@ -48,6 +48,8 @@ export default defineAppConfig({
         'Ansible',
         'Docker',
         'Jenkins',
+        'Prometheus',
+        'Grafana',
       ],
     },
     {
