@@ -25,7 +25,7 @@ describe('BlogList', async () => {
       return {
         data: [
           {
-            _path: '/blog/test',
+            path: '/blog/test',
             title: 'Blog Entry Unit Test',
             description: 'This is just a test!',
             image: {

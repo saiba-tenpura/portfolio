@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface BlogEntry {
-  _path: string,
+  path: string,
   title: string,
   description: string,
   image: {
@@ -15,14 +15,14 @@ defineProps({
     type: Object,
     required: true,
     validator: (value: BlogEntry) => {
-      return value?._path && value.title;
+      return value?.path && value.title;
     }
   },
 });
 </script>
 
 <template>
-  <NuxtLink :to="blogEntry._path" class="backdrop-blur block mb-4 p-4 rounded-lg hover:shadow-lg max-lg:bg-neutral-200/50 max-lg:dark:bg-neutral-800/50 lg:hover:bg-neutral-200/40 lg:hover:dark:bg-neutral-800/40 lg:hover:scale-105">
+  <NuxtLink :to="blogEntry.path" class="backdrop-blur block mb-4 p-4 rounded-lg hover:shadow-lg max-lg:bg-neutral-200/50 max-lg:dark:bg-neutral-800/50 lg:hover:bg-neutral-200/40 lg:hover:dark:bg-neutral-800/40 lg:hover:scale-105">
     <article class="flex flex-col md:flex-row">
       <NuxtImg
         :src="blogEntry?.image?.src"

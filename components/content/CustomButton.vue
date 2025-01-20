@@ -30,7 +30,7 @@ const props = defineProps({
     type="button"
   >
     <slot name="prepend"></slot>
-    <ContentSlot :use="$slots.default" unwrap="p" />
+    <slot mdc-unwrap="p"></slot>
     <slot name="append"></slot>
   </component>
 </template>

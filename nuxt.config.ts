@@ -80,17 +80,14 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   modules: [
+    '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/test-utils/module',
-    '@nuxtjs/sitemap',
     '@nuxtjs/tailwindcss',
   ],
   site: {
     url: 'https://www.saiba-tenpura.com',
-  },
-  sitemap: {
-    strictNuxtContentPaths: true,
   },
   vite: {
     plugins: [
