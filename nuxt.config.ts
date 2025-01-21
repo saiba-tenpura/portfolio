@@ -68,10 +68,11 @@ export default defineNuxtConfig({
     ],
   },
   content: {
-    markdown: {
+    renderer: {
       anchorLinks: {
-        depth: 4,
-        exclude: [1, 2, 3],
+        h2: false,
+        h3: false,
+        h4: false,
       },
     },
   },

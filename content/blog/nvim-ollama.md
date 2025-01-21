@@ -13,7 +13,7 @@ To be fair, I don't think of an AI coding assistant as an absolute must-have, bu
 
 Enter Ollama, an open-source tool for running LLMs on your local machine, similar to Docker and its containers, which is particularly useful if you have some GPU computing power to spare that won't be utilized during regular coding otherwise anyway.
 
-## 1. Installing Ollama
+## Installing Ollama
 
 So let's first start off by installing Ollama. If you are running Linux like me you can just run the following command to install it. Otherwise please refer to the instructions in the [official GitHub repository](https://github.com/ollama/ollama).
 
@@ -27,7 +27,7 @@ After the installation process has finished, you can setup the model of your cho
 ollama run llama3.1
 ```
 
-## 2. Configure the Neovim Plugin
+## Configure the Neovim Plugin
 
 Next add the [gen.nvim](https://github.com/David-Kunz/gen.nvim) plugin, which is going to serve as the interface between Neovim and Ollama, via your plugin manager of choice. In this example I'm using [lazy.nvim](https://github.com/folke/lazy.nvim).
 
@@ -49,7 +49,7 @@ require('gen').setup({
 vim.keymap.set({'n', 'v'}, '<leader>]', ':Gen<CR>')
 ```
 
-## 3. Usage
+## Usage
 
 The previously defined shortcut can be used to prompt the LLM either by selecting text marked in visual mode or inputting a prompt manually. The plugin is equipped with a few useful prompts by default.
 
@@ -83,7 +83,7 @@ function helloWorld() {
 This function will print "Hello, World!" to the console when it is called.
 ````
 
-## 4. Adding Custom Prompts
+## Adding Custom Prompts
 
 You are also able to add your own base prompts to suit it to your own needs. In the definition you can specify a base prompt, if the selection should be automatically replaced, the regex used for extraction and the LLM which should be used.
 
