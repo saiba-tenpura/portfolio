@@ -68,6 +68,15 @@ export default defineNuxtConfig({
     ],
   },
   content: {
+    build: {
+      markdown: {
+        highlight: {
+          langs: [
+            'lua',
+          ],
+        },
+      },
+    },
     renderer: {
       anchorLinks: {
         h2: false,

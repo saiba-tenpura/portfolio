@@ -17,13 +17,13 @@ Enter Ollama, an open-source tool for running LLMs on your local machine, simila
 
 So let's first start off by installing Ollama. If you are running Linux like me you can just run the following command to install it. Otherwise please refer to the instructions in the [official GitHub repository](https://github.com/ollama/ollama).
 
-```
+```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
 After the installation process has finished, you can setup the model of your choice. In this case, I decided on the Code Llama model since it covers my primary programming languages. The following command will automatically pull and run the 7B parameter version of it.
 
-```
+```bash
 ollama run llama3.1
 ```
 
@@ -31,7 +31,7 @@ ollama run llama3.1
 
 Next add the [gen.nvim](https://github.com/David-Kunz/gen.nvim) plugin, which is going to serve as the interface between Neovim and Ollama, via your plugin manager of choice. In this example I'm using [lazy.nvim](https://github.com/folke/lazy.nvim).
 
-```
+```lua
 require('lazy').setup({
   "David-Kunz/gen.nvim",
 })
@@ -39,7 +39,7 @@ require('lazy').setup({
 
 Then, you can set up the plugin by specifying the model, keyboard shortcuts, and other options you want to use for interacting with the model.
 
-```
+```lua
 require('gen').setup({
   model = "llama3.1",
   host = "localhost",
@@ -87,7 +87,7 @@ This function will print "Hello, World!" to the console when it is called.
 
 You are also able to add your own base prompts to suit it to your own needs. In the definition you can specify a base prompt, if the selection should be automatically replaced, the regex used for extraction and the LLM which should be used.
 
-```
+```lua
 require('gen').prompts['Enhance_Code_Maintainability'] = {
   prompt = "Enhance the maintainability of the following code, $input, only output the result in the format ```$filetype\n...\n```:\n```$filetype\n$text\n```",
   replace = true,
