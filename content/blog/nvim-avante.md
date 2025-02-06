@@ -1,0 +1,184 @@
+---
+title: Avante - A Cursor like experience for Neovim
+description: Elevate your Neovim experience by yet another level.
+image:
+  src: /blog/nvim-avante/cover.png
+  alt: Neovim + Avante
+created_at: 2025-02-01
+---
+
+This is a continuation of my [previous blog entry](/blog/nvim-ollama) talking about how to setup Neovim & Ollama but this time we are using another plugin called [Avante](https://github.com/yetone/avante.nvim) which promises a [Cursor](https://www.cursor.com/) like experience.
+
+If you are not familiar with Cursor it's an IDE leveraging AI to increase developer productivity by providing features like code suggestions and an integrated AI chat which is able to reference your code.
+
+## Installing the plugin
+
+First of all we are going to add the necessary configuration to our Neovim package manager of choice. I'm using [lazy.nvim](https://github.com/folke/lazy.nvim) here, but you can find other examples in the README of the Avante GitHub repository.
+
+```lua
+require('lazy').setup({
+  {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    lazy = false,
+    version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+    opts = {
+      -- add any opts here
+    },
+    -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
+    build = "make",
+    -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
+    dependencies = {
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      --- The below dependencies are optional,
+      "echasnovski/mini.pick", -- for file_selector provider mini.pick
+      "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+      "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+      "ibhagwan/fzf-lua", -- for file_selector provider fzf
+      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+      -- "zbirenbaum/copilot.lua", -- for providers='copilot'
+      {
+        -- support for image pasting
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+        opts = {
+          -- recommended settings
+          default = {
+            embed_image_as_base64 = false,
+            prompt_for_file_name = false,
+            drag_and_drop = {
+              insert_mode = true,
+            },
+            -- required for Windows users
+            use_absolute_path = true,
+          },
+        },
+      },
+      {
+        -- Make sure to set this up properly if you have lazy=true
+        'MeanderingProgrammer/render-markdown.nvim',
+        opts = {
+          file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+      },
+    },
+  }
+})
+```
+
+## Choosing a Model
+
+When choosing a model it is essential to account for your available hardware capabilities. As a general rule of thumb, the size of your VRAM should be at least 1.2 times greater than the size of the model you are trying to run.
+
+For example given the table below which contains the currently available options of the DeepSeek-R1 reasoning model we would need 10.8 GB of VRAM or more to run the 14b parameter model.
+
+| Parameters   | Size   |
+| ------------ | ------ |
+| 1.5b         | 1.1 GB |
+| 7b           | 4.7 GB |
+| 8b           | 4.9 GB |
+| 14b          | 9.0 GB |
+| 32b          |  20 GB |
+| 70b          |  43 GB |
+| 671b         | 404 GB |
+
+We can further test this with a couple of commands. First we are going to check how Ollama is actually going to allocate our resources for running the model.
+
+```bash
+ollama run deepseek-r1:14b
+>>> /bye
+ollama ps
+NAME               ID              SIZE     PROCESSOR    UNTIL
+deepseek-r1:14b    ea35dfe18182    11 GB    100% GPU     4 minutes from now
+```
+
+As you can see we are able to fit the full 14b parameter model into the VRAM of our GPU. Next we are going to look at the general performance of the model when we query it. Anything above 10 tokens/s should provide an acceptable experience for our use case.
+
+```bash
+ollama run deepseek-r1:14b --verbose
+>>> What is the largest animal in the world?
+
+...
+
+total duration:       13.010056912s
+load duration:        12.018553ms
+prompt eval count:    12 token(s)
+prompt eval duration: 5ms
+prompt eval rate:     2400.00 tokens/s
+eval count:           534 token(s)
+eval duration:        12.992s
+eval rate:            41.10 tokens/s
+```
+
+## Configuring the Model
+
+Since we already went over how to install Ollama last time I'm not going to reiterate that here, so please refer to the previous entry or the official documentation. At the time of writing using a local LLM via Ollama is not officially supported by the plugin, but the community has provided a workaround in one of the [issues](https://github.com/yetone/avante.nvim/issues/1067#issuecomment-2585550870) of the project.
+
+```lua
+  {
+    "yetone/avante.nvim",
+    ...
+    opts = {
+      provider = "ollama",
+      vendors = {
+        --@type AvanteProvider
+        ollama = {
+          api_key_name = "",
+          ask = "",
+          endpoint = "http://127.0.0.1:11434/api",
+          model = "deepseek-r1:14b",
+          parse_curl_args = function(opts, code_opts)
+            return {
+              url = opts.endpoint .. "/chat",
+              headers = {
+                ["Accept"] = "application/json",
+                ["Content-Type"] = "application/json",
+              },
+              body = {
+                model = opts.model,
+                options = {
+                  num_ctx = 16384,
+                },
+                messages = require("avante.providers").copilot.parse_messages(code_opts),
+                stream = true,
+              }
+            }
+          end,
+          parse_stream_data = function(data, handler_opts)
+            -- Parse the JSON data
+            local json_data = vim.fn.json_decode(data)
+            -- Check for stream completion marker ifrst
+            if json_data and json_data.done then
+              handler_opts.on_complete(nil) -- Properly terminate the stream
+            end
+
+            -- Process normal message content
+            if json_data and json_data.message and json_data.message.content then
+              -- Extract the content from the message
+              local content = json_data.message.content
+              -- Call the handler with the content
+              handler_opts.on_chunk(content)
+            end
+          end,
+        },
+      },
+    }
+    ...
+  }
+```
+
+## Usage
+
+After we are done with the configuration we can now interact with Avante either by pressing **Leader a a** (the default Neovim leader key is the backslash key) to open the Avante Chat window and entering our question there or alternatively via the **\:AvanteAsk \[question\]** command. Avante will then generate code suggestions in reference to the current file using the configured model which we can then apply one by one.
+
+Another option is to select some code in visual mode and then press the keybind **Leader a e** and specify what we would like to be modified about it to trigger another code suggestion.
+
+## Sources
+
+* [ollama/ollama](https://github.com/ollama/ollama) - Official GitHub Repository
+* [avante.nvim](https://github.com/yetone/avante.nvim) - Plugin by yetone.
+* [Avante + Ollama](https://github.com/yetone/avante.nvim/issues/1067#issuecomment-2585550870) provider config for Avante.
+
