@@ -9,7 +9,7 @@ created_at: 2024-05-20
 
 Back when GitHub Copilot first released, I was able to join the technical preview and test it out for myself. During that time, I came to appreciate the convenience of having someone to pair program with integrated into my IDE.
 
-To be fair, I don't think of an AI coding assistant as an absolute must-have, but rather a convenient tool that allows one to do more in less time. As technology advances, AI will likely become an increasingly integral part of a developer's arsenal, similar to how LSPs did before them. Therefore, I have been looking for something similar ever since, without wanting to spend a lot of money on it or compromise on security by sending my code through across the internet.
+To be fair, I don't think of an AI coding assistant as an absolute must-have, but rather a convenient tool that allows one to do more in less time. As technology advances, AI will likely become an increasingly integral part of a developer's arsenal, similar to how LSPs did before them. Therefore, I have been looking for something similar ever since, without wanting to spend a lot of money on it or compromise on security by involving a third party.
 
 Enter Ollama, an open-source tool for running LLMs on your local machine, similar to Docker and its containers, which is particularly useful if you have some GPU computing power to spare that won't be utilized during regular coding otherwise anyway.
 
@@ -24,7 +24,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 After the installation process has finished, you can setup the model of your choice. In this case, I decided on the Code Llama model since it covers my primary programming languages. The following command will automatically pull and run the 7B parameter version of it.
 
 ```bash
-ollama run llama3.1
+ollama run llama3.2-vision
 ```
 
 ## Configure the Neovim Plugin
@@ -41,7 +41,7 @@ Then, you can set up the plugin by specifying the model, keyboard shortcuts, and
 
 ```lua
 require('gen').setup({
-  model = "llama3.1",
+  model = "llama3.2-vision",
   host = "localhost",
   port = "11434",
 })

@@ -7,13 +7,13 @@ image:
 created_at: 2025-02-01
 ---
 
-This is a continuation of my [previous blog entry](/blog/nvim-ollama) talking about how to setup Neovim & Ollama but this time we are using another plugin called [Avante](https://github.com/yetone/avante.nvim) which promises a [Cursor](https://www.cursor.com/) like experience.
+This is a continuation of my [previous blog entry](/blog/nvim-ollama) about setting up Neovim with Ollama but this time we are using new plugin called [Avante](https://github.com/yetone/avante.nvim) which provides a [Cursor](https://www.cursor.com/) like experience.
 
 If you are not familiar with Cursor it's an IDE leveraging AI to increase developer productivity by providing features like code suggestions and an integrated AI chat which is able to reference your code.
 
 ## Installing the plugin
 
-First of all we are going to add the necessary configuration to our Neovim package manager of choice. I'm using [lazy.nvim](https://github.com/folke/lazy.nvim) here, but you can find other examples in the README of the Avante GitHub repository.
+Let's start by installing and configuring it via the Neovim plugin manager of choice. In my case I'm using [lazy.nvim](https://github.com/folke/lazy.nvim), but you can find other examples in the README of the Avante GitHub repository.
 
 ```lua
 require('lazy').setup({
@@ -95,7 +95,7 @@ NAME               ID              SIZE     PROCESSOR    UNTIL
 deepseek-r1:14b    ea35dfe18182    11 GB    100% GPU     4 minutes from now
 ```
 
-As you can see we are able to fit the full 14b parameter model into the VRAM of our GPU. Next we are going to look at the general performance of the model when we query it. Anything above 10 tokens/s should provide an acceptable experience for our use case.
+As you can see we are able to fit the full 14b parameter model into the VRAM of our GPU. Next we are going to look at the general performance of the model when we query it. Anything above 10 tokens/s should provide a somewhat acceptable experience for our use case.
 
 ```bash
 ollama run deepseek-r1:14b --verbose
@@ -174,7 +174,7 @@ Since we already went over how to install Ollama last time I'm not going to reit
 
 After we are done with the configuration we can now interact with Avante either by pressing **Leader a a** (the default Neovim leader key is the backslash key) to open the Avante Chat window and entering our question there or alternatively via the **\:AvanteAsk \[question\]** command. Avante will then generate code suggestions in reference to the current file using the configured model which we can then apply one by one.
 
-Another option is to select some code in visual mode and then press the keybind **Leader a e** and specify what we would like to be modified about it to trigger another code suggestion.
+Another option is to select some code in visual mode and then press the key binding **Leader a e** and specify what we would like to be modified about it to trigger another code suggestion.
 
 ## Sources
 
