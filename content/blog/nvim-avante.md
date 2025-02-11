@@ -255,7 +255,15 @@ require('lazy').setup({
 
 After we are done with the configuration we can now interact with Avante either by pressing **Leader a a** (the default Neovim leader key is the backslash key) to open the Avante Chat window and entering our question there or alternatively via the **\:AvanteAsk \[question\]** command. Avante will then generate code suggestions in reference to the current file using the configured model which we can then apply one by one.
 
+<video controls>
+  <source src="/blog/nvim-avante/avante-01.mp4" type="video/mp4" />
+</video>
+
 Another option is to select some code in visual mode and then press the key binding **Leader a e** and specify what we would like to be modified about it to trigger another code suggestion.
+
+<video controls>
+  <source src="/blog/nvim-avante/avante-02.mp4" type="video/mp4" />
+</video>
 
 ## Sources
 
