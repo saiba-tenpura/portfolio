@@ -58,6 +58,8 @@ export default defineAppConfig({
         'Blender',
         'Gimp',
         'Godot',
+        'C',
+        'Wasm',
         'Inkscape',
         'LaTeX',
       ],
