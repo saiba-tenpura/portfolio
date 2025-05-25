@@ -33,13 +33,13 @@ const dropdownHeight = computed(() => {
         :style="{ height: (show ? dropdownHeight : 0) + 'px' }"
         :aria-expanded="show"
       >
-        <div class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+        <div class="flex flex-col font-medium mt-4 md:flex-row md:gap-8 md:mt-0">
           <NuxtLink
             v-for="link of navigation"
             :key="link.path"
             :to="link.path"
             active-class="bg-neutral-200 dark:bg-neutral-800 font-bold"
-            class="block m-1 p-2 rounded hover:bg-neutral-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent hover:text-neutral-300 dark:hover:text-neutral-400"
+            class="block m-1 p-2 rounded-sm hover:bg-neutral-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent hover:text-neutral-300 dark:hover:text-neutral-400"
             @click="toggleNav"
           >
             {{ link.text }}
@@ -51,6 +51,8 @@ const dropdownHeight = computed(() => {
 </template>
 
 <style scoped>
+@reference "tailwindcss";
+
 .menu-icon {
   @apply stroke-neutral-950 dark:stroke-neutral-100;
   fill: none;

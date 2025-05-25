@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite';
 import svgLoader from 'vite-svg-loader';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -86,6 +87,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
+    '~/assets/css/main.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   devtools: { enabled: true },
@@ -94,13 +96,13 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/test-utils/module',
-    '@nuxtjs/tailwindcss',
   ],
   site: {
     url: 'https://www.saiba-tenpura.com',
   },
   vite: {
     plugins: [
+      tailwindcss(),
       svgLoader({
         svgoConfig: {
           plugins: [

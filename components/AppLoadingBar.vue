@@ -104,6 +104,8 @@ onBeforeUnmount(() => clear);
 </template>
 
 <style scoped>
+@reference "../assets/css/main.css";
+
 .nuxt-progress {
   position: fixed;
   top: 0px;
@@ -112,7 +114,7 @@ onBeforeUnmount(() => clear);
   width: 0%;
   opacity: 1;
   transition: width 0.1s, height 0.4s, opacity 0.4s;
-  background: repeating-linear-gradient(to right, theme('colors.primary.500') 0%, theme('colors.primary.800') 50%, theme('colors.secondary.500') 100%);
+  background: repeating-linear-gradient(to right, --var('--colors-primary-500') 0%, --var('--colors-primary-800') 50%, --var('--colors-secondary-500') 100%);
   z-index: 9999;
 }
 </style>
