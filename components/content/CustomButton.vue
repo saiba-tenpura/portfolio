@@ -1,8 +1,8 @@
 <script lang="ts">
 const variants: Record<string, string> = {
-  'primary': 'bg-primary-400 hover:shadow-primary-400 hover:-translate-y-1 hover:shadow-surround focus:outline-hidden focus:ring-primary-200 dark:focus:ring-primary-800',
+  'primary': 'bg-primary-400 hover:shadow-primary-400 hover:-translate-y-1 hover:shadow-surround focus:bg-primary-300 focus:dark:bg-primary-500 focus:ring-primary-200 dark:focus:ring-primary-800',
   'primary-to-secondary': 'bg-gradient-to-r from-primary-400 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 focus:ring-primary-300 dark:focus:ring-primary-800',
-  'secondary': 'bg-secondary-500 hover:shadow-primary-500 hover:-translate-y-1 hover:shadow-surround focus:ring-secondary-300 dark:focus:ring-secondary-800',
+  'secondary': 'bg-secondary-500 hover:shadow-secondary-500 hover:-translate-y-1 hover:shadow-surround focus:bg-secondary-400 focus:dark:bg-secondary-600 focus:ring-secondary-300 dark:focus:ring-secondary-800',
   'secondary-to-primary': 'bg-gradient-to-r from-secondary-500 to-primary-500 hover:from-secondary-600 hover:to-primary-600 focus:ring-secondary-300 dark:focus:ring-secondary-800',
 };
 </script>
