@@ -125,10 +125,11 @@ require('lazy').setup({
     "yetone/avante.nvim",
     ...
     opts = {
-      provider = "ollama",
-      ollama = {
-        endpoint = "http://127.0.0.1:11434",
-        model = "deepseek-r1:32b",
+      providers = {
+        ollama = {
+          endpoint = "http://127.0.0.1:11434",
+          model = "deepseek-r1:32b",
+        },
       },
     },
     ...
