@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface SkillSet {
-  category: string,
-  skills: string[],
+  category: string;
+  skills: string[];
 }
 
 const skillSets: SkillSet[] = useAppConfig().skillSets;
@@ -9,9 +9,9 @@ const skillSets: SkillSet[] = useAppConfig().skillSets;
 
 <template>
   <section>
-    <h2 class="text-3xl font-bold py-2">Skills</h2>
+    <h2 class="py-2 text-3xl font-bold">Skills</h2>
     <SkillSet
-      v-for="(skillSet) in skillSets"
+      v-for="skillSet in skillSets"
       :key="skillSet.category"
       :category="skillSet.category"
       :skills="skillSet.skills"

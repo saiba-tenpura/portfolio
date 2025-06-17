@@ -12,11 +12,12 @@ created_at: 2022-04-27
 Back in 2022 I wanted to create a basic First-Person Shooter project using the Godot Game Engine so I could familiarize myself with it as well as the process of creating the mechanics, models and animations. So I decided to recreate the "Nyan Gun" Garry's Mod addon originally created by Rubat the workshop page can be found [here](https://steamcommunity.com/sharedfiles/filedetails/?id=123277559). I decided to do so not only because it was one of my favorite weapons in the TTT game mode but also because it offered a lot of unique challenges that would allow me to aquire a lot of new skills. A short disclaimer this is by no means a tutorial but rather a short summary of the complete process.
 
 The overall steps necessary for this project included:
-* The creation of 3D models for the MP7 submachine gun and arms.
-* Each model had to be rigged, weight painted, UV unwrapped and textured.
-* Combining the two models and creating the necessary animations.
-* Creating controllers for movement and weapon handling.
-* Creating the effects for the Nyan Cat projectile and the explosion.
+
+- The creation of 3D models for the MP7 submachine gun and arms.
+- Each model had to be rigged, weight painted, UV unwrapped and textured.
+- Combining the two models and creating the necessary animations.
+- Creating controllers for movement and weapon handling.
+- Creating the effects for the Nyan Cat projectile and the explosion.
 
 ## The Creative Process
 

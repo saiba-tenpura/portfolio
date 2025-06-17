@@ -13,7 +13,7 @@ useSeoMeta({
 <template>
   <AppLayout>
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage />
     </NuxtLayout>
   </AppLayout>
 </template>

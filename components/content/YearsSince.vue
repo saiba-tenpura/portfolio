@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const current_year = new Date().getFullYear()
+const current_year = new Date().getFullYear();
 defineProps({
   year: {
     type: Number,
     required: true,
   },
-})
+});
 </script>
 
 <template>

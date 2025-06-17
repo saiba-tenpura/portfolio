@@ -76,15 +76,15 @@ When choosing a model it is essential to account for your available hardware cap
 
 For example given the table below which contains the currently available options of the DeepSeek-R1 reasoning model we would need 10.8 GB of VRAM or more to run the 14b parameter model.
 
-| Parameters   | Size   |
-| ------------ | ------ |
-| 1.5b         | 1.1 GB |
-| 7b           | 4.7 GB |
-| 8b           | 4.9 GB |
-| 14b          | 9.0 GB |
-| 32b          |  20 GB |
-| 70b          |  43 GB |
-| 671b         | 404 GB |
+| Parameters | Size   |
+| ---------- | ------ |
+| 1.5b       | 1.1 GB |
+| 7b         | 4.7 GB |
+| 8b         | 4.9 GB |
+| 14b        | 9.0 GB |
+| 32b        | 20 GB  |
+| 70b        | 43 GB  |
+| 671b       | 404 GB |
 
 We can further test this with a couple of commands. First we are going to check how Ollama is actually going to allocate our resources for running the model.
 
@@ -154,8 +154,7 @@ Another option is to select some code in visual mode and then press the key bind
 
 ## Sources
 
-* [ollama/ollama](https://github.com/ollama/ollama) - Official GitHub Repository
-* [avante.nvim](https://github.com/yetone/avante.nvim) - Plugin by yetone.
-* [Avante + Ollama #1 - Issue](https://github.com/yetone/avante.nvim/issues/1067#issuecomment-2585550870).
-* [Avante + Ollama #2 - Issue](https://github.com/yetone/avante.nvim/issues/1149#issuecomment-2629226723).
-
+- [ollama/ollama](https://github.com/ollama/ollama) - Official GitHub Repository
+- [avante.nvim](https://github.com/yetone/avante.nvim) - Plugin by yetone.
+- [Avante + Ollama #1 - Issue](https://github.com/yetone/avante.nvim/issues/1067#issuecomment-2585550870).
+- [Avante + Ollama #2 - Issue](https://github.com/yetone/avante.nvim/issues/1149#issuecomment-2629226723).

@@ -11,15 +11,19 @@ const dropdownHeight = computed(() => {
 </script>
 
 <template>
-  <nav class="max-w-7xl mx-auto p-4 lg:p-2">
-    <div class="flex flex-wrap justify-between items-center">
+  <nav class="mx-auto max-w-7xl p-4 lg:p-2">
+    <div class="flex flex-wrap items-center justify-between">
       <NuxtLink to="/" @click="show = false">
         <span class="sr-only">Logo</span>
         <Logo class="h-9 w-auto" />
       </NuxtLink>
-      <button @click="toggleNav" class="inline-flex items-center p-2 rounded-lg md:hidden">
+      <button @click="toggleNav" class="inline-flex items-center rounded-lg p-2 md:hidden">
         <span class="sr-only">Toggle navigation menu</span>
-        <svg class="menu-icon d-flex items-center overflow-visible hover:text-neutral-300 dark:hover:text-neutral-400" viewBox="0 0 100 100" :aria-expanded="show">
+        <svg
+          class="menu-icon d-flex items-center overflow-visible hover:text-neutral-300 dark:hover:text-neutral-400"
+          viewBox="0 0 100 100"
+          :aria-expanded="show"
+        >
           <g>
             <path id="top" class="path" d="m 20,20 h 30 30 c 20,0 18.227928,30 20,55 0.0356,7.961535 0,12.5 -7.5,12.5 C 88.792524,87.5 87.022601,85.888733 80,80 L 50,50 20,20" />
             <path id="middle" class="path" d="M 20,50 H 81" />
@@ -28,18 +32,20 @@ const dropdownHeight = computed(() => {
         </svg>
       </button>
       <div
-        class="w-full overflow-hidden transition-all duration-500 md:w-auto md:!h-full md:overflow-visible md:!opacity-100"
-        :class="{ 'opacity-0': ! show, 'opacity-100': show }"
+        class="w-full overflow-hidden transition-all duration-500 md:!h-full md:w-auto md:overflow-visible md:!opacity-100"
+        :class="{ 'opacity-0': !show, 'opacity-100': show }"
         :style="{ height: (show ? dropdownHeight : 0) + 'px' }"
         :aria-expanded="show"
       >
-        <div class="flex flex-col font-medium mt-4 md:flex-row md:gap-8 md:mt-0">
+        <div
+          class="mt-4 flex flex-col font-medium md:mt-0 md:flex-row md:gap-8"
+        >
           <NuxtLink
             v-for="link of navigation"
             :key="link.path"
             :to="link.path"
             active-class="bg-neutral-200 dark:bg-neutral-800 font-bold"
-            class="block m-1 p-2 rounded-sm hover:bg-neutral-700 md:p-0 md:bg-transparent md:hover:bg-transparent dark:md:bg-transparent dark:hover:md:bg-transparent hover:text-neutral-300 dark:hover:text-neutral-400"
+            class="m-1 block rounded-sm p-2 hover:bg-neutral-700 hover:text-neutral-300 md:bg-transparent md:p-0 md:hover:bg-transparent dark:hover:text-neutral-400 dark:md:bg-transparent dark:hover:md:bg-transparent"
             @click="toggleNav"
           >
             {{ link.text }}
@@ -51,7 +57,7 @@ const dropdownHeight = computed(() => {
 </template>
 
 <style scoped>
-@reference "tailwindcss";
+@reference 'tailwindcss';
 
 .menu-icon {
   @apply stroke-neutral-950 dark:stroke-neutral-100;

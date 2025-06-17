@@ -22,13 +22,13 @@ const onVideoEnter = (video: HTMLVideoElement) => {
   if (video.paused) {
     video.play();
   }
-}
+};
 
 const onVideoExit = (video: HTMLVideoElement) => {
   if (! video.paused) {
     video.pause();
   }
-}
+};
 
 useSafeOnMounted(rootEl, () => {
   headingObserver.value = onIntersect(document.querySelectorAll('article h2[id], article h3[id]'), onHeadingEnter, () => {}, false);
@@ -36,8 +36,8 @@ useSafeOnMounted(rootEl, () => {
 });
 
 onUnmounted(() => {
- headingObserver.value?.disconnect();
- videoObserver.value?.disconnect();
+  headingObserver.value?.disconnect();
+  videoObserver.value?.disconnect();
 });
 </script>
 
@@ -69,7 +69,7 @@ onUnmounted(() => {
           </header>
           <TableOfContents
             v-if="getDocTocLinks(doc).length"
-            class="lg:hidden not-prose"
+            class="not-prose lg:hidden"
             aria-labelledby="article-navigation"
             :links="getDocTocLinks(doc)"
             :current="currentHeadingId"
@@ -88,10 +88,12 @@ onUnmounted(() => {
     </div>
     <div v-else>
       <section class="self-center text-center">
-        <h1 class="text-7xl lg:text-9xl mb-3 ">404</h1>
-        <p class="text-3xl md:text-4xl mb-2">Blog entry not found!</p>
-        <p class="text-lg mb-5">Sorry, we can't find the blog entry you're looking for.</p>
-        <CustomButton class="px-5 py-2.5" variant="primary" :as="NuxtLink" to="/blog">
+        <h1 class="mb-3 text-7xl lg:text-9xl">404</h1>
+        <p class="mb-2 text-3xl md:text-4xl">Blog entry not found!</p>
+        <p class="mb-5 text-lg">
+          Sorry, we can't find the blog entry you're looking for.
+        </p>
+        <CustomButton class="px-5 py-2.5" variant="primary" to="/blog" :as="NuxtLink">
           Return to overview
         </CustomButton>
       </section>

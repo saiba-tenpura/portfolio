@@ -32,4 +32,3 @@ Check out my dotfiles!
 #prepend
 ::font-awesome-icon{.mr-2 icon="fa-brands fa-github" size="lg"}
 :::
-

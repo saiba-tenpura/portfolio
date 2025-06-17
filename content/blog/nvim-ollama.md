@@ -100,6 +100,6 @@ Depending on the specific use case, the results achieved by using different prom
 
 ## Sources
 
-* [ollama/ollama](https://github.com/ollama/ollama) - Official GitHub Repository
-* [gen.nvim](https://github.com/David-Kunz/gen.nvim) - Plugin by David Kunz
-* [Video](https://www.youtube.com/watch?v=FIZt7MinpMY) showcasing the plugin.
+- [ollama/ollama](https://github.com/ollama/ollama) - Official GitHub Repository
+- [gen.nvim](https://github.com/David-Kunz/gen.nvim) - Plugin by David Kunz
+- [Video](https://www.youtube.com/watch?v=FIZt7MinpMY) showcasing the plugin.

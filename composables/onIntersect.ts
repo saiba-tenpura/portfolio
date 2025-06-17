@@ -13,6 +13,6 @@ export const onIntersect = (elements: NodeListOf<HTMLElement>, callback: Functio
     });
   }, options);
 
-  elements.forEach(elem => observer.observe(elem));
+  elements.forEach((elem) => observer.observe(elem));
   return observer;
 };

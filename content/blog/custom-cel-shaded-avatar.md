@@ -29,10 +29,10 @@ The second technique known as **Inverted Hull Method** is used to mimic the inke
 
 The final technique I adapted was to also use the three different texture maps Arc System Works used to control and adjust the color and shading of the model. Which consist of the base color texture representing the lit colors, the SSS (Subsurface Scattering) texture which is multiplied with the base color map to color shadows and the ILM texture map which stores additional shading information for the model. The actual meaning of the ILM abbreviation is actually highly debated within the community so let's just talk about what it does. It's a RGBA texture map which stores values from black to white, from 0 to 1 within each of it's color channels each with a different purpose.
 
-* [R]{.text-red-500}ed: Contains the **specular intensity** value which controls where and how intense specular highlights are. White areas have full specular highlight and black areas have no specular.
-* [G]{.text-green-500}reen: Contains the **ambient occlusion** value which controls how likely areas are to be shaded. White areas are are always lit and black areas are always shaded.
-* [B]{.text-blue-500}lue: Contains the **specular size** value which controls which areas are highlighted when lit or shaded. White areas are always highlighted and black areas are never highlighted.
-* [A]{.font-bold}lpha: Contains additional inner line art which is displayed on the model.
+- [R]{.text-red-500}ed: Contains the **specular intensity** value which controls where and how intense specular highlights are. White areas have full specular highlight and black areas have no specular.
+- [G]{.text-green-500}reen: Contains the **ambient occlusion** value which controls how likely areas are to be shaded. White areas are are always lit and black areas are always shaded.
+- [B]{.text-blue-500}lue: Contains the **specular size** value which controls which areas are highlighted when lit or shaded. White areas are always highlighted and black areas are never highlighted.
+- [A]{.font-bold}lpha: Contains additional inner line art which is displayed on the model.
 
 <video autoplay loop>
   <source src="/blog/custom-cel-shaded-avatar/sb-texture-maps.mp4" type="video/mp4" />
@@ -42,6 +42,6 @@ All of this does not only allow for a lot of creative freedom but also requires 
 
 ## Sources
 
-* Arc System Work's Technial Artist Junya C Motomura's [GDC talk](https://www.youtube.com/watch?v=yhGjCzxJV3E).
-* Activemontionpictures [Youtube Playlist](https://www.youtube.com/watch?v=UHGoy6A_DmY&list=PLv8Xik7JbQH3AtYLs3QY7jYuubckdGfnU&index=13) on the topic.
-* Raymond Cripps [Youtube Video](https://www.youtube.com/watch?v=E3zHGD8V2IY) on how he used this style for his project.
+- Arc System Work's Technial Artist Junya C Motomura's [GDC talk](https://www.youtube.com/watch?v=yhGjCzxJV3E).
+- Activemontionpictures [Youtube Playlist](https://www.youtube.com/watch?v=UHGoy6A_DmY&list=PLv8Xik7JbQH3AtYLs3QY7jYuubckdGfnU&index=13) on the topic.
+- Raymond Cripps [Youtube Video](https://www.youtube.com/watch?v=E3zHGD8V2IY) on how he used this style for his project.

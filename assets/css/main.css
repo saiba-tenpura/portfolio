@@ -46,15 +46,16 @@
 }
 
 body {
-  @apply font-sans bg-neutral-50 text-neutral-700 accent-neutral-500 dark:bg-neutral-900 dark:text-neutral-100;
-  background-image: url('@/assets/images/aurora-bg.png');
+  @apply bg-neutral-50 font-sans text-neutral-700 accent-neutral-500 dark:bg-neutral-900 dark:text-neutral-100;
+  background-image: url("@/assets/images/aurora-bg.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100vw 100%;
   backdrop-filter: blur(1rem);
 }
 
-.prose img, .prose video {
+.prose img,
+.prose video {
   @apply rounded-lg;
 }
 

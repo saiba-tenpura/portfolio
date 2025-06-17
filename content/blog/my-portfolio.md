@@ -16,19 +16,20 @@ If you're are only here for the code then feel free to [check it out on Github](
 ## Tech Stack
 
 As for the technologies used in this project:
-* [Nuxt](https://nuxt.com/) a Vue based Full Stack framework.
-  * [Nuxt Content](https://content.nuxtjs.org/) module for managing the markdown based blog entries.
-  * [Nuxt Image](https://image.nuxtjs.org/) module for handling image optimizations.
-  * [Nuxt Testutils](https://nuxt.com/docs/getting-started/testing) modules is used to perform End-to-End, component and unit testing.
-  * [Nuxt Sitemap](https://nuxtseo.com/sitemap/getting-started/installation) module for generating a sitemap.
-* [Tailwind CSS](https://tailwindcss.com/) a utility-first CSS framework.
-* [Font Awesome](https://fontawesome.com/) as icon library.
+
+- [Nuxt](https://nuxt.com/) a Vue based Full Stack framework.
+  - [Nuxt Content](https://content.nuxtjs.org/) module for managing the markdown based blog entries.
+  - [Nuxt Image](https://image.nuxtjs.org/) module for handling image optimizations.
+  - [Nuxt Testutils](https://nuxt.com/docs/getting-started/testing) modules is used to perform End-to-End, component and unit testing.
+  - [Nuxt Sitemap](https://nuxtseo.com/sitemap/getting-started/installation) module for generating a sitemap.
+- [Tailwind CSS](https://tailwindcss.com/) a utility-first CSS framework.
+- [Font Awesome](https://fontawesome.com/) as icon library.
 
 Continuous improvement is an essential part of the development process in every software project. Thus in order to streamline the deployment process, GitHub Action workflows are used to automatically build and publish the changes of each commit. Additionally, the Static Site Generation (SSG) feature of Nuxt is implemented to enhance performance and security by generating static files.
 
 ## Logo
 
-The logo design for *Saiba Tenpura* (translated as *Cyber Templar*) my alias is illustrated by a sci-fi themed helmet. The first step in the creation of it was to draw up a couple of sketches in Krita to get a sense for the direction I wanted to take it.
+The logo design for _Saiba Tenpura_ (translated as _Cyber Templar_) my alias is illustrated by a sci-fi themed helmet. The first step in the creation of it was to draw up a couple of sketches in Krita to get a sense for the direction I wanted to take it.
 
 ![Logo Sketch](/blog/my-portfolio/logo-sketch.png)
 
