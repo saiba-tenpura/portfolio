@@ -2,14 +2,12 @@
 const observer: Ref<IntersectionObserver | undefined> = ref();
 const targetRefs: Ref<HTMLElement[]> = ref([]);
 
-defineProps({
-  category: {
-    type: String,
-  },
-  skills: {
-    type: Array as PropType<string[]>,
-  },
-});
+interface Props {
+  category: string;
+  skills: string[];
+}
+
+defineProps<Props>();
 
 const onEnter = (target: HTMLElement) => {
   target.classList.add('opacity-100', 'translate-x-0');

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 interface BlogEntry {
-  path: string,
   title: string,
   description: string,
+  path?: string,
   image: {
     src: string,
     alt: string,
@@ -10,15 +10,9 @@ interface BlogEntry {
   created_at: string,
 }
 
-defineProps({
-  blogEntry: {
-    type: Object,
-    required: true,
-    validator: (value: BlogEntry) => {
-      return value?.path && value.title;
-    },
-  },
-});
+defineProps<{
+  blogEntry: BlogEntry;
+}>();
 </script>
 
 <template>

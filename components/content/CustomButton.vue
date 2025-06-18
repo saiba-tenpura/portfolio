@@ -8,17 +8,13 @@ const variants: Record<string, string> = {
 </script>
 
 <script setup lang="ts">
-const props = defineProps({
-  as: {
-    type: [String, Object],
-    default: 'button',
-  },
-  variant: {
-    type: String,
-    validator: (value: string) => {
-      return Object.keys(variants).includes(value);
-    },
-  },
+interface Props {
+  as?: string | Object;
+  variant: 'primary' | 'primary-to-secondary' | 'secondary' | 'secondary-to-primary';
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  as: 'button',
 });
 </script>
 

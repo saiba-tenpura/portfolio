@@ -1,19 +1,16 @@
 <script setup lang="ts">
 import { useNuxtApp, onBeforeUnmount, reactive } from '#imports';
 
-const props = defineProps({
-  throttle: {
-    type: Number,
-    default: 200,
-  },
-  duration: {
-    type: Number,
-    default: 2000,
-  },
-  height: {
-    type: Number,
-    default: 3,
-  },
+interface Props {
+  throttle?: number;
+  duration?: number;
+  height?: number;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  throttle: 200,
+  duration: 2000,
+  height: 3,
 });
 
 const nuxtApp = useNuxtApp();
