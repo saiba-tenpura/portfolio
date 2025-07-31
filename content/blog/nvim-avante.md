@@ -4,6 +4,7 @@ description: Elevate your Neovim experience by yet another level.
 image:
   src: /blog/nvim-avante/cover.png
   alt: Neovim + Avante
+published: true
 created_at: 2025-02-01
 ---
 

@@ -8,6 +8,8 @@ head:
   meta:
     - name: keywords
       content: 'Nuxt, Portfolio, Logo Design'
+
+published: true
 created_at: 2023-12-19
 ---
 

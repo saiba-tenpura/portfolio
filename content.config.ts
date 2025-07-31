@@ -14,6 +14,7 @@ export default defineContentConfig({
             src: z.string(),
             alt: z.string(),
           }),
+          published: z.boolean(),
           created_at: z.date(),
         }),
       }),

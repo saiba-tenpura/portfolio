@@ -3,6 +3,7 @@ const rootEl = ref();
 const showBlogEntries = ref(false);
 const { data } = await useAsyncData(() => {
   return queryCollection('blog')
+    .where('published', '=', true)
     .order('created_at', 'DESC')
     .all();
 });
