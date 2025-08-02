@@ -86,17 +86,15 @@ onUnmounted(() => {
         />
       </section>
     </div>
-    <div v-else>
-      <section class="self-center text-center">
-        <h1 class="mb-3 text-7xl lg:text-9xl">404</h1>
-        <p class="mb-2 text-3xl md:text-4xl">Blog entry not found!</p>
-        <p class="mb-5 text-lg">
-          Sorry, we can't find the blog entry you're looking for.
-        </p>
-        <CustomButton class="px-5 py-2.5" variant="primary" to="/blog" :as="NuxtLink">
-          Return to overview
-        </CustomButton>
-      </section>
-    </div>
+    <section v-else class="self-center text-center">
+      <h1 class="mb-3 text-7xl lg:text-9xl">404</h1>
+      <p class="mb-2 text-3xl md:text-4xl">Blog entry not found!</p>
+      <p class="mb-5 text-lg">
+        Sorry, we can't find the blog entry you're looking for.
+      </p>
+      <CustomButton class="px-5 py-2.5" variant="primary" to="/blog" :as="NuxtLink">
+        Return to overview
+      </CustomButton>
+    </section>
   </div>
 </template>
