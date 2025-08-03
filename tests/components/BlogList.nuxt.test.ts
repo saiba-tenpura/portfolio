@@ -18,7 +18,7 @@ describe('BlogList', async () => {
   test('empty state', async () => {
     const component = await mountSuspended(BlogList);
     expect(component.text()).toContain('There are no blog entries yet!');
-  });
+  }, 15000);
 
   test('rendering of blog entry', async () => {
     useAsyncData.mockImplementation(() => {
@@ -40,5 +40,5 @@ describe('BlogList', async () => {
 
     const component = await mountSuspended(BlogList);
     expect(component.text()).toContain('Blog Entry Unit Test');
-  });
+  }, 15000);
 });

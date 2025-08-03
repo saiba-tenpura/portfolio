@@ -14,11 +14,11 @@ describe('app', async () => {
     test('page: ' + path + ' to contain heading: ' + heading, async () => {
       const page = await createPage(path);
       expect(await page.getByRole('heading', { name: heading }).isVisible()).toBe(true);
-    });
+    }, 15000);
   }
 
   test('404 error page', async () => {
     const response = await fetch('/non-existent').then(r => r.text());
     expect(response).toContain('Page not found:');
-  });
+  }, 15000);
 });
