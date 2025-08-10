@@ -9,9 +9,9 @@ const handleError = () => clearError({ redirect: '/' });
 </script>
 
 <template>
-  <main class="flex min-h-screen">
-    <section class="flex flex-auto items-center justify-center">
-      <div class="text-center">
+  <AppLayout>
+    <NuxtLayout>
+      <section class="self-center text-center">
         <div class="mb-3">
           <NuxtImg v-if="error?.statusCode == 404" src="/404.svg" />
           <NuxtImg v-else="error?.statusCode == 500" src="/500.svg" />
@@ -21,7 +21,7 @@ const handleError = () => clearError({ redirect: '/' });
         <CustomButton class="px-5 py-2.5" variant="primary" @click="handleError">
           Back to home
         </CustomButton>
-      </div>
-    </section>
-  </main>
+      </section>
+    </NuxtLayout>
+  </AppLayout>
 </template>
