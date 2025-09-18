@@ -61,10 +61,13 @@ onUnmounted(() => {
             </time>
             <NuxtImg
               v-if="doc?.image.src"
+              format="webp"
+              preload
+              loading="eager"
+              fetch-priority="high"
+              sizes="100vw sm:75vw md:50vw"
               :src="doc?.image.src"
               :alt="doc?.image.alt"
-              sizes="sm:100vw md:100vw lg:100vw"
-              loading="lazy"
             />
           </header>
           <TableOfContents

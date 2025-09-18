@@ -3,9 +3,12 @@
     <div class="mx-auto lg:col-span-5">
       <NuxtImg
         src="/logo-render.png"
+        format="webp"
+        preload
+        loading="eager"
+        fetch-priority="high"
         alt="logo-render"
         sizes="sm:75vw md:55vw lg:30vw"
-        loading="lazy"
       />
     </div>
     <div class="place-self-center lg:-order-1 lg:col-span-7">
