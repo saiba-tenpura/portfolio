@@ -13,8 +13,8 @@ const handleError = () => clearError({ redirect: '/' });
     <NuxtLayout>
       <section class="self-center text-center">
         <div class="mb-3">
-          <NuxtImg v-if="error?.statusCode == 404" src="/404.svg" />
-          <NuxtImg v-else-if="error?.statusCode == 500" src="/500.svg" />
+          <img v-if="error?.statusCode == 404" src="/404.svg" width="404" />
+          <img v-else-if="error?.statusCode == 500" src="/500.svg" width="500" />
           <h1 v-else class="text-7xl lg:text-9xl">{{ error?.statusCode }}</h1>
         </div>
         <div class="text-lg mb-5">

@@ -90,7 +90,7 @@ onUnmounted(() => {
       </section>
     </div>
     <section v-else class="self-center text-center">
-      <NuxtImg class="mx-auto mb-3" src="/404.svg" />
+      <img class="mx-auto mb-3" src="/404.svg" width="404" />
       <p class="mb-2 text-3xl md:text-4xl">Blog entry not found!</p>
       <p class="mb-5 text-lg">
         Sorry, we can't find the blog entry you're looking for.
