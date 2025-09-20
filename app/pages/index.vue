@@ -7,7 +7,7 @@
         preload
         loading="eager"
         fetch-priority="high"
-        alt="logo-render"
+        alt="Rendered Logo"
         sizes="sm:75vw md:55vw lg:30vw"
       />
     </div>

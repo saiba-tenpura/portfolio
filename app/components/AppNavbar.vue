@@ -17,12 +17,11 @@ const dropdownHeight = computed(() => {
         <span class="sr-only">Logo</span>
         <Logo class="h-9 w-auto" />
       </NuxtLink>
-      <button @click="toggleNav" class="inline-flex items-center rounded-lg p-2 md:hidden">
+      <button @click="toggleNav" class="inline-flex items-center rounded-lg p-2 md:hidden" aria-controls="navbar" :aria-expanded="show">
         <span class="sr-only">Toggle navigation menu</span>
         <svg
           class="menu-icon d-flex items-center overflow-visible hover:text-neutral-300 dark:hover:text-neutral-400"
           viewBox="0 0 100 100"
-          :aria-expanded="show"
         >
           <g>
             <path id="top" class="path" d="m 20,20 h 30 30 c 20,0 18.227928,30 20,55 0.0356,7.961535 0,12.5 -7.5,12.5 C 88.792524,87.5 87.022601,85.888733 80,80 L 50,50 20,20" />
@@ -32,10 +31,10 @@ const dropdownHeight = computed(() => {
         </svg>
       </button>
       <div
+        id="navbar"
         class="w-full overflow-hidden transition-all duration-500 md:!h-full md:w-auto md:overflow-visible md:!opacity-100"
         :class="{ 'opacity-0': !show, 'opacity-100': show }"
         :style="{ height: (show ? dropdownHeight : 0) + 'px' }"
-        :aria-expanded="show"
       >
         <div
           class="mt-4 flex flex-col font-medium md:mt-0 md:flex-row md:gap-8"
@@ -80,12 +79,12 @@ const dropdownHeight = computed(() => {
   stroke-dasharray: 60;
 }
 
-.menu-icon[aria-expanded="true"] :is(#top, #bottom) {
+button[aria-expanded="true"] .menu-icon :is(#top, #bottom) {
   stroke-dasharray: 155 1000;
   stroke-dashoffset: -155;
 }
 
-.menu-icon[aria-expanded="true"] #middle {
+button[aria-expanded="true"] .menu-icon #middle {
   stroke-dasharray: 0 50;
   stroke-dashoffset: 30;
   opacity: 0;

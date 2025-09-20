@@ -49,7 +49,7 @@ onUnmounted(() => {
       <Meta property="og:image" :content="url.origin + (doc?.image?.src ?? '/blog/my-portfolio/cover.png')" />
       <Meta property="og:image:alt" :content="doc?.image?.alt" />
       <section class="grid grid-cols-1 lg:grid-cols-[auto_minmax(0,_1fr)] gap-16">
-        <article id="article-navigation" class="prose prose-neutral dark:prose-invert">
+        <article class="prose prose-neutral dark:prose-invert">
           <header class="mb-4">
             <h1 class="mb-0">{{ doc.title }}</h1>
             <time
@@ -73,7 +73,6 @@ onUnmounted(() => {
           <TableOfContents
             v-if="getDocTocLinks(doc).length"
             class="not-prose lg:hidden"
-            aria-labelledby="article-navigation"
             :links="getDocTocLinks(doc)"
             :current="currentHeadingId"
           />
@@ -82,7 +81,6 @@ onUnmounted(() => {
         <TableOfContents
           v-if="getDocTocLinks(doc).length"
           class="hidden lg:flex lg:flex-col"
-          aria-labelledby="article-navigation"
           :sticky="true"
           :links="getDocTocLinks(doc)"
           :current="currentHeadingId"

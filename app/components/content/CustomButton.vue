@@ -20,8 +20,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <component
-    class="inline-block rounded-lg px-5 py-2.5 text-center text-sm text-neutral-100 no-underline transition-transform focus:ring-2 focus:outline-hidden"
-    type="button"
+    class="inline-block rounded-lg px-5 py-2.5 text-center text-sm text-neutral-100 no-underline transition-transform focus:ring-2 focus:outline-hidden focus-visible:border-neutral-50 focus-visible:border"
     :class="variants[variant]"
     :is="props.as"
   >
