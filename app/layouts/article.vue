@@ -8,7 +8,7 @@ const currentHeadingId: Ref<string | null> = ref('');
 const headingObserver: Ref<IntersectionObserver | undefined> = ref();
 const videoObserver: Ref<IntersectionObserver | undefined> = ref();
 
-const { data: doc } = await useAsyncData(route.path, () => {
+const { data: doc, status } = await useAsyncData(route.path, () => {
   return queryCollection('blog').path(route.path).first();
 });
 
@@ -43,7 +43,10 @@ onUnmounted(() => {
 
 <template>
   <div ref="rootEl" class="flex">
-    <div v-if="doc">
+    <div v-if="['idle', 'pending'].includes(status)">
+      <ArticleSkeleton />
+    </div>
+    <div v-else-if="doc">
       <Meta property="og:title" :content="doc.title" />
       <Meta property="og:description" :content="doc.description" />
       <Meta property="og:image" :content="url.origin + (doc?.image?.src ?? '/blog/my-portfolio/cover.png')" />
