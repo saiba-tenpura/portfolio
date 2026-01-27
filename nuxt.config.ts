@@ -97,6 +97,11 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/test-utils/module',
   ],
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://www.saiba-tenpura.com',
+    },
+  },
   site: {
     url: 'https://www.saiba-tenpura.com',
   },
