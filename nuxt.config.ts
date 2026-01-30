@@ -104,6 +104,10 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://www.saiba-tenpura.com',
+    name: 'Saiba Tenpura',
+  },
+  sitemap: {
+    zeroRuntime: true,
   },
   vite: {
     plugins: [
