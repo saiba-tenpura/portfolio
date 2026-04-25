@@ -110,6 +110,14 @@ export default defineNuxtConfig({
     zeroRuntime: true,
   },
   vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        '@fortawesome/free-solid-svg-icons',
+        '@fortawesome/free-brands-svg-icons',
+      ],
+    },
     plugins: [
       tailwindcss(),
       svgLoader({
