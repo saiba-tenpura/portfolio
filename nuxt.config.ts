@@ -1,4 +1,4 @@
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 import svgLoader from 'vite-svg-loader';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -68,6 +68,7 @@ export default defineNuxtConfig({
       '@fortawesome/fontawesome-svg-core',
     ],
   },
+  compatibilityDate: '2025-07-15',
   content: {
     build: {
       markdown: {
@@ -87,7 +88,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    '~/assets/css/main.css',
+    './app/assets/css/main.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   devtools: { enabled: true },
@@ -112,10 +113,10 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: [
+        '@fortawesome/free-brands-svg-icons',
+        '@fortawesome/free-solid-svg-icons',
         '@vue/devtools-core',
         '@vue/devtools-kit',
-        '@fortawesome/free-solid-svg-icons',
-        '@fortawesome/free-brands-svg-icons',
       ],
     },
     plugins: [
@@ -134,5 +135,4 @@ export default defineNuxtConfig({
       }),
     ],
   },
-  compatibilityDate: '2026-03-20',
 });
