@@ -22,7 +22,7 @@
         the intersection of art and science through 3D modeling and game
         development.
       </p>
-      <CustomButton class="mx-auto" variant="primary" as="a" href="https://github.com/saiba-tenpura/dotfiles">
+      <CustomButton class="mx-auto" variant="primary" as="a" href="https://github.com/saiba-tenpura">
         <font-awesome-icon class="mr-2" icon="fa-brands fa-github" size="xl" />
         Checkout my GitHub!
       </CustomButton>
