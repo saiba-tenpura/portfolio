@@ -27,7 +27,7 @@ jobs:
         run: npm run generate
 
       - name: Install Playwright browsers
-        run: npx playwright@1.63.0 install --with-deps
+        run: npx playwright@1.64.1 install --with-deps
 
       - name: Run tests
         run: npm run test

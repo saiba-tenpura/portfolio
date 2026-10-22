@@ -115,8 +115,16 @@ export default defineNuxtConfig({
       include: [
         '@fortawesome/free-brands-svg-icons',
         '@fortawesome/free-solid-svg-icons',
+        '@shikijs/core',
+        '@shikijs/engine-javascript',
+        '@shikijs/engine-oniguruma',
+        '@shikijs/langs/lua',
+        '@shikijs/themes/github-dark',
+        '@shikijs/themes/github-light',
+        '@shikijs/transformers',
         '@vue/devtools-core',
         '@vue/devtools-kit',
+        'shiki/wasm',
       ],
     },
     plugins: [
